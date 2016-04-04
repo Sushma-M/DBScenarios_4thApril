@@ -29,6 +29,9 @@
   "name" : "PagewithLivegrid",
   "type" : "PAGE"
 }, {
+  "name" : "Procedure_Page",
+  "type" : "PAGE"
+}, {
   "name" : "ReadOnlyDataGrid",
   "type" : "PAGE"
 }, {

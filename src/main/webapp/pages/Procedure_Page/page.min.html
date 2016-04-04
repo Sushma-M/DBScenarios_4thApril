@@ -1,0 +1,88 @@
+<style id="Procedure_Page.css">
+
+</style>
+<script id="Procedure_Page.js">
+Application.$controller("Procedure_PagePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="Procedure_Page.variables.json">
+var _Procedure_PagePage_Variables_ ={};
+</script>
+<script id="Procedure_Page.html" type="text/ng-template">
+<wm-page data-ng-controller="Procedure_PagePageController" pagetitle="Procedure Page" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="IN"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane2">
+                    <wm-accordionheader name="accordionheader2" heading="IN, OUT"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent2"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane3">
+                    <wm-accordionheader name="accordionheader3" heading="Multiple OUTs"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent3"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane4">
+                    <wm-accordionheader name="accordionheader4" heading="MultipleINOUTs"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent4"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane5">
+                    <wm-accordionheader name="accordionheader5" heading="IN, INOUT"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent5"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane6">
+                    <wm-accordionheader name="accordionheader6" heading="Loops"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent6"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane7">
+                    <wm-accordionheader name="accordionheader7" heading="if-else, case"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent7"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane8">
+                    <wm-accordionheader name="accordionheader8" heading="Error handling"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent8"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane9">
+                    <wm-accordionheader name="accordionheader9" heading="Signal, Unsignal"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent9"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane10">
+                    <wm-accordionheader name="accordionheader10" heading="Cursor"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane11">
+                    <wm-accordionheader name="accordionheader11" heading="Function"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane12">
+                    <wm-accordionheader name="accordionheader12" heading="Date"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent12"></wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

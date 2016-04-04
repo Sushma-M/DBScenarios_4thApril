@@ -127,6 +127,7 @@
         "relatedTableName" : "employees",
         "relatedEntityName" : "Employees",
         "relatedFieldName" : "employees.employeeNumber",
+        "isList" : false,
         "targetTable" : "employees",
         "scale" : 0,
         "columns" : [ {
@@ -430,6 +431,7 @@
         "relatedTableName" : "employees",
         "relatedEntityName" : "Employees",
         "relatedFieldName" : "employeesByReportsTo.employeeNumber",
+        "isList" : false,
         "targetTable" : "employees",
         "scale" : 0,
         "columns" : [ {
@@ -549,6 +551,7 @@
         "relatedTableName" : "offices",
         "relatedEntityName" : "Offices",
         "relatedFieldName" : "offices.officeCode",
+        "isList" : false,
         "targetTable" : "offices",
         "scale" : 0,
         "columns" : [ {
@@ -1090,6 +1093,7 @@
         "relatedTableName" : "orders",
         "relatedEntityName" : "Orders",
         "relatedFieldName" : "orders.orderNumber",
+        "isList" : false,
         "targetTable" : "orders",
         "scale" : 0,
         "columns" : [ {
@@ -1192,6 +1196,7 @@
         "relatedTableName" : "products",
         "relatedEntityName" : "Products",
         "relatedFieldName" : "products.productCode",
+        "isList" : false,
         "targetTable" : "products",
         "scale" : 0,
         "columns" : [ {
@@ -1404,6 +1409,7 @@
         "relatedTableName" : "customers",
         "relatedEntityName" : "Customers",
         "relatedFieldName" : "customers.customerNumber",
+        "isList" : false,
         "targetTable" : "customers",
         "scale" : 0,
         "columns" : [ {
@@ -1694,6 +1700,7 @@
         "relatedTableName" : "customers",
         "relatedEntityName" : "Customers",
         "relatedFieldName" : "customers.customerNumber",
+        "isList" : false,
         "targetTable" : "customers",
         "scale" : 0,
         "columns" : [ {
@@ -2046,6 +2053,7 @@
         "relatedTableName" : "productlines",
         "relatedEntityName" : "Productlines",
         "relatedFieldName" : "productlines.productLine",
+        "isList" : false,
         "targetTable" : "productlines",
         "scale" : 0,
         "columns" : [ {
@@ -2311,6 +2319,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "pagewithLiveList",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Procedure_Page" : {
+    "_id" : "wm-goToPage_Procedure_Page-wm.NavigationVariable-1459760363731",
+    "name" : "goToPage_Procedure_Page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Procedure_Page",
     "pageTransitions" : "none"
   },
   "goToPage_ReadOnlyDataGrid" : {
