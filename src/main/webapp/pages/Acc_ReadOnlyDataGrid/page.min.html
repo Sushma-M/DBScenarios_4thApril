@@ -1,0 +1,171 @@
+<style id="Acc_ReadOnlyDataGrid.css">
+
+</style>
+<script id="Acc_ReadOnlyDataGrid.js">
+Application.$controller("Acc_ReadOnlyDataGridPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+</script>
+<script id="Acc_ReadOnlyDataGrid.variables.json">
+var _Acc_ReadOnlyDataGridPage_Variables_ ={ }
+</script>
+<script id="Acc_ReadOnlyDataGrid.html" type="text/ng-template">
+<wm-page data-ng-controller="Acc_ReadOnlyDataGridPageController" pagetitle="Acc Read Only Data Grid" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion5">
+                <wm-accordionpane name="accordionpane5">
+                    <wm-accordionheader name="accordionheader5" heading="With Normal DB"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent5">
+                        <wm-accordion name="accordion1">
+                            <wm-accordionpane name="accordionpane1">
+                                <wm-accordionheader name="accordionheader1" heading="Read Only Grid With All Data Types And With Navigation Type As None"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent1"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion2">
+                            <wm-accordionpane name="accordionpane2">
+                                <wm-accordionheader name="accordionheader2" heading="Read Only Grid With All Data Types And With Navigation Type As Basic"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent2"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion3">
+                            <wm-accordionpane name="accordionpane3">
+                                <wm-accordionheader name="accordionheader3" heading="Read Only Grid With All Data Types And With Navigation Type As Advanced"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent3"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion4">
+                            <wm-accordionpane name="accordionpane4">
+                                <wm-accordionheader name="accordionheader4" heading="Read Only Grid With Self Relation Table"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent4"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+            <wm-accordion name="accordion6">
+                <wm-accordionpane name="accordionpane6">
+                    <wm-accordionheader name="accordionheader6" heading="With Virtual DB"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent6">
+                        <wm-accordion name="accordion7">
+                            <wm-accordionpane name="accordionpane7">
+                                <wm-accordionheader name="accordionheader7" heading="HeadingVirtualRelationsDBAllVirtualTableData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent7"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion8">
+                            <wm-accordionpane name="accordionpane9">
+                                <wm-accordionheader name="accordionheader9" heading="VirtualRelationsDBBigDecVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent9"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion9">
+                            <wm-accordionpane name="accordionpane10">
+                                <wm-accordionheader name="accordionheader10" heading="VirtualRelationsDBBigIntVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion10">
+                            <wm-accordionpane name="accordionpane11">
+                                <wm-accordionheader name="accordionheader11" heading="VirtualRelationsDBByteVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion11">
+                            <wm-accordionpane name="accordionpane12">
+                                <wm-accordionheader name="accordionheader12" heading="VirtualRelationsDBCharVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent12"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion12">
+                            <wm-accordionpane name="accordionpane13">
+                                <wm-accordionheader name="accordionheader13" heading="VirtualRelationsDBDateTimeVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent13"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion13">
+                            <wm-accordionpane name="accordionpane14">
+                                <wm-accordionheader name="accordionheader14" heading="VirtualRelationsDBDateVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent14"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion14">
+                            <wm-accordionpane name="accordionpane15">
+                                <wm-accordionheader name="accordionheader15" heading="VirtualRelationsDBDoubleVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent15"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion15">
+                            <wm-accordionpane name="accordionpane16">
+                                <wm-accordionheader name="accordionheader16" heading="VirtualRelationsDBFloatVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent16"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion16">
+                            <wm-accordionpane name="accordionpane17">
+                                <wm-accordionheader name="accordionheader17" heading="VirtualRelationsDBIntVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent17"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion17">
+                            <wm-accordionpane name="accordionpane18">
+                                <wm-accordionheader name="accordionheader18" heading="VirtualRelationsDBLongVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent18"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion18">
+                            <wm-accordionpane name="accordionpane19">
+                                <wm-accordionheader name="accordionheader19" heading="VirtualRelationsDBShortVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent19"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion19">
+                            <wm-accordionpane name="accordionpane20">
+                                <wm-accordionheader name="accordionheader20" heading="VirtualRelationsDBStringVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent20"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion20">
+                            <wm-accordionpane name="accordionpane21">
+                                <wm-accordionheader name="accordionheader21" heading="VirtualRelationsDBTimeStampVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent21"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion21">
+                            <wm-accordionpane name="accordionpane22">
+                                <wm-accordionheader name="accordionheader22" heading="VirtualRelationsDBTimeVirtualData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent22"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion22">
+                            <wm-accordionpane name="accordionpane23">
+                                <wm-accordionheader name="accordionheader23" heading="VirtualRelationsDBVirtualCompositesData"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent23"></wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

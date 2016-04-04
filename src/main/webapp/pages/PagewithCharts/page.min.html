@@ -1,0 +1,164 @@
+<style id="PagewithCharts.css">
+
+</style>
+<script id="PagewithCharts.js">
+Application.$controller("PagewithChartsPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="PagewithCharts.variables.json">
+var _PagewithChartsPage_Variables_ ={ }
+</script>
+<script id="PagewithCharts.html" type="text/ng-template">
+<wm-page data-ng-controller="PagewithChartsPageController" pagetitle="Pagewith Charts" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1" heading="Charts Using HRDB" isdefaulttab="true"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-panel class="panel-primary" name="panel1" title="Charts using Live Variables">
+                            <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                            <wm-layoutgrid name="layoutgrid1" columns="2">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn10">
+                                        <wm-button class="btn-default" caption="LineChart" type="button" name="button1" on-click="goToPage_LineChart_LiveVar"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn11">
+                                        <wm-button class="btn-default" caption="ColumnChart" type="button" name="button5"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn12">
+                                        <wm-button class="btn-default" caption="Area Chart" type="button" name="button2"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn13">
+                                        <wm-button class="btn-default" caption="PieChart" type="button" name="button6"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn14">
+                                        <wm-button class="btn-default" caption="BarChart" type="button" name="button3"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn15">
+                                        <wm-button class="btn-default" caption="Cummulative Line" type="button" name="button7"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow7">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn16">
+                                        <wm-button class="btn-default" caption="Donut Chart" type="button" name="button4"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn17">
+                                        <wm-button class="btn-default" caption="BubbleChart" type="button" name="button8"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                        <wm-panel class="panel-primary" name="panel2" title="charts using query variables">
+                            <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                            <wm-layoutgrid name="layoutgrid2" columns="2">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn10">
+                                        <wm-button class="btn-default" caption="LineChart" type="button" name="button11"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn11">
+                                        <wm-button class="btn-default" caption="ColumnChart" type="button" name="button15"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn12">
+                                        <wm-button class="btn-default" caption="Area Chart" type="button" name="button12"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn13">
+                                        <wm-button class="btn-default" caption="PieChart" type="button" name="button16"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn14">
+                                        <wm-button class="btn-default" caption="BarChart" type="button" name="button13"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn15">
+                                        <wm-button class="btn-default" caption="Cummulative Line" type="button" name="button17"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow7">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn16">
+                                        <wm-button class="btn-default" caption="Donut Chart" type="button" name="button14"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn17">
+                                        <wm-button class="btn-default" caption="BubbleChart" type="button" name="button18"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                        <wm-panel class="panel-primary" name="panel3" title="Charts using Service (Rest) variable">
+                            <wm-panel-footer name="panel_footer3"></wm-panel-footer>
+                            <wm-layoutgrid name="layoutgrid3" columns="2">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn10">
+                                        <wm-button class="btn-default" caption="LineChart" type="button" name="button21"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn11">
+                                        <wm-button class="btn-default" caption="ColumnChart" type="button" name="button25"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn12">
+                                        <wm-button class="btn-default" caption="Area Chart" type="button" name="button22"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn13">
+                                        <wm-button class="btn-default" caption="PieChart" type="button" name="button26"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn14">
+                                        <wm-button class="btn-default" caption="BarChart" type="button" name="button23"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn15">
+                                        <wm-button class="btn-default" caption="Cummulative Line" type="button" name="button27"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow7">
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn16">
+                                        <wm-button class="btn-default" caption="Donut Chart" type="button" name="button24"></wm-button>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" name="gridcolumn17">
+                                        <wm-button class="btn-default" caption="BubbleChart" type="button" name="button28"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2">
+                    <wm-tabheader name="tabheader2" heading="Charts using Normal DB"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent2"></wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3">
+                    <wm-tabheader name="tabheader3" heading="Charts Using Virtual Related DB"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent3"></wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

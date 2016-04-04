@@ -1,35 +1,55 @@
-[
-  {
-    "name": "Common",
-    "type": "PARTIAL"
-  },
-  {
-    "name": "Login",
-    "type": "PAGE"
-  },
-  {
-    "name": "Main",
-    "type": "PAGE"
-  },
-  {
-    "name": "footer",
-    "type": "FOOTER"
-  },
-  {
-    "name": "header",
-    "type": "HEADER"
-  },
-  {
-    "name": "leftnav",
-    "type": "LEFTNAV"
-  },
-  {
-    "name": "rightnav",
-    "type": "RIGHTNAV"
-
-  },
-  {
-    "name": "topnav",
-    "type": "TOPNAV"
-  }
-]
+[ {
+  "name" : "Acc_ReadOnlyDataGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "Common",
+  "type" : "PARTIAL"
+}, {
+  "name" : "EditableDataGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "LineChart_LiveVar",
+  "type" : "PAGE"
+}, {
+  "name" : "LineChartwithAggrgtn",
+  "type" : "PARTIAL"
+}, {
+  "name" : "Login",
+  "type" : "PAGE"
+}, {
+  "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "PagewithCharts",
+  "type" : "PAGE"
+}, {
+  "name" : "PagewithLiveForm",
+  "type" : "PAGE"
+}, {
+  "name" : "PagewithLivegrid",
+  "type" : "PAGE"
+}, {
+  "name" : "ReadOnlyDataGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "Tabs_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "footer",
+  "type" : "FOOTER"
+}, {
+  "name" : "header",
+  "type" : "HEADER"
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV"
+}, {
+  "name" : "pagewithLiveList",
+  "type" : "PAGE"
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV"
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV"
+} ]

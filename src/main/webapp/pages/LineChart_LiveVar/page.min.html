@@ -1,0 +1,103 @@
+<style id="LineChart_LiveVar.css">
+
+</style>
+<script id="LineChart_LiveVar.js">
+Application.$controller("LineChart_LiveVarPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+
+Application.$controller("dialog1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("dialog2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="LineChart_LiveVar.variables.json">
+var _LineChart_LiveVarPage_Variables_ ={ }
+</script>
+<script id="LineChart_LiveVar.html" type="text/ng-template">
+<wm-page data-ng-controller="LineChart_LiveVarPageController" pagetitle="Line Chart Live Var" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="SimpleLineChart using LiveVAr"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-chart type="Line" name="chart1" theme="Terrestrial" dataset="bind:Variables.HrdbDepartmentData.dataSet" xaxisdatakey="deptcode" yaxisdatakey="budget"></wm-chart>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane2">
+                    <wm-accordionheader name="accordionheader2" heading="LineChart with Order By"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent2"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane3">
+                    <wm-accordionheader name="accordionheader3" heading="LineChart with Groupby, Aggregation within a Page Partial"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent3" content="LineChartwithAggrgtn"></wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane4">
+                    <wm-accordionheader name="accordionheader4" heading="Chart to Chart/Grid communication"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent4">
+                        <wm-label name="label1" caption="Click to test Chart comm in dialogues" fontsize="18" fontweight="bold"></wm-label>
+                        <wm-button class="btn-default" caption="Chart-Grid Comm" type="button" name="button2" on-click="dialog2.show"></wm-button>
+                        <wm-list name="list1">
+                            <wm-button class="btn-default" caption="Chart-Chart comm" type="button" name="button1" on-click="dialog1.show"></wm-button>
+                        </wm-list>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-dialog dialogtype="design-dialog" modal="true" name="dialog1">
+            <wm-dialogheader caption="LineChart to Donut" iconclass="wi wi-edit" name="dialogheader1"></wm-dialogheader>
+            <wm-dialogcontent name="dialogcontent1">
+                <wm-chart type="Line" name="chart2" theme="Terrestrial"></wm-chart>
+                <wm-chart type="Donut" name="chart3" theme="Azure"></wm-chart>
+            </wm-dialogcontent>
+            <wm-dialogactions name="dialogactions1">
+                <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button3"></wm-button>
+                <wm-button class="btn-primary" caption="Save" name="button4"></wm-button>
+            </wm-dialogactions>
+        </wm-dialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view2">
+        <wm-dialog dialogtype="design-dialog" modal="true" name="dialog2">
+            <wm-dialogheader caption="LineChart to Grid" iconclass="wi wi-edit" name="dialogheader2"></wm-dialogheader>
+            <wm-dialogcontent name="dialogcontent2">
+                <wm-chart type="Line" name="chart4" theme="Terrestrial"></wm-chart>
+            </wm-dialogcontent>
+            <wm-dialogactions name="dialogactions2">
+                <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button5"></wm-button>
+                <wm-button class="btn-primary" caption="Save" name="button6"></wm-button>
+            </wm-dialogactions>
+        </wm-dialog>
+    </wm-view>
+</wm-page>
+</script>

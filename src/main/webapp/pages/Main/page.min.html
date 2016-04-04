@@ -21,7 +21,7 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 }]);
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={};
+var _MainPage_Variables_ ={ }
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
@@ -29,9 +29,9 @@ var _MainPage_Variables_ ={};
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="10" paddingleft="15" paddingright="15" name="mainContent">
+            <wm-label name="label2" caption="Page with Live Filters"></wm-label>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>

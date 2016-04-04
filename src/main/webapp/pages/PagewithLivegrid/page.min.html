@@ -1,0 +1,74 @@
+<style id="PagewithLivegrid.css">
+
+</style>
+<script id="PagewithLivegrid.js">
+Application.$controller("PagewithLivegridPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="PagewithLivegrid.variables.json">
+var _PagewithLivegridPage_Variables_ ={ }
+</script>
+<script id="PagewithLivegrid.html" type="text/ng-template">
+<wm-page data-ng-controller="PagewithLivegridPageController" pagetitle="Pagewith Livegrid" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-panel class="panel-primary" name="panel1" title="Grid with Live Variable">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-layoutgrid name="layoutgrid1" columns="2">
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn colwidth="6" name="gridcolumn10" horizontalalign="center">
+                            <wm-button class="btn-default" caption="ReadOnly Data Grid Template" type="button" name="button1" on-click="goToPage_ReadOnlyDataGrid"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn colwidth="6" name="gridcolumn11" horizontalalign="center">
+                            <wm-button class="btn-default" caption="Editable Data Grid Template" type="button" name="button2"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn colwidth="6" name="gridcolumn12" horizontalalign="center">
+                            <wm-button class="btn-default" caption="Data Grid With Dialog Form" type="button" name="button3"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn colwidth="6" name="gridcolumn13" horizontalalign="center">
+                            <wm-button class="btn-default" caption="Editable Grid With Inline Form" type="button" name="button4"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn colwidth="6" name="gridcolumn14" horizontalalign="center">
+                            <wm-button class="btn-default" caption="Data Grid with inline form (Readonly)" type="button" name="button5"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn colwidth="6" name="gridcolumn15"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel2" title="Grid With Rest Service Variable">
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel3" title="Grid With Query Service Variable">
+                <wm-panel-footer name="panel_footer3"></wm-panel-footer>
+            </wm-panel>
+        </wm-page-content>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-button class="btn-default" caption="Button" type="button" name="button1"></wm-button>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>
