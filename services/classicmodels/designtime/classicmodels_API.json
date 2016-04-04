@@ -1,0 +1,4500 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for classicmodels",
+    "version" : "2.0",
+    "title" : "classicmodelsService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "DataService",
+    "x-WM-SERVICE_ID" : "classicmodels"
+  },
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "OfficesController",
+    "description" : "Exposes APIs to work with Offices resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OfficesController",
+    "x-WM-CONTROLLER_NAME" : "Offices",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "ArticleTagsController",
+    "description" : "Exposes APIs to work with ArticleTags resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ArticleTagsController",
+    "x-WM-CONTROLLER_NAME" : "ArticleTags",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "CustomersController",
+    "description" : "Exposes APIs to work with Customers resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.CustomersController",
+    "x-WM-CONTROLLER_NAME" : "Customers",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "OrdersController",
+    "description" : "Exposes APIs to work with Orders resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrdersController",
+    "x-WM-CONTROLLER_NAME" : "Orders",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "EmployeesController",
+    "description" : "Exposes APIs to work with Employees resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.EmployeesController",
+    "x-WM-CONTROLLER_NAME" : "Employees",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "ProductsController",
+    "description" : "Exposes APIs to work with Products resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ProductsController",
+    "x-WM-CONTROLLER_NAME" : "Products",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "ProductlinesController",
+    "description" : "Exposes APIs to work with Productlines resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ProductlinesController",
+    "x-WM-CONTROLLER_NAME" : "Productlines",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "Mytable2Controller",
+    "description" : "Exposes APIs to work with Mytable2 resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.Mytable2Controller",
+    "x-WM-CONTROLLER_NAME" : "Mytable2",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "ProcedureExecutionController",
+    "description" : "Controller class for procedure execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ProcedureExecutionController",
+    "x-WM-CONTROLLER_NAME" : "ProcedureExecution",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "PaymentsController",
+    "description" : "Exposes APIs to work with Payments resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.PaymentsController",
+    "x-WM-CONTROLLER_NAME" : "Payments",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "MytableController",
+    "description" : "Exposes APIs to work with Mytable resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.MytableController",
+    "x-WM-CONTROLLER_NAME" : "Mytable",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "QueryExecutionController",
+    "description" : "Controller class for query execution",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.QueryExecutionController",
+    "x-WM-CONTROLLER_NAME" : "QueryExecution",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "OrderdetailsController",
+    "description" : "Exposes APIs to work with Orderdetails resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrderdetailsController",
+    "x-WM-CONTROLLER_NAME" : "Orderdetails",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/classicmodels/ArticleTags/" : {
+      "get" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Returns the list of ArticleTags instances.",
+        "operationId" : "ArticleTagsController-getArticleTagss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/ArticleTags",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "625711fc-a444-4eb0-85ba-7a6affc39b12",
+        "x-WM-METHOD_NAME" : "getArticleTagss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Creates a new ArticleTags instance.",
+        "operationId" : "ArticleTagsController-createArticleTags-1--703070146",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ArticleTags",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ArticleTags",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.ArticleTags",
+          "x-WM-UUID" : "23366c61-cad2-4757-9e50-08c009a2a84b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ArticleTags",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "962e5156-4d09-4e1c-86f9-8dd60a18c97a",
+        "x-WM-METHOD_NAME" : "createArticleTags",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ArticleTagsController",
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/ArticleTags/composite-id" : {
+      "get" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Returns the ArticleTags instance associated with the given composite-id.",
+        "operationId" : "ArticleTagsController-getArticleTags-2--849622875",
+        "parameters" : [ {
+          "name" : "articleId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "cc480f92-ce06-426e-bfec-f20cb37a1604",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "tagId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f8f2da36-3545-46ce-b922-1ce2c8d103e2",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ArticleTags",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "56129569-f224-4941-9691-3bc684d94440",
+        "x-WM-METHOD_NAME" : "getArticleTags",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Updates the ArticleTags instance associated with the given composite-id.",
+        "operationId" : "ArticleTagsController-editArticleTags-3--2074346078",
+        "parameters" : [ {
+          "name" : "articleId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "1e18adf0-fbcb-4b35-9836-f7cd6947d3f5",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "tagId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "0ef84ec8-88be-443f-8aae-b4929a440657",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "ArticleTags",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ArticleTags",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.ArticleTags",
+          "x-WM-UUID" : "282a0d50-bd56-4fd0-a0aa-0b08a34ca87e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ArticleTags",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "671f3386-57b1-47ba-9bc6-ffaf4deba7de",
+        "x-WM-METHOD_NAME" : "editArticleTags",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Deletes the ArticleTags instance associated with the given composite-id.",
+        "operationId" : "ArticleTagsController-deleteArticleTags-2--849622875",
+        "parameters" : [ {
+          "name" : "articleId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "1a5476d7-5f9d-437a-aa46-0bbce5a649ea",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "tagId",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "7a33aedb-2db0-4c76-8310-900deacbfe10",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "44944580-d17c-4da9-9f18-f2081eb25971",
+        "x-WM-METHOD_NAME" : "deleteArticleTags",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ArticleTagsController",
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
+    },
+    "/classicmodels/ArticleTags/count" : {
+      "get" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Returns the total count of ArticleTags instances.",
+        "operationId" : "ArticleTagsController-countAllArticleTagss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "e43d88c8-b8f3-4f4a-80cc-bf40af87f7e2",
+        "x-WM-METHOD_NAME" : "countAllArticleTagss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ArticleTagsController",
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/ArticleTags/search" : {
+      "post" : {
+        "tags" : [ "ArticleTagsController" ],
+        "description" : "Returns the list of ArticleTags instances matching the search criteria.",
+        "operationId" : "ArticleTagsController-findArticleTagss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "2f3ab3e3-6d6c-402a-8793-93e10ce63977",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/ArticleTags",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c4abaa97-92e6-4d2c-bfca-28af84f46101",
+        "x-WM-METHOD_NAME" : "findArticleTagss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ArticleTagsController",
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Customers/" : {
+      "get" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Returns the list of Customers instances.",
+        "operationId" : "CustomersController-getCustomerss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Customers",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ea27fba8-acb1-47cf-8d65-676fbcee4d8b",
+        "x-WM-METHOD_NAME" : "getCustomerss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Creates a new Customers instance.",
+        "operationId" : "CustomersController-createCustomers-1--52588316",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Customers",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Customers",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Customers",
+          "x-WM-UUID" : "f7e2a3de-b8e3-4f52-a5e8-708a91412b5b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Customers",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "3f724210-4261-455d-ba71-56bb40f9e593",
+        "x-WM-METHOD_NAME" : "createCustomers",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Customers/count" : {
+      "get" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Returns the total count of Customers instances.",
+        "operationId" : "CustomersController-countAllCustomerss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "513a026f-eafb-44c0-b6f6-17ffacdc0eaf",
+        "x-WM-METHOD_NAME" : "countAllCustomerss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Customers/search" : {
+      "post" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Returns the list of Customers instances matching the search criteria.",
+        "operationId" : "CustomersController-findCustomerss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "8e44aebd-a606-47ca-a13d-146d115661a6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Customers",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b067d9f7-78ec-43ce-8696-b4c579150af0",
+        "x-WM-METHOD_NAME" : "findCustomerss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Customers/{id}" : {
+      "get" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Returns the Customers instance associated with the given id.",
+        "operationId" : "CustomersController-getCustomers-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f8dc3599-71a8-4a74-b107-044d1d348f4c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Customers",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "e8ba1d21-4bce-4353-aa75-3a9a6a50434f",
+        "x-WM-METHOD_NAME" : "getCustomers",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Updates the Customers instance associated with the given id.",
+        "operationId" : "CustomersController-editCustomers-2-1154605482",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "0558a481-2bc2-459e-bb44-1fa52c691698",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Customers",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Customers",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Customers",
+          "x-WM-UUID" : "d7754749-57e8-41b5-a824-8026c3f4f0a4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Customers",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8fe32281-2671-4b8b-a495-9082c226dd50",
+        "x-WM-METHOD_NAME" : "editCustomers",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Deletes the Customers instance associated with the given id.",
+        "operationId" : "CustomersController-deleteCustomers-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "50c302e6-01b9-4f1c-b79e-26ac1d70c33e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "2e0ff7b1-b7a5-4524-8883-68c49b49c3fb",
+        "x-WM-METHOD_NAME" : "deleteCustomers",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Customers/{id}/orderses" : {
+      "get" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Gets the orderses instance associated with the given id.",
+        "operationId" : "CustomersController-findAssociatedorderses-2--1857483743",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "2c9c1cbc-58ea-43dc-976f-5a35cf1c6228",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orders",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "06109ba0-906d-44f3-b7b4-edbbaf5f8195",
+        "x-WM-METHOD_NAME" : "findAssociatedorderses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/orderses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderses"
+    },
+    "/classicmodels/Customers/{id}/paymentses" : {
+      "get" : {
+        "tags" : [ "CustomersController" ],
+        "description" : "Gets the paymentses instance associated with the given id.",
+        "operationId" : "CustomersController-findAssociatedpaymentses-2--1857483743",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "58396fa7-ad3f-48f0-bf29-8ebf620055a3",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Payments",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "a0ccca96-b81d-4013-9a7f-4d4103912bd0",
+        "x-WM-METHOD_NAME" : "findAssociatedpaymentses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "CustomersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/paymentses",
+      "x-WM-RELATIVE_PATH" : "/{id}/paymentses"
+    },
+    "/classicmodels/Employees/" : {
+      "get" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Returns the list of Employees instances.",
+        "operationId" : "EmployeesController-getEmployeess-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Employees",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "75409fe5-a58e-46a1-95fc-c1bd4da41d84",
+        "x-WM-METHOD_NAME" : "getEmployeess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Creates a new Employees instance.",
+        "operationId" : "EmployeesController-createEmployees-1-973669396",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Employees",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Employees",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Employees",
+          "x-WM-UUID" : "9cb67beb-5fe6-4dbf-997a-e9bb0d73241b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Employees",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "1aaa521c-f2a9-4350-a26b-7cc3f6a9dddc",
+        "x-WM-METHOD_NAME" : "createEmployees",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Employees/count" : {
+      "get" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Returns the total count of Employees instances.",
+        "operationId" : "EmployeesController-countAllEmployeess-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f43bc432-c205-4831-b5b9-014ebb0e755c",
+        "x-WM-METHOD_NAME" : "countAllEmployeess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Employees/search" : {
+      "post" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Returns the list of Employees instances matching the search criteria.",
+        "operationId" : "EmployeesController-findEmployeess-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "b1a80151-103a-4ac1-ac9d-9c22c8176245",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Employees",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0c835245-aced-4e84-896f-86a1f4ba52ee",
+        "x-WM-METHOD_NAME" : "findEmployeess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Employees/{id}" : {
+      "get" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Returns the Employees instance associated with the given id.",
+        "operationId" : "EmployeesController-getEmployees-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f2a261f4-9c6e-4468-927c-6ddf15cc3974",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Employees",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "1e63eafe-5142-441b-b6ce-b0dea66b990f",
+        "x-WM-METHOD_NAME" : "getEmployees",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Updates the Employees instance associated with the given id.",
+        "operationId" : "EmployeesController-editEmployees-2--2114104102",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "01f432c7-425c-4ba8-bb21-8c97ac84adca",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Employees",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Employees",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Employees",
+          "x-WM-UUID" : "8fc0dfd0-0b96-4d57-98a5-cc9317b1059b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Employees",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8af226e2-6250-40fc-ba0a-b17bbd6cda58",
+        "x-WM-METHOD_NAME" : "editEmployees",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Deletes the Employees instance associated with the given id.",
+        "operationId" : "EmployeesController-deleteEmployees-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "25fcab93-17aa-471e-83cc-f2d4cebdd897",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "997dbccc-0dc0-40fc-8c25-4f6cb2bc1bbe",
+        "x-WM-METHOD_NAME" : "deleteEmployees",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Employees/{id}/customerses" : {
+      "get" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Gets the customerses instance associated with the given id.",
+        "operationId" : "EmployeesController-findAssociatedcustomerses-2--1857483743",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "55274f24-8a3a-47e2-9c9f-e63615f5b10b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Customers",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "e1423764-1122-4d4e-afac-38296131c0db",
+        "x-WM-METHOD_NAME" : "findAssociatedcustomerses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/customerses",
+      "x-WM-RELATIVE_PATH" : "/{id}/customerses"
+    },
+    "/classicmodels/Employees/{id}/employeesesForReportsTo" : {
+      "get" : {
+        "tags" : [ "EmployeesController" ],
+        "description" : "Gets the employeesesForReportsTo instance associated with the given id.",
+        "operationId" : "EmployeesController-findAssociatedemployeesesForReportsTo-2--1857483743",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "343db87a-64f5-4714-b9b2-002263425f44",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Employees",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f99d79e5-0085-4411-8ae4-a5efac56f4df",
+        "x-WM-METHOD_NAME" : "findAssociatedemployeesesForReportsTo",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "EmployeesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/employeesesForReportsTo",
+      "x-WM-RELATIVE_PATH" : "/{id}/employeesesForReportsTo"
+    },
+    "/classicmodels/Mytable/" : {
+      "get" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Returns the list of Mytable instances.",
+        "operationId" : "MytableController-getMytables-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Mytable",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "6d029c7b-d664-4fa7-9369-23343328913a",
+        "x-WM-METHOD_NAME" : "getMytables",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Creates a new Mytable instance.",
+        "operationId" : "MytableController-createMytable-1-1691528369",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Mytable",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Mytable",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Mytable",
+          "x-WM-UUID" : "6f79e4df-07f2-48f5-9be9-f22953b70a53",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "2d961dbc-95bb-43fb-93db-c66f28380910",
+        "x-WM-METHOD_NAME" : "createMytable",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "MytableController",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Mytable/composite-id" : {
+      "get" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Returns the Mytable instance associated with the given composite-id.",
+        "operationId" : "MytableController-getMytable-2--849622875",
+        "parameters" : [ {
+          "name" : "columnA",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f3150d22-3557-45ff-8f00-8fbe5e343a12",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "columnB",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "d704d4fa-8341-467b-b158-3f1c9fe1588b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "31b5864f-70be-49ab-99c0-8930039b548d",
+        "x-WM-METHOD_NAME" : "getMytable",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Updates the Mytable instance associated with the given composite-id.",
+        "operationId" : "MytableController-editMytable-3-320252437",
+        "parameters" : [ {
+          "name" : "columnA",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "0afd46a9-d530-4ad3-82d7-c0854300e176",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "columnB",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "c68627de-4ab7-4d3c-984b-dc2d67d59acd",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Mytable",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Mytable",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Mytable",
+          "x-WM-UUID" : "b62b80cb-9b65-46bf-9b04-2c638168e65f",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "a3f6ae24-51e8-4d9b-95cb-51fd785108a3",
+        "x-WM-METHOD_NAME" : "editMytable",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Deletes the Mytable instance associated with the given composite-id.",
+        "operationId" : "MytableController-deleteMytable-2--849622875",
+        "parameters" : [ {
+          "name" : "columnA",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "68fb11f5-2e47-4faa-89e8-d4c17b788c2e",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "columnB",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "428673e9-adbf-41a7-b3d7-01dd78b3d59e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8bdef60a-4df4-4f8f-8052-57c295599a01",
+        "x-WM-METHOD_NAME" : "deleteMytable",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "MytableController",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
+    },
+    "/classicmodels/Mytable/count" : {
+      "get" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Returns the total count of Mytable instances.",
+        "operationId" : "MytableController-countAllMytables-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "075bf67f-cf18-4282-b0e4-e767c1ee8973",
+        "x-WM-METHOD_NAME" : "countAllMytables",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "MytableController",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Mytable/search" : {
+      "post" : {
+        "tags" : [ "MytableController" ],
+        "description" : "Returns the list of Mytable instances matching the search criteria.",
+        "operationId" : "MytableController-findMytables-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "eb26a368-b1a8-4441-9043-ac3c33f09c56",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Mytable",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "4bdfaeeb-8ca6-496a-a264-1c138348ded9",
+        "x-WM-METHOD_NAME" : "findMytables",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "MytableController",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Mytable2/" : {
+      "get" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Returns the list of Mytable2 instances.",
+        "operationId" : "Mytable2Controller-getMytable2s-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Mytable2",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "1ef3a52c-4ce9-4f81-8117-619cbe2352f6",
+        "x-WM-METHOD_NAME" : "getMytable2s",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Creates a new Mytable2 instance.",
+        "operationId" : "Mytable2Controller-createMytable2-1-897753067",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Mytable2",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Mytable2",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Mytable2",
+          "x-WM-UUID" : "78a395e3-c34d-42d7-ba99-5d4ae92cfff9",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable2",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "322c0cbc-d74c-40e8-a44c-e637c39d0d19",
+        "x-WM-METHOD_NAME" : "createMytable2",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "Mytable2Controller",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Mytable2/composite-id" : {
+      "get" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Returns the Mytable2 instance associated with the given composite-id.",
+        "operationId" : "Mytable2Controller-getMytable2-2--849622875",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "f965beea-a8e0-4bb7-b894-726453f0f6c6",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "col1",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "83bbf44d-d1d4-400c-bfdd-dafa76a08d77",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable2",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "010d7c2b-c643-4801-b67e-bc31bb8f69b6",
+        "x-WM-METHOD_NAME" : "getMytable2",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Updates the Mytable2 instance associated with the given composite-id.",
+        "operationId" : "Mytable2Controller-editMytable2-3--473522865",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "366e96fb-b0e9-4592-9aa7-0b526fb4fff4",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "col1",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "86733956-72a4-4de9-a138-a2888fc06cd5",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Mytable2",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Mytable2",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Mytable2",
+          "x-WM-UUID" : "c8f51320-6667-477a-be77-6a290038f618",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Mytable2",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "256b8cfd-641b-463e-8acc-04f50cc31060",
+        "x-WM-METHOD_NAME" : "editMytable2",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Deletes the Mytable2 instance associated with the given composite-id.",
+        "operationId" : "Mytable2Controller-deleteMytable2-2--849622875",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "6be76d53-869c-464d-a64f-d8509363b63c",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "col1",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "0e9c7b21-97d7-4db0-9006-a9762b734797",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "16ebbad7-f543-4936-b794-3bdf4a14a0c1",
+        "x-WM-METHOD_NAME" : "deleteMytable2",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "Mytable2Controller",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
+    },
+    "/classicmodels/Mytable2/count" : {
+      "get" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Returns the total count of Mytable2 instances.",
+        "operationId" : "Mytable2Controller-countAllMytable2s-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "203925ca-9b87-4ec6-873d-68506b9cd2cc",
+        "x-WM-METHOD_NAME" : "countAllMytable2s",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "Mytable2Controller",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Mytable2/search" : {
+      "post" : {
+        "tags" : [ "Mytable2Controller" ],
+        "description" : "Returns the list of Mytable2 instances matching the search criteria.",
+        "operationId" : "Mytable2Controller-findMytable2s-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "7715c055-7631-43c8-bb7f-c55abc34cef2",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Mytable2",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "bfe7c2b1-f301-45c5-bd5e-3e44258b53e0",
+        "x-WM-METHOD_NAME" : "findMytable2s",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "Mytable2Controller",
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Offices/" : {
+      "get" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Returns the list of Offices instances.",
+        "operationId" : "OfficesController-getOfficess-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Offices",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "2fa1339c-ccba-4dc3-a6bc-bba06265c184",
+        "x-WM-METHOD_NAME" : "getOfficess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Creates a new Offices instance.",
+        "operationId" : "OfficesController-createOffices-1--1385075642",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Offices",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Offices",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Offices",
+          "x-WM-UUID" : "a7049bb7-cc8d-4d75-a32a-01f55dc5d3b4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Offices",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ce9b231e-b0d8-4a6f-9be6-4b9ab01e89fa",
+        "x-WM-METHOD_NAME" : "createOffices",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OfficesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Offices/count" : {
+      "get" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Returns the total count of Offices instances.",
+        "operationId" : "OfficesController-countAllOfficess-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "e025c77f-bb9d-4969-b9e1-edf4231a5cc6",
+        "x-WM-METHOD_NAME" : "countAllOfficess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OfficesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Offices/search" : {
+      "post" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Returns the list of Offices instances matching the search criteria.",
+        "operationId" : "OfficesController-findOfficess-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "d5d9d35c-31ba-4e10-adfa-8f493385fb71",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Offices",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "dd6a240c-b35a-4012-bc78-a2870c389fee",
+        "x-WM-METHOD_NAME" : "findOfficess",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OfficesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Offices/{id}" : {
+      "get" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Returns the Offices instance associated with the given id.",
+        "operationId" : "OfficesController-getOffices-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "d0e1ea38-85f1-4f7d-b973-df5dbf394b89",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Offices",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "48389be4-5d0d-44ab-8d59-5f9d39430a78",
+        "x-WM-METHOD_NAME" : "getOffices",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Updates the Offices instance associated with the given id.",
+        "operationId" : "OfficesController-editOffices-2--110124717",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "228b323b-6401-46ba-9545-5a13c731b2d2",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Offices",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Offices",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Offices",
+          "x-WM-UUID" : "7a00275d-47ff-42eb-b627-f52591de78b8",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Offices",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "30a5db31-5705-4a59-8203-564551f1ad2a",
+        "x-WM-METHOD_NAME" : "editOffices",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Deletes the Offices instance associated with the given id.",
+        "operationId" : "OfficesController-deleteOffices-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "e07c11a9-e967-41cf-afc1-2a46e4248f00",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "59005c9b-3ab8-45dd-921f-4ec8a5b4cb7d",
+        "x-WM-METHOD_NAME" : "deleteOffices",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OfficesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Offices/{id}/employeeses" : {
+      "get" : {
+        "tags" : [ "OfficesController" ],
+        "description" : "Gets the employeeses instance associated with the given id.",
+        "operationId" : "OfficesController-findAssociatedemployeeses-2-1394593052",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "cd5d22d4-62fb-4aff-a192-53fcb102396c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Employees",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "11da7e99-1cb3-4252-9e29-e6e069ac48fa",
+        "x-WM-METHOD_NAME" : "findAssociatedemployeeses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OfficesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}/employeeses",
+      "x-WM-RELATIVE_PATH" : "/{id}/employeeses"
+    },
+    "/classicmodels/Orderdetails/" : {
+      "get" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Returns the list of Orderdetails instances.",
+        "operationId" : "OrderdetailsController-getOrderdetailss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orderdetails",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "a5965183-b996-4aaf-b4ed-f17cd52bed07",
+        "x-WM-METHOD_NAME" : "getOrderdetailss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Creates a new Orderdetails instance.",
+        "operationId" : "OrderdetailsController-createOrderdetails-1-867744079",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Orderdetails",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Orderdetails",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Orderdetails",
+          "x-WM-UUID" : "d23a4aff-5e31-43c1-84c3-7d04074d5ba8",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orderdetails",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b65244d3-0c2d-4931-b0c9-29fa70f27a52",
+        "x-WM-METHOD_NAME" : "createOrderdetails",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrderdetailsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Orderdetails/composite-id" : {
+      "get" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Returns the Orderdetails instance associated with the given composite-id.",
+        "operationId" : "OrderdetailsController-getOrderdetails-2--1892513376",
+        "parameters" : [ {
+          "name" : "orderNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "923ee244-fe2b-4bca-b066-e87a368d4c38",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "productCode",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "6909db8a-28a3-4faa-b976-91b932eb92b6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orderdetails",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "86b9f152-5801-430f-89d0-025b10eb8030",
+        "x-WM-METHOD_NAME" : "getOrderdetails",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Updates the Orderdetails instance associated with the given composite-id.",
+        "operationId" : "OrderdetailsController-editOrderdetails-3--435774726",
+        "parameters" : [ {
+          "name" : "orderNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "e580bb7c-ee4f-4921-a2ec-e30f420337d1",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "productCode",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "da533203-cdfd-4674-85e8-7ca1d653bc46",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Orderdetails",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Orderdetails",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Orderdetails",
+          "x-WM-UUID" : "892db257-3c5d-4a04-b310-75f8f9d590f0",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orderdetails",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "4bd19f42-9c5f-4719-8865-2237322c465a",
+        "x-WM-METHOD_NAME" : "editOrderdetails",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Deletes the Orderdetails instance associated with the given composite-id.",
+        "operationId" : "OrderdetailsController-deleteOrderdetails-2--1892513376",
+        "parameters" : [ {
+          "name" : "orderNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "0d60a8ef-a94f-416d-8f60-64abf000a6d8",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "productCode",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "f8dd4ff8-3e1e-436e-84e6-f96031b1beea",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f565d483-274f-478f-b2fe-ca8d9c7a8f3d",
+        "x-WM-METHOD_NAME" : "deleteOrderdetails",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrderdetailsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
+    },
+    "/classicmodels/Orderdetails/count" : {
+      "get" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Returns the total count of Orderdetails instances.",
+        "operationId" : "OrderdetailsController-countAllOrderdetailss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "fe625b29-5938-4aa5-962f-9321909ecf6f",
+        "x-WM-METHOD_NAME" : "countAllOrderdetailss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrderdetailsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Orderdetails/search" : {
+      "post" : {
+        "tags" : [ "OrderdetailsController" ],
+        "description" : "Returns the list of Orderdetails instances matching the search criteria.",
+        "operationId" : "OrderdetailsController-findOrderdetailss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "d7909d27-62a4-4c1a-8bf9-86a198d82022",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orderdetails",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b0ec472b-9cfc-4854-9d92-a4673dad480f",
+        "x-WM-METHOD_NAME" : "findOrderdetailss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrderdetailsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Orders/" : {
+      "get" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Returns the list of Orders instances.",
+        "operationId" : "OrdersController-getOrderss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orders",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "3760ba1a-3a04-407b-a51e-a48e3ad744fe",
+        "x-WM-METHOD_NAME" : "getOrderss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Creates a new Orders instance.",
+        "operationId" : "OrdersController-createOrders-1-1490360704",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Orders",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Orders",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Orders",
+          "x-WM-UUID" : "e540ba10-158d-4236-918a-da8383f6c618",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orders",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "96f143f0-474f-4d97-b0b4-da0f387e3503",
+        "x-WM-METHOD_NAME" : "createOrders",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrdersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Orders/count" : {
+      "get" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Returns the total count of Orders instances.",
+        "operationId" : "OrdersController-countAllOrderss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "148cf9ac-1cf6-4a09-b967-07d1005765ca",
+        "x-WM-METHOD_NAME" : "countAllOrderss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrdersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Orders/search" : {
+      "post" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Returns the list of Orders instances matching the search criteria.",
+        "operationId" : "OrdersController-findOrderss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "431fb987-b8c3-4477-8c6c-141bda673093",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orders",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c9142035-0494-40f7-a548-d6c2b8749f6c",
+        "x-WM-METHOD_NAME" : "findOrderss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrdersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Orders/{id}" : {
+      "get" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Returns the Orders instance associated with the given id.",
+        "operationId" : "OrdersController-getOrders-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "3336f85f-2d46-4fed-bb63-627dcda6450b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orders",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c571748c-3e4b-446e-9669-0c7ff58698e5",
+        "x-WM-METHOD_NAME" : "getOrders",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Updates the Orders instance associated with the given id.",
+        "operationId" : "OrdersController-editOrders-2--1597412794",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "a070870b-5aa1-447b-a72e-569ec6e41dc3",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Orders",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Orders",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Orders",
+          "x-WM-UUID" : "833233c0-0e81-4463-b84d-8665baf92238",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Orders",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "d5267ec8-c152-4639-9e83-173d2e49ebac",
+        "x-WM-METHOD_NAME" : "editOrders",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Deletes the Orders instance associated with the given id.",
+        "operationId" : "OrdersController-deleteOrders-1--2056816673",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "6e17f304-5fc3-4ab9-ad77-580f6bf2c0a6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "74812b4a-b8ed-4b91-93d5-f3fa5ace76e4",
+        "x-WM-METHOD_NAME" : "deleteOrders",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrdersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Orders/{id}/orderdetailses" : {
+      "get" : {
+        "tags" : [ "OrdersController" ],
+        "description" : "Gets the orderdetailses instance associated with the given id.",
+        "operationId" : "OrdersController-findAssociatedorderdetailses-2--1857483743",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "be5bb67f-8436-4808-97c1-1a5981673645",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orderdetails",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0ae43478-10e0-4f3e-a2a2-21ed2221574d",
+        "x-WM-METHOD_NAME" : "findAssociatedorderdetailses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "OrdersController",
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}/orderdetailses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses"
+    },
+    "/classicmodels/Payments/" : {
+      "get" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Returns the list of Payments instances.",
+        "operationId" : "PaymentsController-getPaymentss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Payments",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8080872c-6aca-4e6a-83d0-7c9788439491",
+        "x-WM-METHOD_NAME" : "getPaymentss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Creates a new Payments instance.",
+        "operationId" : "PaymentsController-createPayments-1--2134682552",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Payments",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Payments",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Payments",
+          "x-WM-UUID" : "d3a3f1c6-39ee-465d-a6e6-17f0849bd4d7",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Payments",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "618eea3a-1744-444f-8154-2816beecd751",
+        "x-WM-METHOD_NAME" : "createPayments",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "PaymentsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Payments/composite-id" : {
+      "get" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Returns the Payments instance associated with the given composite-id.",
+        "operationId" : "PaymentsController-getPayments-2--1892513376",
+        "parameters" : [ {
+          "name" : "customerNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "2b622d4e-1e90-4137-8279-fd7dd756f4af",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "checkNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "492b60d9-4795-4677-b818-8d8a20f768e1",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Payments",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "80e94a22-a3f6-4ca0-b23b-19aaefaf6ec5",
+        "x-WM-METHOD_NAME" : "getPayments",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Updates the Payments instance associated with the given composite-id.",
+        "operationId" : "PaymentsController-editPayments-3-856765939",
+        "parameters" : [ {
+          "name" : "customerNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "096efbee-c39e-48e2-ba2e-958ad6e0d329",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "checkNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "403f3df4-9d23-4317-a888-6a9376c9befa",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Payments",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Payments",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Payments",
+          "x-WM-UUID" : "684d04e0-28c8-4c23-b700-1c2e983ebac6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Payments",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "eb96e3b1-f7aa-4932-ba90-64cfc8eb37b8",
+        "x-WM-METHOD_NAME" : "editPayments",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Deletes the Payments instance associated with the given composite-id.",
+        "operationId" : "PaymentsController-deletePayments-2--1892513376",
+        "parameters" : [ {
+          "name" : "customerNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "1a41df4d-9b57-4e30-96f6-f9bb47342c29",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "checkNumber",
+          "in" : "query",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "78a7eec8-36ca-4f7f-8ac5-5193ad893330",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "4db98172-3ec1-4bbe-9190-7dfc48c91a4c",
+        "x-WM-METHOD_NAME" : "deletePayments",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "PaymentsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
+    },
+    "/classicmodels/Payments/count" : {
+      "get" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Returns the total count of Payments instances.",
+        "operationId" : "PaymentsController-countAllPaymentss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "10e86819-1014-43f9-ba1d-0dc2a42ab50d",
+        "x-WM-METHOD_NAME" : "countAllPaymentss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "PaymentsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Payments/search" : {
+      "post" : {
+        "tags" : [ "PaymentsController" ],
+        "description" : "Returns the list of Payments instances matching the search criteria.",
+        "operationId" : "PaymentsController-findPaymentss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "9eb08194-ebe7-470d-9143-cb05e068dc20",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Payments",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "218aea20-3bc0-4171-b9b2-079996ef8d80",
+        "x-WM-METHOD_NAME" : "findPaymentss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "PaymentsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Productlines/" : {
+      "get" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Returns the list of Productlines instances.",
+        "operationId" : "ProductlinesController-getProductliness-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Productlines",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "9009a55b-37c7-4460-aeaa-2c12fe5535cf",
+        "x-WM-METHOD_NAME" : "getProductliness",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Creates a new Productlines instance.This API should be used when the Productlines instance has fields that requires multipart data.",
+        "operationId" : "ProductlinesController-createProductlines-1-1582507088",
+        "consumes" : [ "multipart/form-data" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Productlines",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "48d53167-e3c8-4821-8b62-896e31756109",
+        "x-WM-METHOD_NAME" : "createProductlines",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Productlines/count" : {
+      "get" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Returns the total count of Productlines instances.",
+        "operationId" : "ProductlinesController-countAllProductliness-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "31d3c347-8add-4f26-a202-2043b2adb6e1",
+        "x-WM-METHOD_NAME" : "countAllProductliness",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Productlines/search" : {
+      "post" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Returns the list of Productlines instances matching the search criteria.",
+        "operationId" : "ProductlinesController-findProductliness-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "a4b6c812-4788-44aa-ad9e-c1f1f7c74af6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Productlines",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0622239b-21a8-402e-9c2d-9b9f5dfee399",
+        "x-WM-METHOD_NAME" : "findProductliness",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Productlines/{id}" : {
+      "get" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Returns the Productlines instance associated with the given id.",
+        "operationId" : "ProductlinesController-getProductlines-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "98c80148-b3d4-4844-97c6-6b5ff8902bdc",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Productlines",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "14f1acc9-a58e-438c-8f6f-f9db581ab2eb",
+        "x-WM-METHOD_NAME" : "getProductlines",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Updates the Productlines instance associated with the given id.This API should be used when Productlines instance fields that require multipart data.",
+        "operationId" : "ProductlinesController-editProductlines-2--1437509283",
+        "consumes" : [ "multipart/form-data" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "e2ba7ebe-4be4-4741-9593-698600005bb7",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Productlines",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "f178b118-36a5-451f-b2ba-58b5f0fb7a67",
+        "x-WM-METHOD_NAME" : "editProductlines",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Updates the Productlines instance associated with the given id.",
+        "operationId" : "ProductlinesController-editProductlines-2--1909131624",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "dfe1cc58-0853-4a00-915e-c4e75f3d832f",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Productlines",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Productlines",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Productlines",
+          "x-WM-UUID" : "3eebf382-7b1c-40a3-9d2a-13474bfa6d2e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Productlines",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5caa936d-e4b8-4fae-93a9-1cde497cee1f",
+        "x-WM-METHOD_NAME" : "editProductlines",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Deletes the Productlines instance associated with the given id.",
+        "operationId" : "ProductlinesController-deleteProductlines-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "0ae78eac-cb97-48da-873e-fc8d69631ef1",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8664bac7-c545-4c70-b378-a6f96d95948d",
+        "x-WM-METHOD_NAME" : "deleteProductlines",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Productlines/{id}/content/{fieldName}" : {
+      "get" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Retrieves content for the given BLOB field in Productlines instance",
+        "operationId" : "ProductlinesController-getProductlinesBLOBContent-5--1196568625",
+        "produces" : [ "application/octet-stream" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "944a221c-9dfd-4049-8b01-c315a73adf85",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "fieldName",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "140b9ac7-2ca2-4066-a337-cd082131e592",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "download",
+          "in" : "query",
+          "required" : true,
+          "type" : "boolean",
+          "default" : false,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "boolean",
+          "x-WM-UUID" : "324d6ec3-344b-4a6a-8163-fa5f07778aed",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DownloadResponse",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b275fed0-3ca0-4b7b-bd4a-16cbf0882f44",
+        "x-WM-METHOD_NAME" : "getProductlinesBLOBContent",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/content/{fieldName}",
+      "x-WM-RELATIVE_PATH" : "/{id}/content/{fieldName}"
+    },
+    "/classicmodels/Productlines/{id}/productses" : {
+      "get" : {
+        "tags" : [ "ProductlinesController" ],
+        "description" : "Gets the productses instance associated with the given id.",
+        "operationId" : "ProductlinesController-findAssociatedproductses-2-1394593052",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "ce78820a-a1d3-466f-8127-57ddcb9c41db",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Products",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0599284f-2f73-44ce-99e3-ea42952457ba",
+        "x-WM-METHOD_NAME" : "findAssociatedproductses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductlinesController",
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/productses",
+      "x-WM-RELATIVE_PATH" : "/{id}/productses"
+    },
+    "/classicmodels/Products/" : {
+      "get" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Returns the list of Products instances.",
+        "operationId" : "ProductsController-getProductss-1-934028971",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Products",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "353674fb-467e-40ce-b946-d424c76d38d8",
+        "x-WM-METHOD_NAME" : "getProductss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "post" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Creates a new Products instance.",
+        "operationId" : "ProductsController-createProducts-1--226158977",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Products",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Products",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Products",
+          "x-WM-UUID" : "263b5af0-962d-4b5a-86e6-5b894d668ac6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Products",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "3529d0af-6dad-479e-a896-8ad2991e089f",
+        "x-WM-METHOD_NAME" : "createProducts",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/",
+      "x-WM-RELATIVE_PATH" : "/"
+    },
+    "/classicmodels/Products/count" : {
+      "get" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Returns the total count of Products instances.",
+        "operationId" : "ProductsController-countAllProductss-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int64"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "272911cc-e88a-421d-9b00-36b691df687a",
+        "x-WM-METHOD_NAME" : "countAllProductss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/count",
+      "x-WM-RELATIVE_PATH" : "/count"
+    },
+    "/classicmodels/Products/search" : {
+      "post" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Returns the list of Products instances matching the search criteria.",
+        "operationId" : "ProductsController-findProductss-2--1821969279",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "in" : "body",
+          "name" : "QueryFilter",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/QueryFilter",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : false
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "x-WM-UUID" : "b830b70e-098f-4ec0-b3ed-0aa833361261",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Products",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "bc34db83-8840-41c8-bc4a-6252084ea826",
+        "x-WM-METHOD_NAME" : "findProductss",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/search",
+      "x-WM-RELATIVE_PATH" : "/search"
+    },
+    "/classicmodels/Products/{id}" : {
+      "get" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Returns the Products instance associated with the given id.",
+        "operationId" : "ProductsController-getProducts-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "d27f4ecc-dcb6-49c1-8540-02f804958b94",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Products",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "152b3b6d-ce0f-4b21-abf7-f79db17138ed",
+        "x-WM-METHOD_NAME" : "getProducts",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "put" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Updates the Products instance associated with the given id.",
+        "operationId" : "ProductsController-editProducts-2-1048791948",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "d5c7969d-908d-4927-9c85-136e2545e619",
+          "x-WM-EDITABLE" : true
+        }, {
+          "in" : "body",
+          "name" : "Products",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Products",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.dbscenarios_30mar.classicmodels.Products",
+          "x-WM-UUID" : "9068fe7b-7586-437a-9011-a5d59a854ced",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Products",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "98808ff3-0370-432f-aa04-ad8bd5e3554f",
+        "x-WM-METHOD_NAME" : "editProducts",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "delete" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Deletes the Products instance associated with the given id.",
+        "operationId" : "ProductsController-deleteProducts-1-1195260122",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "0d96bd56-a9ab-4c21-a99b-beab9447059c",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ae063e5f-8127-4550-af04-abd4a1613073",
+        "x-WM-METHOD_NAME" : "deleteProducts",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
+    },
+    "/classicmodels/Products/{id}/orderdetailses" : {
+      "get" : {
+        "tags" : [ "ProductsController" ],
+        "description" : "Gets the orderdetailses instance associated with the given id.",
+        "operationId" : "ProductsController-findAssociatedorderdetailses-2-1394593052",
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "f58b0840-a5a6-4312-8c83-618542f1969e",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Orderdetails",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "074a5f4f-91cc-4114-b007-e4c199804f94",
+        "x-WM-METHOD_NAME" : "findAssociatedorderdetailses",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProductsController",
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}/orderdetailses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/wm_custom" : {
+      "post" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute custom Procedure",
+        "operationId" : "ProcedureExecutionController-executeWMCustomProcedure-1--282256460",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomProcedure",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomProcedure",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
+          "x-WM-UUID" : "5c445327-ff13-45e6-b4a6-4c08c8ea6655",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "ed36a0a0-630d-4a48-8279-63b64b36daf5",
+        "x-WM-METHOD_NAME" : "executeWMCustomProcedure",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/wm_custom"
+    },
+    "/classicmodels/queryExecutor/queries/wm_custom" : {
+      "post" : {
+        "tags" : [ "QueryExecutionController" ],
+        "description" : "Process request to execute customer queries",
+        "operationId" : "QueryExecutionController-executeWMCustomQuery-2-107741091",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomQuery",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomQuery",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
+          "x-WM-UUID" : "bdb0c076-bb77-4390-8676-12749313e593",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-EDITABLE" : false,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
+        }, {
+          "name" : "size",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 20,
+          "format" : "int32",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Page",
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              } ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "52ad1d7d-3488-46ac-8100-a7808ec4a022",
+        "x-WM-METHOD_NAME" : "executeWMCustomQuery",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom"
+    },
+    "/classicmodels/queryExecutor/queries/wm_custom_update" : {
+      "post" : {
+        "tags" : [ "QueryExecutionController" ],
+        "description" : "Process request to execute customer queries",
+        "operationId" : "QueryExecutionController-executeWMCustomQuery-1--718813271",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CustomQuery",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustomQuery",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
+          "x-WM-UUID" : "5c9c4697-a96c-492e-bd06-5a924dbdf66b",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "integer",
+              "format" : "int32"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "237ba153-25a9-4007-9028-13f29b866811",
+        "x-WM-METHOD_NAME" : "executeWMCustomQuery",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom_update",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom_update"
+    }
+  },
+  "definitions" : {
+    "Mytable2" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "col2" : {
+            "type" : "string"
+          },
+          "col1" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Mytable2",
+      "x-WM-TAGS" : [ "Mytable2Controller" ]
+    },
+    "Customers" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "customerNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "contactFirstName" : {
+            "type" : "string"
+          },
+          "customerName" : {
+            "type" : "string"
+          },
+          "contactLastName" : {
+            "type" : "string"
+          },
+          "paymentses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Payments",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "phone" : {
+            "type" : "string"
+          },
+          "addressLine2" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "country" : {
+            "type" : "string"
+          },
+          "addressLine1" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "string"
+          },
+          "creditLimit" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "postalCode" : {
+            "type" : "string"
+          },
+          "employees" : {
+            "$ref" : "#/definitions/Employees",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "orderses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Orders",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Customers",
+      "x-WM-TAGS" : [ "PaymentsController", "CustomersController", "EmployeesController" ]
+    },
+    "Products" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orderdetailses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Orderdetails",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "quantityInStock" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "productScale" : {
+            "type" : "string"
+          },
+          "msrp" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "productDescription" : {
+            "type" : "string"
+          },
+          "productCode" : {
+            "type" : "string"
+          },
+          "buyPrice" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "productVendor" : {
+            "type" : "string"
+          },
+          "productlines" : {
+            "$ref" : "#/definitions/Productlines",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "productName" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Products",
+      "x-WM-TAGS" : [ "PaymentsController", "ProductsController", "ProductlinesController" ]
+    },
+    "CustomQueryParam" : {
+      "properties" : {
+        "paramValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "paramName" : {
+          "type" : "string"
+        },
+        "paramType" : {
+          "type" : "string"
+        },
+        "isList" : {
+          "type" : "boolean"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQueryParam",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "QueryFilter" : {
+      "properties" : {
+        "attributeType" : {
+          "type" : "string",
+          "enum" : [ "BIG_DECIMAL", "BIG_INTEGER", "BLOB", "BOOLEAN", "BYTE", "CALENDAR", "CALENDAR_DATE", "CHARACTER", "CLOB", "CURRENCY", "DATE", "DOUBLE", "FLOAT", "INTEGER", "LONG", "LOCALE", "STRING", "SHORT", "TEXT", "TIME", "DATETIME", "TIMESTAMP", "TIMEZONE", "TRUE_FALSE", "YES_NO" ]
+        },
+        "filterCondition" : {
+          "type" : "string",
+          "enum" : [ "STARTING_WITH", "ENDING_WITH", "CONTAINING", "EQUALS", "NOT_EQUALS", "BETWEEN", "LESS_THAN", "LESS_THAN_OR_EQUALS", "GREATER_THAN", "GREATER_THAN_OR_EQUALS", "NULL", "EMPTY", "NULL_OR_EMPTY" ]
+        },
+        "attributeValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "attributeName" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.expression.QueryFilter",
+      "x-WM-TAGS" : [ "Mytable2Controller", "ArticleTagsController", "PaymentsController", "ProductsController", "OrderdetailsController", "OrdersController", "OfficesController", "CustomersController", "ProductlinesController", "MytableController", "EmployeesController" ]
+    },
+    "InputStream" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Closeable"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.InputStream",
+      "x-WM-TAGS" : [ "ProductlinesController" ]
+    },
+    "Orders" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "status" : {
+            "type" : "string"
+          },
+          "shippedDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "orderNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "orderDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "orderdetailses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Orderdetails",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "requiredDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "customers" : {
+            "$ref" : "#/definitions/Customers",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "comments" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Orders",
+      "x-WM-TAGS" : [ "PaymentsController", "OrdersController", "CustomersController" ]
+    },
+    "CustomProcedureParam" : {
+      "properties" : {
+        "paramValue" : {
+          "$ref" : "#/definitions/Object",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "paramName" : {
+          "type" : "string"
+        },
+        "valueType" : {
+          "type" : "string"
+        },
+        "procedureParamType" : {
+          "type" : "string",
+          "enum" : [ "IN", "OUT", "IN_OUT" ]
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedureParam",
+      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
+    },
+    "ArticleTags" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "tagId" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "articleId" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "blank" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.ArticleTags",
+      "x-WM-TAGS" : [ "ArticleTagsController" ]
+    },
+    "Mytable" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "columnB" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "columnC" : {
+            "type" : "string"
+          },
+          "columnA" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Mytable",
+      "x-WM-TAGS" : [ "MytableController" ]
+    },
+    "Downloadable" : {
+      "properties" : {
+        "contents" : {
+          "$ref" : "#/definitions/InputStream",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "fileName" : {
+          "type" : "string"
+        },
+        "inline" : {
+          "type" : "boolean"
+        },
+        "contentLength" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contentType" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.file.model.Downloadable",
+      "x-WM-TAGS" : [ "ProductlinesController" ]
+    },
+    "Iterable" : {
+      "x-WM-TAGS" : [ "Mytable2Controller" ]
+    },
+    "Page" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Slice"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "numberOfElements" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "totalPages" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "first" : {
+            "type" : "boolean"
+          },
+          "totalElements" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "number" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "sort" : {
+            "$ref" : "#/definitions/Sort",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "content" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Object",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "last" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Page",
+      "x-WM-TAGS" : [ "Mytable2Controller", "ArticleTagsController", "PaymentsController", "QueryExecutionController", "ProductsController", "OrderdetailsController", "OrdersController", "OfficesController", "CustomersController", "ProductlinesController", "MytableController", "EmployeesController" ]
+    },
+    "Serializable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Serializable",
+      "x-WM-TAGS" : [ "Mytable2Controller", "ArticleTagsController", "PaymentsController", "MytableController" ]
+    },
+    "AutoCloseable" : {
+      "x-WM-TAGS" : [ "ProductlinesController" ]
+    },
+    "CustomQuery" : {
+      "properties" : {
+        "queryStr" : {
+          "type" : "string"
+        },
+        "nativeSql" : {
+          "type" : "boolean"
+        },
+        "queryParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomQueryParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomQuery",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "DownloadResponse" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Downloadable"
+      }, {
+        "properties" : {
+          "contentType" : {
+            "type" : "string"
+          },
+          "fileName" : {
+            "type" : "string"
+          },
+          "inline" : {
+            "type" : "boolean"
+          },
+          "contents" : {
+            "$ref" : "#/definitions/InputStream",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.file.model.DownloadResponse",
+      "x-WM-TAGS" : [ "ProductlinesController" ]
+    },
+    "Object" : {
+      "x-WM-TAGS" : [ "Mytable2Controller", "QueryExecutionController", "ProcedureExecutionController" ]
+    },
+    "Sort" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "orders" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Sort$Order",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort",
+      "x-WM-TAGS" : [ "Mytable2Controller" ]
+    },
+    "Employees" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "extension" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "customerses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Customers",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "offices" : {
+            "$ref" : "#/definitions/Offices",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "employeesesForReportsTo" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Employees",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "employeesByReportsTo" : {
+            "$ref" : "#/definitions/Employees",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "employeeNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "jobTitle" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Employees",
+      "x-WM-TAGS" : [ "PaymentsController", "OfficesController", "EmployeesController" ]
+    },
+    "Sort$Order" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "direction" : {
+            "type" : "string",
+            "enum" : [ "ASC", "DESC" ]
+          },
+          "nullHandling" : {
+            "type" : "string",
+            "enum" : [ "NATIVE", "NULLS_FIRST", "NULLS_LAST" ]
+          },
+          "ignoreCase" : {
+            "type" : "boolean"
+          },
+          "property" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Sort.Order",
+      "x-WM-TAGS" : [ "Mytable2Controller" ]
+    },
+    "Offices" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "state" : {
+            "type" : "string"
+          },
+          "addressLine2" : {
+            "type" : "string"
+          },
+          "country" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "addressLine1" : {
+            "type" : "string"
+          },
+          "territory" : {
+            "type" : "string"
+          },
+          "postalCode" : {
+            "type" : "string"
+          },
+          "phone" : {
+            "type" : "string"
+          },
+          "officeCode" : {
+            "type" : "string"
+          },
+          "employeeses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Employees",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Offices",
+      "x-WM-TAGS" : [ "PaymentsController", "OfficesController" ]
+    },
+    "Closeable" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/AutoCloseable"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Closeable",
+      "x-WM-TAGS" : [ "ProductlinesController" ]
+    },
+    "Payments" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "customers" : {
+            "$ref" : "#/definitions/Customers",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "checkNumber" : {
+            "type" : "string"
+          },
+          "customerNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "paymentDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "amount" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Payments",
+      "x-WM-TAGS" : [ "PaymentsController", "CustomersController" ]
+    },
+    "Productlines" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "htmlDescription" : {
+            "type" : "string"
+          },
+          "image" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "type" : "string",
+              "format" : "byte"
+            }
+          },
+          "productses" : {
+            "type" : "array",
+            "uniqueItems" : true,
+            "items" : {
+              "$ref" : "#/definitions/Products",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "textDescriptio" : {
+            "type" : "string"
+          },
+          "textDescription" : {
+            "type" : "string"
+          },
+          "productLine" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Productlines",
+      "x-WM-TAGS" : [ "PaymentsController", "ProductlinesController" ]
+    },
+    "Slice" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Iterable"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "numberOfElements" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "first" : {
+            "type" : "boolean"
+          },
+          "number" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "sort" : {
+            "$ref" : "#/definitions/Sort",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "content" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "$ref" : "#/definitions/Object",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            },
+            "x-WM-IS_LIST" : true
+          },
+          "last" : {
+            "type" : "boolean"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.data.domain.Slice",
+      "x-WM-TAGS" : [ "Mytable2Controller" ]
+    },
+    "Orderdetails" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Serializable"
+      }, {
+        "properties" : {
+          "priceEach" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "productCode" : {
+            "type" : "string"
+          },
+          "orderNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "orders" : {
+            "$ref" : "#/definitions/Orders",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "orderLineNumber" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "products" : {
+            "$ref" : "#/definitions/Products",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "quantityOrdered" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.Orderdetails",
+      "x-WM-TAGS" : [ "PaymentsController", "ProductsController", "OrderdetailsController", "OrdersController" ]
+    },
+    "CustomProcedure" : {
+      "properties" : {
+        "procedureStr" : {
+          "type" : "string"
+        },
+        "procedureParams" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/CustomProcedureParam",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.data.model.CustomProcedure",
+      "x-WM-TAGS" : [ "ProcedureExecutionController" ]
+    }
+  }
+}

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dbscenarios_30mar.classicmodels">
+  <class table="`orderdetails`" name="com.dbscenarios_30mar.classicmodels.Orderdetails" entity-name="com.dbscenarios_30mar.classicmodels.Orderdetails">
+    <composite-id mapped="true" class="OrderdetailsId">
+      <key-property name="orderNumber" type="java.lang.Integer">
+        <column name="`orderNumber`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="productCode" type="java.lang.String">
+        <column name="`productCode`" length="15" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <property name="quantityOrdered" type="java.lang.Integer">
+      <column name="`quantityOrdered`" length="255" not-null="true" precision="10"/>
+    </property>
+    <property name="priceEach" type="java.math.BigDecimal">
+      <column name="`priceEach`" length="255" not-null="true" precision="22" scale="9"/>
+    </property>
+    <property name="orderLineNumber" type="java.lang.Short">
+      <column name="`orderLineNumber`" length="255" not-null="true" precision="5"/>
+    </property>
+    <many-to-one
+      name="orders"
+      class="Orders"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-orderNumber">
+        orderNumber
+      </meta>
+      <meta attribute="setter-override">
+        this.orderNumber = orders.getOrderNumber();
+      </meta>
+      <column name="`orderNumber`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+    <many-to-one
+      name="products"
+      class="Products"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-productCode">
+        productCode
+      </meta>
+      <meta attribute="setter-override">
+        this.productCode = products.getProductCode();
+      </meta>
+      <column name="`productCode`" length="15" not-null="true" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`employees`" name="com.dbscenarios_30mar.classicmodels.Employees" entity-name="com.dbscenarios_30mar.classicmodels.Employees">
+    <id name="employeeNumber" type="java.lang.Integer">
+      <column name="`employeeNumber`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="lastName" type="java.lang.String">
+      <column name="`lastName`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="firstName" type="java.lang.String">
+      <column name="`firstName`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="extension" type="java.lang.String">
+      <column name="`extension`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="email" type="java.lang.String">
+      <column name="`email`" length="100" not-null="true" precision="19"/>
+    </property>
+    <property name="jobTitle" type="java.lang.String">
+      <column name="`jobTitle`" length="50" not-null="true" precision="19"/>
+    </property>
+    <many-to-one
+      name="employeesByReportsTo"
+      class="Employees"
+      fetch="select">
+      <meta attribute="mapping-reportsTo">
+        employeeNumber
+      </meta>
+      <meta attribute="ignore-properties">
+        &quot;employeesByReportsTo&quot;, &quot;employeesesForReportsTo&quot;
+      </meta>
+      <column name="`reportsTo`" length="255" not-null="false" precision="10"/>
+    </many-to-one>
+    <set name="employeesesForReportsTo" table="employees" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`reportsTo`"/>
+      </key>
+      <one-to-many class="Employees"/>
+    </set>
+    <many-to-one
+      name="offices"
+      class="Offices"
+      fetch="select">
+      <meta attribute="mapping-officeCode">
+        officeCode
+      </meta>
+      <column name="`officeCode`" length="10" not-null="true" precision="19"/>
+    </many-to-one>
+    <set name="customerses" table="customers" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`salesRepEmployeeNumber`"/>
+      </key>
+      <one-to-many class="Customers"/>
+    </set>
+  </class>
+  <class table="`products`" name="com.dbscenarios_30mar.classicmodels.Products" entity-name="com.dbscenarios_30mar.classicmodels.Products">
+    <id name="productCode" type="java.lang.String">
+      <column name="`productCode`" length="15" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="productName" type="java.lang.String">
+      <column name="`productName`" length="70" not-null="true" precision="19"/>
+    </property>
+    <property name="productScale" type="java.lang.String">
+      <column name="`productScale`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="productVendor" type="java.lang.String">
+      <column name="`productVendor`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="productDescription" type="java.lang.String">
+      <column name="`productDescription`" length="65535" not-null="true" precision="19"/>
+    </property>
+    <property name="quantityInStock" type="java.lang.Short">
+      <column name="`quantityInStock`" length="255" not-null="true" precision="5"/>
+    </property>
+    <property name="buyPrice" type="java.math.BigDecimal">
+      <column name="`buyPrice`" length="255" not-null="true" precision="22" scale="9"/>
+    </property>
+    <property name="msrp" type="java.math.BigDecimal">
+      <column name="`MSRP`" length="255" not-null="true" precision="22" scale="9"/>
+    </property>
+    <set name="orderdetailses" table="orderdetails" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`productCode`"/>
+      </key>
+      <one-to-many class="Orderdetails"/>
+    </set>
+    <many-to-one
+      name="productlines"
+      class="Productlines"
+      fetch="select">
+      <meta attribute="mapping-productLine">
+        productLine
+      </meta>
+      <column name="`productLine`" length="50" not-null="true" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`orders`" name="com.dbscenarios_30mar.classicmodels.Orders" entity-name="com.dbscenarios_30mar.classicmodels.Orders">
+    <id name="orderNumber" type="java.lang.Integer">
+      <column name="`orderNumber`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="orderDate" type="java.sql.Date">
+      <column name="`orderDate`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="requiredDate" type="java.sql.Date">
+      <column name="`requiredDate`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="shippedDate" type="java.sql.Date">
+      <column name="`shippedDate`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="status" type="java.lang.String">
+      <column name="`status`" length="15" not-null="true" precision="19"/>
+    </property>
+    <property name="comments" type="java.lang.String">
+      <column name="`comments`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <set name="orderdetailses" table="orderdetails" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`orderNumber`"/>
+      </key>
+      <one-to-many class="Orderdetails"/>
+    </set>
+    <many-to-one
+      name="customers"
+      class="Customers"
+      fetch="select">
+      <meta attribute="mapping-customerNumber">
+        customerNumber
+      </meta>
+      <column name="`customerNumber`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+  </class>
+  <class table="`customers`" name="com.dbscenarios_30mar.classicmodels.Customers" entity-name="com.dbscenarios_30mar.classicmodels.Customers">
+    <id name="customerNumber" type="java.lang.Integer">
+      <column name="`customerNumber`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="customerName" type="java.lang.String">
+      <column name="`customerName`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="contactLastName" type="java.lang.String">
+      <column name="`contactLastName`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="contactFirstName" type="java.lang.String">
+      <column name="`contactFirstName`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="phone" type="java.lang.String">
+      <column name="`phone`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="addressLine1" type="java.lang.String">
+      <column name="`addressLine1`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="addressLine2" type="java.lang.String">
+      <column name="`addressLine2`" length="50" not-null="false" precision="19"/>
+    </property>
+    <property name="city" type="java.lang.String">
+      <column name="`city`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="state" type="java.lang.String">
+      <column name="`state`" length="50" not-null="false" precision="19"/>
+    </property>
+    <property name="postalCode" type="java.lang.String">
+      <column name="`postalCode`" length="15" not-null="false" precision="19"/>
+    </property>
+    <property name="country" type="java.lang.String">
+      <column name="`country`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="creditLimit" type="java.math.BigDecimal">
+      <column name="`creditLimit`" length="255" not-null="false" precision="22" scale="9"/>
+    </property>
+    <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`customerNumber`"/>
+      </key>
+      <one-to-many class="Orders"/>
+    </set>
+    <many-to-one
+      name="employees"
+      class="Employees"
+      fetch="select">
+      <meta attribute="mapping-salesRepEmployeeNumber">
+        employeeNumber
+      </meta>
+      <column name="`salesRepEmployeeNumber`" length="255" not-null="false" precision="10"/>
+    </many-to-one>
+    <set name="paymentses" table="payments" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`customerNumber`"/>
+      </key>
+      <one-to-many class="Payments"/>
+    </set>
+  </class>
+  <class table="`offices`" name="com.dbscenarios_30mar.classicmodels.Offices" entity-name="com.dbscenarios_30mar.classicmodels.Offices">
+    <id name="officeCode" type="java.lang.String">
+      <column name="`officeCode`" length="10" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="city" type="java.lang.String">
+      <column name="`city`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="phone" type="java.lang.String">
+      <column name="`phone`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="addressLine1" type="java.lang.String">
+      <column name="`addressLine1`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="addressLine2" type="java.lang.String">
+      <column name="`addressLine2`" length="50" not-null="false" precision="19"/>
+    </property>
+    <property name="state" type="java.lang.String">
+      <column name="`state`" length="50" not-null="false" precision="19"/>
+    </property>
+    <property name="country" type="java.lang.String">
+      <column name="`country`" length="50" not-null="true" precision="19"/>
+    </property>
+    <property name="postalCode" type="java.lang.String">
+      <column name="`postalCode`" length="15" not-null="true" precision="19"/>
+    </property>
+    <property name="territory" type="java.lang.String">
+      <column name="`territory`" length="10" not-null="true" precision="19"/>
+    </property>
+    <set name="employeeses" table="employees" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`officeCode`"/>
+      </key>
+      <one-to-many class="Employees"/>
+    </set>
+  </class>
+  <class table="`article_tags`" name="com.dbscenarios_30mar.classicmodels.ArticleTags" entity-name="com.dbscenarios_30mar.classicmodels.ArticleTags">
+    <composite-id mapped="true" class="ArticleTagsId">
+      <key-property name="articleId" type="java.lang.Integer">
+        <column name="`article_id`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="tagId" type="java.lang.Integer">
+        <column name="`tag_id`" length="255" not-null="true" precision="10"/>
+      </key-property>
+    </composite-id>
+    <property name="blank" type="java.lang.String">
+      <column name="`blank`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`productlines`" name="com.dbscenarios_30mar.classicmodels.Productlines" entity-name="com.dbscenarios_30mar.classicmodels.Productlines">
+    <id name="productLine" type="java.lang.String">
+      <column name="`productLine`" length="50" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="textDescriptio" type="java.lang.String">
+      <column name="`textDescriptio`" length="4000" not-null="false" precision="19"/>
+    </property>
+    <property name="htmlDescription" type="java.lang.String">
+      <column name="`htmlDescription`" length="16777215" not-null="false" precision="19"/>
+    </property>
+    <property name="image" type="binary">
+      <column name="`image`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="textDescription" type="java.lang.String">
+      <column name="`textDescription`" length="4000" not-null="false" precision="19"/>
+    </property>
+    <set name="productses" table="products" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`productLine`"/>
+      </key>
+      <one-to-many class="Products"/>
+    </set>
+  </class>
+  <class table="`mytable2`" name="com.dbscenarios_30mar.classicmodels.Mytable2" entity-name="com.dbscenarios_30mar.classicmodels.Mytable2">
+    <composite-id mapped="true" class="Mytable2Id">
+      <key-property name="id" type="java.lang.Integer">
+        <column name="`ID`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="col1" type="java.lang.Integer">
+        <column name="`col1`" length="255" not-null="true" precision="10"/>
+      </key-property>
+    </composite-id>
+    <property name="col2" type="java.lang.String">
+      <column name="`col2`" length="20" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`mytable`" name="com.dbscenarios_30mar.classicmodels.Mytable" entity-name="com.dbscenarios_30mar.classicmodels.Mytable">
+    <composite-id mapped="true" class="MytableId">
+      <key-property name="columnA" type="java.lang.Integer">
+        <column name="`column_a`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="columnB" type="java.lang.Integer">
+        <column name="`column_b`" length="255" not-null="true" precision="10"/>
+      </key-property>
+    </composite-id>
+    <property name="columnC" type="java.lang.String">
+      <column name="`column_c`" length="50" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`payments`" name="com.dbscenarios_30mar.classicmodels.Payments" entity-name="com.dbscenarios_30mar.classicmodels.Payments">
+    <composite-id mapped="true" class="PaymentsId">
+      <key-property name="customerNumber" type="java.lang.Integer">
+        <column name="`customerNumber`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="checkNumber" type="java.lang.String">
+        <column name="`checkNumber`" length="50" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <property name="paymentDate" type="java.sql.Date">
+      <column name="`paymentDate`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="amount" type="java.math.BigDecimal">
+      <column name="`amount`" length="255" not-null="true" precision="22" scale="9"/>
+    </property>
+    <many-to-one
+      name="customers"
+      class="Customers"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-customerNumber">
+        customerNumber
+      </meta>
+      <meta attribute="setter-override">
+        this.customerNumber = customers.getCustomerNumber();
+      </meta>
+      <column name="`customerNumber`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>
