@@ -26,6 +26,17 @@
         <parameter name="inc" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
         <return typeRef="classicmodelsMultipleINOUTsrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="InInOut">
+        <parameter name="Add" typeRef="java.lang.Integer" isList="false" parameterType="IN_OUT"/>
+        <parameter name="inc" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <return typeRef="classicmodelsInInOutrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="loops1">
+        <return typeRef="classicmodelsloops1rtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="Loops2">
+        <return typeRef="classicmodelsLoops2rtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.dbscenarios_30mar.classicmodels.Mytable2">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
@@ -149,6 +160,15 @@
             <element name="Add" typeRef="java.lang.Integer" isList="false"/>
             <element name="Mul" typeRef="java.lang.Integer" isList="false"/>
             <element name="Divde" typeRef="java.lang.Integer" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsInInOutrtnType" name="classicmodelsInInOutrtnType">
+            <element name="Add" typeRef="java.lang.Integer" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsloops1rtnType" name="classicmodelsloops1rtnType">
+            <element name="str" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsLoops2rtnType" name="classicmodelsLoops2rtnType">
+            <element name="str" typeRef="java.lang.String" isList="false"/>
         </dataobject>
     </dataobjects>
 </service>

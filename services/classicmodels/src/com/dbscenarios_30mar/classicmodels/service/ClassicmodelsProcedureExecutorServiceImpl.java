@@ -62,6 +62,38 @@ public class ClassicmodelsProcedureExecutorServiceImpl implements ClassicmodelsP
         return procedureExecutor.executeNamedProcedure("MultipleINOUTs", params);
 
 	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeInInOut(java.lang.Integer Add,java.lang.Integer inc)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("Add", Add);
+        params.put("inc", inc);
+        return procedureExecutor.executeNamedProcedure("InInOut", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeLoops1()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("loops1", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeLoops2()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("Loops2", params);
+
+	}
 
 	@Transactional(value = "classicmodelsTransactionManager")
 	@Override

@@ -266,5 +266,78 @@
       "javaType" : "classicmodelsMultipleINOUTsrtnType",
       "name" : "classicmodelsMultipleINOUTsrtnType"
     } ]
+  }, {
+    "name" : "InInOut",
+    "procedure" : "call set_counter(:Add, :inc)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "Add",
+      "procedureParamType" : "IN_OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "33",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "inc",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "32",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "Add",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsInInOutrtnType",
+      "name" : "classicmodelsInInOutrtnType"
+    } ]
+  }, {
+    "name" : "loops1",
+    "procedure" : "call mysql_test_loop()",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "str",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsloops1rtnType",
+      "name" : "classicmodelsloops1rtnType"
+    } ]
+  }, {
+    "name" : "Loops2",
+    "procedure" : "call test_mysql_loop()",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "str",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsLoops2rtnType",
+      "name" : "classicmodelsLoops2rtnType"
+    } ]
   } ]
 }

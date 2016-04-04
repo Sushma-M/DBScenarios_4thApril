@@ -31,7 +31,27 @@ public class ProcedureExecutionController {
     @Autowired
     private ClassicmodelsProcedureExecutorService procedureService;
 
+    @RequestMapping(value = "/procedure/execute/Loops2", method = RequestMethod.GET)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeLoops2() {
+        LOGGER.debug("Executing named procedure Loops2");
+        List<Object> result = procedureService.executeLoops2();
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/InInOut", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeInInOut(@RequestParam(value = "Add", required = false) java.lang.Integer Add, @RequestParam(value = "inc", required = false) java.lang.Integer inc) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure InInOut");
+        List<Object> result = procedureService.executeInInOut(Add, inc);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
     @RequestMapping(value = "/procedure/execute/MultipleINOUTs", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Process request to execute Procedure")
     public List<Object> executeMultipleINOUTs(@RequestParam(value = "Add", required = false) java.lang.Integer Add, @RequestParam(value = "Mul", required = false) java.lang.Integer Mul, @RequestParam(value = "Divde", required = false) java.lang.Integer Divde, @RequestParam(value = "inc", required = false) java.lang.Integer inc) throws QueryParameterMismatchException {
         LOGGER.debug("Executing named procedure MultipleINOUTs");
@@ -56,6 +76,16 @@ public class ProcedureExecutionController {
     public List<Object> executeMultipleOUTs2(@RequestParam(value = "cutomerNumber", required = false) java.lang.Integer cutomerNumber) throws QueryParameterMismatchException {
         LOGGER.debug("Executing named procedure MultipleOUTs2");
         List<Object> result = procedureService.executeMultipleOUTs2(cutomerNumber);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/loops1", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeLoops1() {
+        LOGGER.debug("Executing named procedure loops1");
+        List<Object> result = procedureService.executeLoops1();
         LOGGER.debug("got the result of named procedure {}", result);
         return result;
     }

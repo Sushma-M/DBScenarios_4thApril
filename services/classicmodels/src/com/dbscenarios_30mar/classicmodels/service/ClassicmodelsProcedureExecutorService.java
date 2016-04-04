@@ -19,6 +19,15 @@ public interface ClassicmodelsProcedureExecutorService {
     List<Object> executeMultipleINOUTs( java.lang.Integer Add, java.lang.Integer Mul, java.lang.Integer Divde, java.lang.Integer inc) throws QueryParameterMismatchException;
 
 
+    List<Object> executeInInOut( java.lang.Integer Add, java.lang.Integer inc) throws QueryParameterMismatchException;
+
+
+    List<Object> executeLoops1() throws QueryParameterMismatchException;
+
+
+    List<Object> executeLoops2() throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 
