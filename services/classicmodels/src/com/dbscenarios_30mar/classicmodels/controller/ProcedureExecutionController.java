@@ -31,11 +31,11 @@ public class ProcedureExecutionController {
     @Autowired
     private ClassicmodelsProcedureExecutorService procedureService;
 
-    @RequestMapping(value = "/procedure/execute/Loops2", method = RequestMethod.GET)
+    @RequestMapping(value = "/procedure/execute/ErrorHandling", method = RequestMethod.GET)
     @ApiOperation(value = "Process request to execute Procedure")
-    public List<Object> executeLoops2() {
-        LOGGER.debug("Executing named procedure Loops2");
-        List<Object> result = procedureService.executeLoops2();
+    public List<Object> executeErrorHandling(@RequestParam(value = "art_id", required = false) java.lang.Integer art_id, @RequestParam(value = "tag_id", required = false) java.lang.Integer tag_id, @RequestParam(value = "blnak", required = false) java.lang.String blnak) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure ErrorHandling");
+        List<Object> result = procedureService.executeErrorHandling(art_id, tag_id, blnak);
         LOGGER.debug("got the result of named procedure {}", result);
         return result;
     }
@@ -46,6 +46,26 @@ public class ProcedureExecutionController {
     public List<Object> executeInInOut(@RequestParam(value = "Add", required = false) java.lang.Integer Add, @RequestParam(value = "inc", required = false) java.lang.Integer inc) throws QueryParameterMismatchException {
         LOGGER.debug("Executing named procedure InInOut");
         List<Object> result = procedureService.executeInInOut(Add, inc);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/Loops1", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeLoops1() {
+        LOGGER.debug("Executing named procedure Loops1");
+        List<Object> result = procedureService.executeLoops1();
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/Loops2", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeLoops2() {
+        LOGGER.debug("Executing named procedure Loops2");
+        List<Object> result = procedureService.executeLoops2();
         LOGGER.debug("got the result of named procedure {}", result);
         return result;
     }
@@ -80,12 +100,22 @@ public class ProcedureExecutionController {
         return result;
     }
 
-    @RequestMapping(value = "/procedure/execute/loops1", method = RequestMethod.GET)
+    @RequestMapping(value = "/procedure/execute/caseOut", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Process request to execute Procedure")
-    public List<Object> executeLoops1() {
-        LOGGER.debug("Executing named procedure loops1");
-        List<Object> result = procedureService.executeLoops1();
+    public List<Object> executeCaseOut(@RequestParam(value = "custNum", required = false) java.lang.Integer custNum) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure caseOut");
+        List<Object> result = procedureService.executeCaseOut(custNum);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/ifelse", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeIfelse(@RequestParam(value = "custNum", required = false) java.lang.Integer custNum) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure ifelse");
+        List<Object> result = procedureService.executeIfelse(custNum);
         LOGGER.debug("got the result of named procedure {}", result);
         return result;
     }

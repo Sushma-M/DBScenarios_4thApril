@@ -77,21 +77,56 @@ public class ClassicmodelsProcedureExecutorServiceImpl implements ClassicmodelsP
 	@Transactional(value = "classicmodelsTransactionManager")
 	@Override
 
-	public List<Object> executeLoops1()
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        return procedureExecutor.executeNamedProcedure("loops1", params);
-
-	}
-	@Transactional(value = "classicmodelsTransactionManager")
-	@Override
-
 	public List<Object> executeLoops2()
 
 	throws QueryParameterMismatchException{
         Map<String, Object> params = new HashMap<String, Object>();
         return procedureExecutor.executeNamedProcedure("Loops2", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeIfelse(java.lang.Integer custNum)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("custNum", custNum);
+        return procedureExecutor.executeNamedProcedure("ifelse", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeLoops1()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("Loops1", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeCaseOut(java.lang.Integer custNum)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("custNum", custNum);
+        return procedureExecutor.executeNamedProcedure("caseOut", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeErrorHandling(java.lang.Integer art_id,java.lang.Integer tag_id,java.lang.String blnak)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("art_id", art_id);
+        params.put("tag_id", tag_id);
+        params.put("blnak", blnak);
+        return procedureExecutor.executeNamedProcedure("ErrorHandling", params);
 
 	}
 

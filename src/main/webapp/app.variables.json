@@ -761,6 +761,142 @@
     } ],
     "package" : "com.dbscenarios_30mar.classicmodels.Employees"
   },
+  "ClassicmodelsExecuteCaseOut" : {
+    "_id" : "wm-ClassicmodelsExecuteCaseOut-wm.ServiceVariable-1459765595226",
+    "name" : "ClassicmodelsExecuteCaseOut",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "custNum",
+      "value" : "125",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelscaseOutrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeCaseOut",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/caseOut",
+      "httpMethod" : "get",
+      "name" : "executeCaseOut",
+      "parameters" : [ {
+        "name" : "custNum",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteErrorHandling" : {
+    "_id" : "wm-ClassicmodelsExecuteErrorHandling-wm.ServiceVariable-1459765885479",
+    "name" : "ClassicmodelsExecuteErrorHandling",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "art_id",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "tag_id",
+      "value" : "bind:Widgets.text3.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "blnak",
+      "value" : "bind:Widgets.text4.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "classicmodelsErrorHandlingrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeErrorHandling",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/ErrorHandling",
+      "httpMethod" : "get",
+      "name" : "executeErrorHandling",
+      "parameters" : [ {
+        "name" : "art_id",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "tag_id",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "blnak",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteIfelse" : {
+    "_id" : "wm-ClassicmodelsExecuteIfelse-wm.ServiceVariable-1459765386273",
+    "name" : "ClassicmodelsExecuteIfelse",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "custNum",
+      "value" : "103",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelsifelsertnType",
+    "service" : "classicmodels",
+    "operation" : "executeIfelse",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/ifelse",
+      "httpMethod" : "get",
+      "name" : "executeIfelse",
+      "parameters" : [ {
+        "name" : "custNum",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
   "ClassicmodelsExecuteInInOut" : {
     "_id" : "wm-ClassicmodelsExecuteInInOut-wm.ServiceVariable-1459763544182",
     "name" : "ClassicmodelsExecuteInInOut",
@@ -815,13 +951,13 @@
     "owner" : "App",
     "category" : "wm.ServiceVariable",
     "dataBinding" : [ ],
-    "type" : "classicmodelsloops1rtnType",
+    "type" : "classicmodelsLoops1rtnType",
     "service" : "classicmodels",
     "operation" : "executeLoops1",
     "operationType" : "get",
     "serviceType" : "DataService",
     "wmServiceOperationInfo" : {
-      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/loops1",
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/Loops1",
       "httpMethod" : "get",
       "name" : "executeLoops1",
       "parameters" : [ ]

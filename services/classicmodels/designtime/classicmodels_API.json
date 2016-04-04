@@ -33,16 +33,16 @@
     "x-WM-CONTROLLER_NAME" : "Productlines",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "ArticleTagsController",
-    "description" : "Exposes APIs to work with ArticleTags resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ArticleTagsController",
-    "x-WM-CONTROLLER_NAME" : "ArticleTags",
-    "x-WM-VERSION" : ""
-  }, {
     "name" : "MytableController",
     "description" : "Exposes APIs to work with Mytable resource.",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.MytableController",
     "x-WM-CONTROLLER_NAME" : "Mytable",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "OrderdetailsController",
+    "description" : "Exposes APIs to work with Orderdetails resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrderdetailsController",
+    "x-WM-CONTROLLER_NAME" : "Orderdetails",
     "x-WM-VERSION" : ""
   }, {
     "name" : "ProcedureExecutionController",
@@ -51,10 +51,10 @@
     "x-WM-CONTROLLER_NAME" : "ProcedureExecution",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "OrderdetailsController",
-    "description" : "Exposes APIs to work with Orderdetails resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrderdetailsController",
-    "x-WM-CONTROLLER_NAME" : "Orderdetails",
+    "name" : "ArticleTagsController",
+    "description" : "Exposes APIs to work with ArticleTags resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ArticleTagsController",
+    "x-WM-CONTROLLER_NAME" : "ArticleTags",
     "x-WM-VERSION" : ""
   }, {
     "name" : "ProductsController",
@@ -3618,28 +3618,36 @@
       "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses",
       "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}/orderdetailses"
     },
-    "/classicmodels/procedureExecutor/procedure/execute/InInOut" : {
+    "/classicmodels/procedureExecutor/procedure/execute/ErrorHandling" : {
       "get" : {
         "tags" : [ "ProcedureExecutionController" ],
         "description" : "Process request to execute Procedure",
-        "operationId" : "ProcedureExecutionController-executeInInOut-2--849622875",
+        "operationId" : "ProcedureExecutionController-executeErrorHandling-3--176015810",
         "parameters" : [ {
-          "name" : "Add",
+          "name" : "art_id",
           "in" : "query",
           "required" : false,
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "5a57aa97-0d2d-48c7-9b4b-e0f8ebe71257",
+          "x-WM-UUID" : "d7719093-97b1-4c0a-8069-15f27b57b2ef",
           "x-WM-EDITABLE" : true
         }, {
-          "name" : "inc",
+          "name" : "tag_id",
           "in" : "query",
           "required" : false,
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "42fc19b8-e599-4876-90db-0e1db3e5c6e9",
+          "x-WM-UUID" : "6f3edbfe-da4f-43d0-9987-1752ffcabb38",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "blnak",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "272ecad5-5ce2-421d-966a-02679628f81c",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3656,7 +3664,54 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "923d7cd9-83a4-4d9a-87ba-7477d4829b39",
+        "x-WM-OPERATION_UID" : "b9f60886-c75c-4f96-bc43-e5792f304b0e",
+        "x-WM-METHOD_NAME" : "executeErrorHandling",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/ErrorHandling",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/ErrorHandling"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/InInOut" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeInInOut-2--849622875",
+        "parameters" : [ {
+          "name" : "Add",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "bf362a4e-b8e5-4c00-b1eb-810172505262",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "inc",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "54dbb54f-04c0-4127-af35-531b21988ce6",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c8b4946a-d20f-48cc-bdec-78213f621bb7",
         "x-WM-METHOD_NAME" : "executeInInOut",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3664,6 +3719,34 @@
       "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
       "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/InInOut",
       "x-WM-RELATIVE_PATH" : "/procedure/execute/InInOut"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/Loops1" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeLoops1-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "68532dd6-1119-4cb1-a043-098273cc7a06",
+        "x-WM-METHOD_NAME" : "executeLoops1",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/Loops1",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/Loops1"
     },
     "/classicmodels/procedureExecutor/procedure/execute/Loops2" : {
       "get" : {
@@ -3684,7 +3767,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "3f08f840-1878-4ea0-862a-73a787cd6b9c",
+        "x-WM-OPERATION_UID" : "55af9f4d-2ca8-415e-8a57-22436527e8b6",
         "x-WM-METHOD_NAME" : "executeLoops2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3705,7 +3788,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "1c96ee9a-30e2-4cda-a8c5-3d34f6c2de83",
+          "x-WM-UUID" : "dc1a3c66-265c-4ea2-9c52-ee1b83d01132",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "Mul",
@@ -3714,7 +3797,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "033e8a4a-eab8-4867-a9e7-bc6e3c19a542",
+          "x-WM-UUID" : "cd3e61ec-9d9d-4550-b247-adab03c34f17",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "Divde",
@@ -3723,7 +3806,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "06ca240e-ea92-4d9c-a1ff-4beef3bc6d14",
+          "x-WM-UUID" : "6555df28-f6aa-4e6a-84c6-41c92d1578e3",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "inc",
@@ -3732,7 +3815,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "b8adb345-1992-4d20-8ea1-5c0daca26185",
+          "x-WM-UUID" : "0b45bcd1-04ad-4cf9-8ffc-af75fd76b0ae",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3749,7 +3832,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b8a1af5c-3d1f-468f-9a3f-3c237b51c9e5",
+        "x-WM-OPERATION_UID" : "92714848-e5a4-4baf-8e9a-75127902d1c5",
         "x-WM-METHOD_NAME" : "executeMultipleINOUTs",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3777,7 +3860,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "4c61e861-dadc-46de-b31f-319982d7be32",
+        "x-WM-OPERATION_UID" : "115aed76-db23-43a3-9f28-9ed249367674",
         "x-WM-METHOD_NAME" : "executeMultipleOUTs",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3798,7 +3881,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "4bfc4111-a5ce-4d1b-956a-4a226595798c",
+          "x-WM-UUID" : "3c657837-47d6-41a0-bfd5-9706134c59f5",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3815,7 +3898,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "17ef2d90-9d60-4e4d-a078-4600befcbcb3",
+        "x-WM-OPERATION_UID" : "24387409-725d-44ca-88c5-346299017778",
         "x-WM-METHOD_NAME" : "executeMultipleOUTs2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3824,11 +3907,21 @@
       "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/MultipleOUTs2",
       "x-WM-RELATIVE_PATH" : "/procedure/execute/MultipleOUTs2"
     },
-    "/classicmodels/procedureExecutor/procedure/execute/loops1" : {
+    "/classicmodels/procedureExecutor/procedure/execute/caseOut" : {
       "get" : {
         "tags" : [ "ProcedureExecutionController" ],
         "description" : "Process request to execute Procedure",
-        "operationId" : "ProcedureExecutionController-executeLoops1-0-17",
+        "operationId" : "ProcedureExecutionController-executeCaseOut-1--2056816673",
+        "parameters" : [ {
+          "name" : "custNum",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "ab4e6b62-cb89-4995-81ad-ad0cdc122869",
+          "x-WM-EDITABLE" : true
+        } ],
         "responses" : {
           "200" : {
             "description" : "Success",
@@ -3843,14 +3936,52 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "7c63ea73-93ce-4a21-8796-16c60eebf352",
-        "x-WM-METHOD_NAME" : "executeLoops1",
+        "x-WM-OPERATION_UID" : "cd5eab33-096f-4cea-90a2-ea8e1149655e",
+        "x-WM-METHOD_NAME" : "executeCaseOut",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
       "x-WM-TAG" : "ProcedureExecutionController",
       "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/loops1",
-      "x-WM-RELATIVE_PATH" : "/procedure/execute/loops1"
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/caseOut",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/caseOut"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/ifelse" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeIfelse-1--2056816673",
+        "parameters" : [ {
+          "name" : "custNum",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "5cbd43a7-877d-481b-ac58-707c8ada9939",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "b840311c-0157-4741-a7a9-e61b9696687c",
+        "x-WM-METHOD_NAME" : "executeIfelse",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/ifelse",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/ifelse"
     },
     "/classicmodels/procedureExecutor/procedure/execute/wm_custom" : {
       "post" : {
@@ -3866,7 +3997,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "8b9de1c4-77b5-41f2-9aad-89834eb2bb4b",
+          "x-WM-UUID" : "0a731927-5f22-46c8-9bea-60d611d9d792",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3883,7 +4014,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "df9af4c2-fc72-4f6b-afd7-3d73a72e2e3a",
+        "x-WM-OPERATION_UID" : "8d01bd7a-921e-47af-bc4a-c5c4fc6a04ce",
         "x-WM-METHOD_NAME" : "executeWMCustomProcedure",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },

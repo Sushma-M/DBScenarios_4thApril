@@ -22,10 +22,19 @@ public interface ClassicmodelsProcedureExecutorService {
     List<Object> executeInInOut( java.lang.Integer Add, java.lang.Integer inc) throws QueryParameterMismatchException;
 
 
+    List<Object> executeLoops2() throws QueryParameterMismatchException;
+
+
+    List<Object> executeIfelse( java.lang.Integer custNum) throws QueryParameterMismatchException;
+
+
     List<Object> executeLoops1() throws QueryParameterMismatchException;
 
 
-    List<Object> executeLoops2() throws QueryParameterMismatchException;
+    List<Object> executeCaseOut( java.lang.Integer custNum) throws QueryParameterMismatchException;
+
+
+    List<Object> executeErrorHandling( java.lang.Integer art_id, java.lang.Integer tag_id, java.lang.String blnak) throws QueryParameterMismatchException;
 
 
 	

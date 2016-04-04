@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="classicmodels" type="DataService" springFile="classicmodels.spring.xml">
+    <operation operationType="procedure" name="loops1">
+        <return typeRef="classicmodelsloops1rtnType" isList="false"/>
+    </operation>
     <operation operationType="procedure" name="MultipleOUTs">
         <parameter name="Ship" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
         <parameter name="Cancel" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
@@ -31,11 +34,27 @@
         <parameter name="inc" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
         <return typeRef="classicmodelsInInOutrtnType" isList="false"/>
     </operation>
-    <operation operationType="procedure" name="loops1">
-        <return typeRef="classicmodelsloops1rtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="Loops2">
         <return typeRef="classicmodelsLoops2rtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="ifelse">
+        <parameter name="custNum" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="customerLevel" typeRef="java.lang.String" isList="false" parameterType="OUT"/>
+        <return typeRef="classicmodelsifelsertnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="Loops1">
+        <return typeRef="classicmodelsLoops1rtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="caseOut">
+        <parameter name="custNum" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="customerLevel" typeRef="java.lang.String" isList="false" parameterType="OUT"/>
+        <return typeRef="classicmodelscaseOutrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="ErrorHandling">
+        <parameter name="art_id" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="tag_id" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="blnak" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="classicmodelsErrorHandlingrtnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.dbscenarios_30mar.classicmodels.Mytable2">
@@ -140,6 +159,9 @@
             <element name="products" typeRef="com.dbscenarios_30mar.classicmodels.Products" allowNull="true"/>
             <element name="quantityOrdered" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="classicmodelsloops1rtnType" name="classicmodelsloops1rtnType">
+            <element name="str" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
         <dataobject javaType="classicmodelsMultipleOUTsrtnType" name="classicmodelsMultipleOUTsrtnType">
             <element name="Ship" typeRef="java.lang.Integer" isList="false"/>
             <element name="Cancel" typeRef="java.lang.Integer" isList="false"/>
@@ -164,11 +186,20 @@
         <dataobject javaType="classicmodelsInInOutrtnType" name="classicmodelsInInOutrtnType">
             <element name="Add" typeRef="java.lang.Integer" isList="false"/>
         </dataobject>
-        <dataobject javaType="classicmodelsloops1rtnType" name="classicmodelsloops1rtnType">
-            <element name="str" typeRef="java.lang.String" isList="false"/>
-        </dataobject>
         <dataobject javaType="classicmodelsLoops2rtnType" name="classicmodelsLoops2rtnType">
             <element name="str" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsifelsertnType" name="classicmodelsifelsertnType">
+            <element name="customerLevel" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsLoops1rtnType" name="classicmodelsLoops1rtnType">
+            <element name="str" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelscaseOutrtnType" name="classicmodelscaseOutrtnType">
+            <element name="customerLevel" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsErrorHandlingrtnType" name="classicmodelsErrorHandlingrtnType">
+            <element name="msg" typeRef="java.lang.String" isList="false"/>
         </dataobject>
     </dataobjects>
 </service>

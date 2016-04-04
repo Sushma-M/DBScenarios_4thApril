@@ -302,25 +302,6 @@
       "name" : "classicmodelsInInOutrtnType"
     } ]
   }, {
-    "name" : "loops1",
-    "procedure" : "call mysql_test_loop()",
-    "comment" : "",
-    "description" : null,
-    "outputType" : null,
-    "returnsSingleResult" : false,
-    "procedureParams" : [ ],
-    "returnTypeMetadata" : [ {
-      "element" : [ {
-        "name" : "str",
-        "subType" : null,
-        "typeRef" : "java.lang.String",
-        "isList" : false,
-        "allowNull" : null
-      } ],
-      "javaType" : "classicmodelsloops1rtnType",
-      "name" : "classicmodelsloops1rtnType"
-    } ]
-  }, {
     "name" : "Loops2",
     "procedure" : "call test_mysql_loop()",
     "comment" : "",
@@ -338,6 +319,138 @@
       } ],
       "javaType" : "classicmodelsLoops2rtnType",
       "name" : "classicmodelsLoops2rtnType"
+    } ]
+  }, {
+    "name" : "ifelse",
+    "procedure" : "call getCustomerLevel(:custNum, :customerLevel)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "custNum",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "103",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "customerLevel",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.String",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "customerLevel",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsifelsertnType",
+      "name" : "classicmodelsifelsertnType"
+    } ]
+  }, {
+    "name" : "Loops1",
+    "procedure" : "call mysql_test_loop()",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "str",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsLoops1rtnType",
+      "name" : "classicmodelsLoops1rtnType"
+    } ]
+  }, {
+    "name" : "caseOut",
+    "procedure" : "call getCustomerLevelCase(:custNum, :customerLevel)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "custNum",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "103",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "customerLevel",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.String",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "customerLevel",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelscaseOutrtnType",
+      "name" : "classicmodelscaseOutrtnType"
+    } ]
+  }, {
+    "name" : "ErrorHandling",
+    "procedure" : "call insert_article_tags(:art_id, :tag_id, :blnak)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "art_id",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "1",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "tag_id",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "4",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "blnak",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.String",
+      "testValue" : "test2",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "msg",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsErrorHandlingrtnType",
+      "name" : "classicmodelsErrorHandlingrtnType"
     } ]
   } ]
 }
