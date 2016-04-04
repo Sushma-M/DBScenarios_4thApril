@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="classicmodels" type="DataService" springFile="classicmodels.spring.xml">
+    <operation operationType="procedure" name="MultipleOUTs">
+        <parameter name="Ship" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Cancel" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Resolve" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Dispute" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="InProcess" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="OnHold" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <return typeRef="classicmodelsMultipleOUTsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="MultipleOUTs2">
+        <parameter name="cutomerNumber" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="Ship" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Cancel" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Resolve" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="Dispute" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="InProcess" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <parameter name="OnHold" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <return typeRef="classicmodelsMultipleOUTs2rtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="MultipleINOUTs">
+        <parameter name="Add" typeRef="java.lang.Integer" isList="false" parameterType="IN_OUT"/>
+        <parameter name="Mul" typeRef="java.lang.Integer" isList="false" parameterType="IN_OUT"/>
+        <parameter name="Divde" typeRef="java.lang.Integer" isList="false" parameterType="IN_OUT"/>
+        <parameter name="inc" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <return typeRef="classicmodelsMultipleINOUTsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.dbscenarios_30mar.classicmodels.Mytable2">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
@@ -102,6 +128,27 @@
             <element name="orderLineNumber" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="products" typeRef="com.dbscenarios_30mar.classicmodels.Products" allowNull="true"/>
             <element name="quantityOrdered" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsMultipleOUTsrtnType" name="classicmodelsMultipleOUTsrtnType">
+            <element name="Ship" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Cancel" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Resolve" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Dispute" typeRef="java.lang.Integer" isList="false"/>
+            <element name="InProcess" typeRef="java.lang.Integer" isList="false"/>
+            <element name="OnHold" typeRef="java.lang.Integer" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsMultipleOUTs2rtnType" name="classicmodelsMultipleOUTs2rtnType">
+            <element name="Ship" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Cancel" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Resolve" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Dispute" typeRef="java.lang.Integer" isList="false"/>
+            <element name="InProcess" typeRef="java.lang.Integer" isList="false"/>
+            <element name="OnHold" typeRef="java.lang.Integer" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsMultipleINOUTsrtnType" name="classicmodelsMultipleINOUTsrtnType">
+            <element name="Add" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Mul" typeRef="java.lang.Integer" isList="false"/>
+            <element name="Divde" typeRef="java.lang.Integer" isList="false"/>
         </dataobject>
     </dataobjects>
 </service>

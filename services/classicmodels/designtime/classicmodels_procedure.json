@@ -1,5 +1,270 @@
 {
   "name" : "classicmodels",
   "description" : "Procedure for classicmodels",
-  "procedures" : [ ]
+  "procedures" : [ {
+    "name" : "MultipleOUTs",
+    "procedure" : "call get_order_count(:Ship, :Cancel, :Resolve, :Dispute, :InProcess, :OnHold)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "Ship",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Cancel",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Resolve",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Dispute",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "InProcess",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "OnHold",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "Ship",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Cancel",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Resolve",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Dispute",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "InProcess",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "OnHold",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsMultipleOUTsrtnType",
+      "name" : "classicmodelsMultipleOUTsrtnType"
+    } ]
+  }, {
+    "name" : "MultipleOUTs2",
+    "procedure" : "call get_order_by_cust(:cutomerNumber,:Ship, :Cancel, :Resolve, :Dispute, :InProcess, :OnHold)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "cutomerNumber",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "124",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Ship",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Cancel",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Resolve",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Dispute",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "InProcess",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "OnHold",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "Ship",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Cancel",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Resolve",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Dispute",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "InProcess",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "OnHold",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsMultipleOUTs2rtnType",
+      "name" : "classicmodelsMultipleOUTs2rtnType"
+    } ]
+  }, {
+    "name" : "MultipleINOUTs",
+    "procedure" : "call set_counter2(:Add, :Mul, :Divde, :inc)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "Add",
+      "procedureParamType" : "IN_OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "10",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Mul",
+      "procedureParamType" : "IN_OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "20",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "Divde",
+      "procedureParamType" : "IN_OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "30",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "inc",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "2",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "Add",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Mul",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "Divde",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsMultipleINOUTsrtnType",
+      "name" : "classicmodelsMultipleINOUTsrtnType"
+    } ]
+  } ]
 }

@@ -1,7 +1,3 @@
-/*Copyright (c) 2016-2017 gmail.com All Rights Reserved.
- This software is the confidential and proprietary information of gmail.com You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with gmail.com*/
-
 
 package com.dbscenarios_30mar.classicmodels.service;
 
@@ -31,6 +27,41 @@ public class ClassicmodelsProcedureExecutorServiceImpl implements ClassicmodelsP
 	@Qualifier("classicmodelsWMProcedureExecutor")
 	private WMProcedureExecutor procedureExecutor;
 
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeMultipleOUTs()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("MultipleOUTs", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeMultipleOUTs2(java.lang.Integer cutomerNumber)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("cutomerNumber", cutomerNumber);
+        return procedureExecutor.executeNamedProcedure("MultipleOUTs2", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeMultipleINOUTs(java.lang.Integer Add,java.lang.Integer Mul,java.lang.Integer Divde,java.lang.Integer inc)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("Add", Add);
+        params.put("Mul", Mul);
+        params.put("Divde", Divde);
+        params.put("inc", inc);
+        return procedureExecutor.executeNamedProcedure("MultipleINOUTs", params);
+
+	}
 
 	@Transactional(value = "classicmodelsTransactionManager")
 	@Override

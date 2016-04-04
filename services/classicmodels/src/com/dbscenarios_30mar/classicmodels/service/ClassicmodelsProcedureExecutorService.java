@@ -1,7 +1,3 @@
-/*Copyright (c) 2016-2017 gmail.com All Rights Reserved.
- This software is the confidential and proprietary information of gmail.com You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with gmail.com*/
-
 
 package com.dbscenarios_30mar.classicmodels.service;
 
@@ -13,6 +9,15 @@ import com.wavemaker.runtime.data.model.CustomProcedure;
 import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface ClassicmodelsProcedureExecutorService {
+
+    List<Object> executeMultipleOUTs() throws QueryParameterMismatchException;
+
+
+    List<Object> executeMultipleOUTs2( java.lang.Integer cutomerNumber) throws QueryParameterMismatchException;
+
+
+    List<Object> executeMultipleINOUTs( java.lang.Integer Add, java.lang.Integer Mul, java.lang.Integer Divde, java.lang.Integer inc) throws QueryParameterMismatchException;
+
 
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;

@@ -1,7 +1,3 @@
-/*Copyright (c) 2016-2017 gmail.com All Rights Reserved.
- This software is the confidential and proprietary information of gmail.com You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with gmail.com*/
-
 package com.dbscenarios_30mar.classicmodels.controller;
 
 import org.slf4j.Logger;
@@ -34,6 +30,35 @@ public class ProcedureExecutionController {
 
     @Autowired
     private ClassicmodelsProcedureExecutorService procedureService;
+
+    @RequestMapping(value = "/procedure/execute/MultipleINOUTs", method = RequestMethod.GET)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeMultipleINOUTs(@RequestParam(value = "Add", required = false) java.lang.Integer Add, @RequestParam(value = "Mul", required = false) java.lang.Integer Mul, @RequestParam(value = "Divde", required = false) java.lang.Integer Divde, @RequestParam(value = "inc", required = false) java.lang.Integer inc) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure MultipleINOUTs");
+        List<Object> result = procedureService.executeMultipleINOUTs(Add, Mul, Divde, inc);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/MultipleOUTs", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeMultipleOUTs() throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure MultipleOUTs");
+        List<Object> result = procedureService.executeMultipleOUTs();
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/MultipleOUTs2", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeMultipleOUTs2(@RequestParam(value = "cutomerNumber", required = false) java.lang.Integer cutomerNumber) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure MultipleOUTs2");
+        List<Object> result = procedureService.executeMultipleOUTs2(cutomerNumber);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
 
     @RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)

@@ -761,6 +761,142 @@
     } ],
     "package" : "com.dbscenarios_30mar.classicmodels.Employees"
   },
+  "ClassicmodelsExecuteMultipleINOUTs" : {
+    "_id" : "wm-ClassicmodelsExecuteMultipleINOUTs-wm.ServiceVariable-1459763187014",
+    "name" : "ClassicmodelsExecuteMultipleINOUTs",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Add",
+      "value" : "10",
+      "type" : "integer"
+    }, {
+      "target" : "Mul",
+      "value" : "20",
+      "type" : "integer"
+    }, {
+      "target" : "Divde",
+      "value" : "30",
+      "type" : "integer"
+    }, {
+      "target" : "inc",
+      "value" : "2",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelsMultipleINOUTsrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeMultipleINOUTs",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/MultipleINOUTs",
+      "httpMethod" : "get",
+      "name" : "executeMultipleINOUTs",
+      "parameters" : [ {
+        "name" : "Add",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "Mul",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "Divde",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "inc",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteMultipleOUTs" : {
+    "_id" : "wm-ClassicmodelsExecuteMultipleOUTs-wm.ServiceVariable-1459762502671",
+    "name" : "ClassicmodelsExecuteMultipleOUTs",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "classicmodelsMultipleOUTsrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeMultipleOUTs",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/MultipleOUTs",
+      "httpMethod" : "get",
+      "name" : "executeMultipleOUTs",
+      "parameters" : [ ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteMultipleOUTs2" : {
+    "_id" : "wm-ClassicmodelsExecuteMultipleOUTs2-wm.ServiceVariable-1459762949381",
+    "name" : "ClassicmodelsExecuteMultipleOUTs2",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "cutomerNumber",
+      "value" : "124",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelsMultipleOUTs2rtnType",
+    "service" : "classicmodels",
+    "operation" : "executeMultipleOUTs2",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/MultipleOUTs2",
+      "httpMethod" : "get",
+      "name" : "executeMultipleOUTs2",
+      "parameters" : [ {
+        "name" : "cutomerNumber",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
   "ClassicmodelsMytable2Data" : {
     "_id" : "wm-ClassicmodelsMytable2Data-wm.LiveVariable-1459750537923",
     "name" : "ClassicmodelsMytable2Data",

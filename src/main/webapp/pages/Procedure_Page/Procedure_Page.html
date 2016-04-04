@@ -7,19 +7,75 @@
             <wm-accordion name="accordion1">
                 <wm-accordionpane name="accordionpane1">
                     <wm-accordionheader name="accordionheader1" heading="IN"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent1"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-tabs name="tabs1">
+                            <wm-tabpane name="tabpane1">
+                                <wm-tabheader name="tabheader1" heading="getOrders()"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent1"></wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane2">
                     <wm-accordionheader name="accordionheader2" heading="IN, OUT"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent2"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent2">
+                        <wm-tabs name="tabs2">
+                            <wm-tabpane name="tabpane2">
+                                <wm-tabheader name="tabheader2" heading="getNull"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent2"></wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane3">
                     <wm-accordionheader name="accordionheader3" heading="Multiple OUTs"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent3"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent3">
+                        <wm-tabs name="tabs3">
+                            <wm-tabpane name="tabpane3">
+                                <wm-tabheader name="tabheader3" heading="get_order_count"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent3">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteMultipleOUTs.dataSet" navigation="Advanced" name="grid1">
+                                        <wm-grid-column binding="Ship" caption="Ship" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Cancel" caption="Cancel" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="OnHold" caption="On Hold" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="InProcess" caption="In Process" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Resolve" caption="Resolve" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Dispute" caption="Dispute" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                            <wm-tabpane name="tabpane4">
+                                <wm-tabheader name="tabheader4" heading="get_order_by_cust"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent4">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteMultipleOUTs2.dataSet" navigation="Advanced" name="grid2">
+                                        <wm-grid-column binding="Ship" caption="Ship" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Cancel" caption="Cancel" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="OnHold" caption="On Hold" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="InProcess" caption="In Process" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Resolve" caption="Resolve" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Dispute" caption="Dispute" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane4">
                     <wm-accordionheader name="accordionheader4" heading="MultipleINOUTs"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent4"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent4">
+                        <wm-tabs name="tabs4">
+                            <wm-tabpane name="tabpane6">
+                                <wm-tabheader name="tabheader6" heading="set_counter2"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent6">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteMultipleINOUTs.dataSet" navigation="Advanced" name="grid3">
+                                        <wm-grid-column binding="Mul" caption="Mul" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Add" caption="Add" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="Divde" caption="Divde" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane5">
                     <wm-accordionheader name="accordionheader5" heading="IN, INOUT"></wm-accordionheader>
