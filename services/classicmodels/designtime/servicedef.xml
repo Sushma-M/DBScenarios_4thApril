@@ -56,6 +56,23 @@
         <parameter name="blnak" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="classicmodelsErrorHandlingrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="signal">
+        <parameter name="number" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <return typeRef="classicmodelssignalrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="resignal">
+        <parameter name="numerator" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="denominator" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="result" typeRef="java.lang.Integer" isList="false" parameterType="OUT"/>
+        <return typeRef="classicmodelsresignalrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="cursor">
+        <parameter name="emails" typeRef="java.lang.String" isList="false" parameterType="IN_OUT"/>
+        <return typeRef="classicmodelscursorrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="functions">
+        <return typeRef="classicmodelsfunctionsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.dbscenarios_30mar.classicmodels.Mytable2">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
@@ -200,6 +217,17 @@
         </dataobject>
         <dataobject javaType="classicmodelsErrorHandlingrtnType" name="classicmodelsErrorHandlingrtnType">
             <element name="msg" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelssignalrtnType" name="classicmodelssignalrtnType"/>
+        <dataobject javaType="classicmodelsresignalrtnType" name="classicmodelsresignalrtnType">
+            <element name="result" typeRef="java.lang.Integer" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelscursorrtnType" name="classicmodelscursorrtnType">
+            <element name="emails" typeRef="java.lang.String" isList="false"/>
+        </dataobject>
+        <dataobject javaType="classicmodelsfunctionsrtnType" name="classicmodelsfunctionsrtnType">
+            <element name="customerName" typeRef="java.lang.String" isList="false"/>
+            <element name="CustomerLevel(creditLimit)" typeRef="java.lang.String" isList="false"/>
         </dataobject>
     </dataobjects>
 </service>

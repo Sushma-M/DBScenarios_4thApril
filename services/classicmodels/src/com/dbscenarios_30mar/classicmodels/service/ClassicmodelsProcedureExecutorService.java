@@ -37,6 +37,18 @@ public interface ClassicmodelsProcedureExecutorService {
     List<Object> executeErrorHandling( java.lang.Integer art_id, java.lang.Integer tag_id, java.lang.String blnak) throws QueryParameterMismatchException;
 
 
+    List<Object> executeSignal( java.lang.Integer number) throws QueryParameterMismatchException;
+
+
+    List<Object> executeResignal( java.lang.Integer numerator, java.lang.Integer denominator) throws QueryParameterMismatchException;
+
+
+    List<Object> executeCursor( java.lang.String emails) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctions() throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

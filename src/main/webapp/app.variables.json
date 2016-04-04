@@ -801,6 +801,46 @@
     "isDefault" : true,
     "controller" : "ProcedureExecution"
   },
+  "ClassicmodelsExecuteCursor" : {
+    "_id" : "wm-ClassicmodelsExecuteCursor-wm.ServiceVariable-1459767909343",
+    "name" : "ClassicmodelsExecuteCursor",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "emails",
+      "value" : "\"\"",
+      "type" : "string"
+    } ],
+    "type" : "classicmodelscursorrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeCursor",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/cursor",
+      "httpMethod" : "get",
+      "name" : "executeCursor",
+      "parameters" : [ {
+        "name" : "emails",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
   "ClassicmodelsExecuteErrorHandling" : {
     "_id" : "wm-ClassicmodelsExecuteErrorHandling-wm.ServiceVariable-1459765885479",
     "name" : "ClassicmodelsExecuteErrorHandling",
@@ -850,6 +890,38 @@
     "maxResults" : 20,
     "designMaxResults" : 10,
     "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteFunctions" : {
+    "_id" : "wm-ClassicmodelsExecuteFunctions-wm.ServiceVariable-1459768263927",
+    "name" : "ClassicmodelsExecuteFunctions",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "classicmodelsfunctionsrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeFunctions",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/functions",
+      "httpMethod" : "get",
+      "name" : "executeFunctions",
+      "parameters" : [ ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
     "autoUpdate" : false,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -1139,6 +1211,94 @@
     "designMaxResults" : 10,
     "startUpdate" : true,
     "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteResignal" : {
+    "_id" : "wm-ClassicmodelsExecuteResignal-wm.ServiceVariable-1459767517282",
+    "name" : "ClassicmodelsExecuteResignal",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "numerator",
+      "value" : "bind:Widgets.text5.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "denominator",
+      "value" : "bind:Widgets.text6.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelsresignalrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeResignal",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/resignal",
+      "httpMethod" : "get",
+      "name" : "executeResignal",
+      "parameters" : [ {
+        "name" : "numerator",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "denominator",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "ClassicmodelsExecuteSignal" : {
+    "_id" : "wm-ClassicmodelsExecuteSignal-wm.ServiceVariable-1459766975098",
+    "name" : "ClassicmodelsExecuteSignal",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "number",
+      "value" : "1012",
+      "type" : "integer"
+    } ],
+    "type" : "classicmodelssignalrtnType",
+    "service" : "classicmodels",
+    "operation" : "executeSignal",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/classicmodels/procedureExecutor/procedure/execute/signal",
+      "httpMethod" : "get",
+      "name" : "executeSignal",
+      "parameters" : [ {
+        "name" : "number",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
     "saveInPhonegap" : false,

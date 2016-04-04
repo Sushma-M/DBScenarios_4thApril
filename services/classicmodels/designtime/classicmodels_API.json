@@ -9,16 +9,16 @@
   },
   "basePath" : "/",
   "tags" : [ {
-    "name" : "EmployeesController",
-    "description" : "Exposes APIs to work with Employees resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.EmployeesController",
-    "x-WM-CONTROLLER_NAME" : "Employees",
-    "x-WM-VERSION" : ""
-  }, {
     "name" : "OrdersController",
     "description" : "Exposes APIs to work with Orders resource.",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrdersController",
     "x-WM-CONTROLLER_NAME" : "Orders",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "EmployeesController",
+    "description" : "Exposes APIs to work with Employees resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.EmployeesController",
+    "x-WM-CONTROLLER_NAME" : "Employees",
     "x-WM-VERSION" : ""
   }, {
     "name" : "PaymentsController",
@@ -33,16 +33,16 @@
     "x-WM-CONTROLLER_NAME" : "Productlines",
     "x-WM-VERSION" : ""
   }, {
+    "name" : "ArticleTagsController",
+    "description" : "Exposes APIs to work with ArticleTags resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ArticleTagsController",
+    "x-WM-CONTROLLER_NAME" : "ArticleTags",
+    "x-WM-VERSION" : ""
+  }, {
     "name" : "MytableController",
     "description" : "Exposes APIs to work with Mytable resource.",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.MytableController",
     "x-WM-CONTROLLER_NAME" : "Mytable",
-    "x-WM-VERSION" : ""
-  }, {
-    "name" : "OrderdetailsController",
-    "description" : "Exposes APIs to work with Orderdetails resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrderdetailsController",
-    "x-WM-CONTROLLER_NAME" : "Orderdetails",
     "x-WM-VERSION" : ""
   }, {
     "name" : "ProcedureExecutionController",
@@ -51,10 +51,10 @@
     "x-WM-CONTROLLER_NAME" : "ProcedureExecution",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "ArticleTagsController",
-    "description" : "Exposes APIs to work with ArticleTags resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.ArticleTagsController",
-    "x-WM-CONTROLLER_NAME" : "ArticleTags",
+    "name" : "OrderdetailsController",
+    "description" : "Exposes APIs to work with Orderdetails resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.dbscenarios_30mar.classicmodels.controller.OrderdetailsController",
+    "x-WM-CONTROLLER_NAME" : "Orderdetails",
     "x-WM-VERSION" : ""
   }, {
     "name" : "ProductsController",
@@ -162,10 +162,10 @@
         "x-WM-METHOD_NAME" : "createArticleTags",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
       "x-WM-TAG" : "ArticleTagsController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/"
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/ArticleTags/composite-id" : {
       "get" : {
@@ -286,10 +286,10 @@
         "x-WM-METHOD_NAME" : "deleteArticleTags",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
       "x-WM-TAG" : "ArticleTagsController",
-      "x-WM-RELATIVE_PATH" : "/composite-id",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/composite-id"
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
     },
     "/classicmodels/ArticleTags/count" : {
       "get" : {
@@ -309,10 +309,10 @@
         "x-WM-METHOD_NAME" : "countAllArticleTagss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
       "x-WM-TAG" : "ArticleTagsController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/count"
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/ArticleTags/search" : {
       "post" : {
@@ -373,10 +373,10 @@
         "x-WM-METHOD_NAME" : "findArticleTagss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
       "x-WM-TAG" : "ArticleTagsController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/search"
+      "x-WM-BASE_PATH" : "/classicmodels/ArticleTags",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/ArticleTags/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Customers/" : {
       "get" : {
@@ -451,10 +451,10 @@
         "x-WM-METHOD_NAME" : "createCustomers",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Customers/count" : {
       "get" : {
@@ -474,10 +474,10 @@
         "x-WM-METHOD_NAME" : "countAllCustomerss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Customers/search" : {
       "post" : {
@@ -538,10 +538,10 @@
         "x-WM-METHOD_NAME" : "findCustomerss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Customers/{id}" : {
       "get" : {
@@ -635,10 +635,10 @@
         "x-WM-METHOD_NAME" : "deleteCustomers",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Customers/{id}/orderses" : {
       "get" : {
@@ -693,10 +693,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedorderses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/{id}/orderses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/orderses"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/orderses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderses"
     },
     "/classicmodels/Customers/{id}/paymentses" : {
       "get" : {
@@ -751,10 +751,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedpaymentses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Customers",
       "x-WM-TAG" : "CustomersController",
-      "x-WM-RELATIVE_PATH" : "/{id}/paymentses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/paymentses"
+      "x-WM-BASE_PATH" : "/classicmodels/Customers",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Customers/{id}/paymentses",
+      "x-WM-RELATIVE_PATH" : "/{id}/paymentses"
     },
     "/classicmodels/Employees/" : {
       "get" : {
@@ -829,10 +829,10 @@
         "x-WM-METHOD_NAME" : "createEmployees",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Employees/count" : {
       "get" : {
@@ -852,10 +852,10 @@
         "x-WM-METHOD_NAME" : "countAllEmployeess",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Employees/search" : {
       "post" : {
@@ -916,10 +916,10 @@
         "x-WM-METHOD_NAME" : "findEmployeess",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Employees/{id}" : {
       "get" : {
@@ -1013,10 +1013,10 @@
         "x-WM-METHOD_NAME" : "deleteEmployees",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Employees/{id}/customerses" : {
       "get" : {
@@ -1071,10 +1071,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedcustomerses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/{id}/customerses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/customerses"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/customerses",
+      "x-WM-RELATIVE_PATH" : "/{id}/customerses"
     },
     "/classicmodels/Employees/{id}/employeesesForReportsTo" : {
       "get" : {
@@ -1129,10 +1129,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedemployeesesForReportsTo",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Employees",
       "x-WM-TAG" : "EmployeesController",
-      "x-WM-RELATIVE_PATH" : "/{id}/employeesesForReportsTo",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/employeesesForReportsTo"
+      "x-WM-BASE_PATH" : "/classicmodels/Employees",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Employees/{id}/employeesesForReportsTo",
+      "x-WM-RELATIVE_PATH" : "/{id}/employeesesForReportsTo"
     },
     "/classicmodels/Mytable/" : {
       "get" : {
@@ -1207,10 +1207,10 @@
         "x-WM-METHOD_NAME" : "createMytable",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
       "x-WM-TAG" : "MytableController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Mytable/composite-id" : {
       "get" : {
@@ -1331,10 +1331,10 @@
         "x-WM-METHOD_NAME" : "deleteMytable",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
       "x-WM-TAG" : "MytableController",
-      "x-WM-RELATIVE_PATH" : "/composite-id",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/composite-id"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
     },
     "/classicmodels/Mytable/count" : {
       "get" : {
@@ -1354,10 +1354,10 @@
         "x-WM-METHOD_NAME" : "countAllMytables",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
       "x-WM-TAG" : "MytableController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Mytable/search" : {
       "post" : {
@@ -1418,10 +1418,10 @@
         "x-WM-METHOD_NAME" : "findMytables",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
       "x-WM-TAG" : "MytableController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Mytable2/" : {
       "get" : {
@@ -1496,10 +1496,10 @@
         "x-WM-METHOD_NAME" : "createMytable2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
       "x-WM-TAG" : "Mytable2Controller",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Mytable2/composite-id" : {
       "get" : {
@@ -1620,10 +1620,10 @@
         "x-WM-METHOD_NAME" : "deleteMytable2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
       "x-WM-TAG" : "Mytable2Controller",
-      "x-WM-RELATIVE_PATH" : "/composite-id",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/composite-id"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
     },
     "/classicmodels/Mytable2/count" : {
       "get" : {
@@ -1643,10 +1643,10 @@
         "x-WM-METHOD_NAME" : "countAllMytable2s",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
       "x-WM-TAG" : "Mytable2Controller",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Mytable2/search" : {
       "post" : {
@@ -1707,10 +1707,10 @@
         "x-WM-METHOD_NAME" : "findMytable2s",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
       "x-WM-TAG" : "Mytable2Controller",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Mytable2",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Mytable2/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Offices/" : {
       "get" : {
@@ -1785,10 +1785,10 @@
         "x-WM-METHOD_NAME" : "createOffices",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Offices",
       "x-WM-TAG" : "OfficesController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/"
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Offices/count" : {
       "get" : {
@@ -1808,10 +1808,10 @@
         "x-WM-METHOD_NAME" : "countAllOfficess",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Offices",
       "x-WM-TAG" : "OfficesController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Offices/search" : {
       "post" : {
@@ -1872,10 +1872,10 @@
         "x-WM-METHOD_NAME" : "findOfficess",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Offices",
       "x-WM-TAG" : "OfficesController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Offices/{id}" : {
       "get" : {
@@ -1966,10 +1966,10 @@
         "x-WM-METHOD_NAME" : "deleteOffices",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Offices",
       "x-WM-TAG" : "OfficesController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Offices/{id}/employeeses" : {
       "get" : {
@@ -2023,10 +2023,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedemployeeses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Offices",
       "x-WM-TAG" : "OfficesController",
-      "x-WM-RELATIVE_PATH" : "/{id}/employeeses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}/employeeses"
+      "x-WM-BASE_PATH" : "/classicmodels/Offices",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Offices/{id}/employeeses",
+      "x-WM-RELATIVE_PATH" : "/{id}/employeeses"
     },
     "/classicmodels/Orderdetails/" : {
       "get" : {
@@ -2101,10 +2101,10 @@
         "x-WM-METHOD_NAME" : "createOrderdetails",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
       "x-WM-TAG" : "OrderdetailsController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/"
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Orderdetails/composite-id" : {
       "get" : {
@@ -2222,10 +2222,10 @@
         "x-WM-METHOD_NAME" : "deleteOrderdetails",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
       "x-WM-TAG" : "OrderdetailsController",
-      "x-WM-RELATIVE_PATH" : "/composite-id",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/composite-id"
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
     },
     "/classicmodels/Orderdetails/count" : {
       "get" : {
@@ -2245,10 +2245,10 @@
         "x-WM-METHOD_NAME" : "countAllOrderdetailss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
       "x-WM-TAG" : "OrderdetailsController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Orderdetails/search" : {
       "post" : {
@@ -2309,10 +2309,10 @@
         "x-WM-METHOD_NAME" : "findOrderdetailss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
       "x-WM-TAG" : "OrderdetailsController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Orderdetails",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orderdetails/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Orders/" : {
       "get" : {
@@ -2387,10 +2387,10 @@
         "x-WM-METHOD_NAME" : "createOrders",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orders",
       "x-WM-TAG" : "OrdersController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/"
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Orders/count" : {
       "get" : {
@@ -2410,10 +2410,10 @@
         "x-WM-METHOD_NAME" : "countAllOrderss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orders",
       "x-WM-TAG" : "OrdersController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Orders/search" : {
       "post" : {
@@ -2474,10 +2474,10 @@
         "x-WM-METHOD_NAME" : "findOrderss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orders",
       "x-WM-TAG" : "OrdersController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Orders/{id}" : {
       "get" : {
@@ -2571,10 +2571,10 @@
         "x-WM-METHOD_NAME" : "deleteOrders",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orders",
       "x-WM-TAG" : "OrdersController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Orders/{id}/orderdetailses" : {
       "get" : {
@@ -2629,10 +2629,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedorderdetailses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Orders",
       "x-WM-TAG" : "OrdersController",
-      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}/orderdetailses"
+      "x-WM-BASE_PATH" : "/classicmodels/Orders",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Orders/{id}/orderdetailses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses"
     },
     "/classicmodels/Payments/" : {
       "get" : {
@@ -2707,10 +2707,10 @@
         "x-WM-METHOD_NAME" : "createPayments",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Payments",
       "x-WM-TAG" : "PaymentsController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/"
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Payments/composite-id" : {
       "get" : {
@@ -2828,10 +2828,10 @@
         "x-WM-METHOD_NAME" : "deletePayments",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Payments",
       "x-WM-TAG" : "PaymentsController",
-      "x-WM-RELATIVE_PATH" : "/composite-id",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/composite-id"
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/composite-id",
+      "x-WM-RELATIVE_PATH" : "/composite-id"
     },
     "/classicmodels/Payments/count" : {
       "get" : {
@@ -2851,10 +2851,10 @@
         "x-WM-METHOD_NAME" : "countAllPaymentss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Payments",
       "x-WM-TAG" : "PaymentsController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Payments/search" : {
       "post" : {
@@ -2915,10 +2915,10 @@
         "x-WM-METHOD_NAME" : "findPaymentss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Payments",
       "x-WM-TAG" : "PaymentsController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Payments",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Payments/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Productlines/" : {
       "get" : {
@@ -2982,10 +2982,10 @@
         "x-WM-METHOD_NAME" : "createProductlines",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Productlines/count" : {
       "get" : {
@@ -3005,10 +3005,10 @@
         "x-WM-METHOD_NAME" : "countAllProductliness",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Productlines/search" : {
       "post" : {
@@ -3069,10 +3069,10 @@
         "x-WM-METHOD_NAME" : "findProductliness",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Productlines/{id}" : {
       "get" : {
@@ -3190,10 +3190,10 @@
         "x-WM-METHOD_NAME" : "deleteProductlines",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Productlines/{id}/content/{fieldName}" : {
       "get" : {
@@ -3240,10 +3240,10 @@
         "x-WM-METHOD_NAME" : "getProductlinesBLOBContent",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/{id}/content/{fieldName}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/content/{fieldName}"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/content/{fieldName}",
+      "x-WM-RELATIVE_PATH" : "/{id}/content/{fieldName}"
     },
     "/classicmodels/Productlines/{id}/productses" : {
       "get" : {
@@ -3297,10 +3297,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedproductses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
       "x-WM-TAG" : "ProductlinesController",
-      "x-WM-RELATIVE_PATH" : "/{id}/productses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/productses"
+      "x-WM-BASE_PATH" : "/classicmodels/Productlines",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Productlines/{id}/productses",
+      "x-WM-RELATIVE_PATH" : "/{id}/productses"
     },
     "/classicmodels/Products/" : {
       "get" : {
@@ -3375,10 +3375,10 @@
         "x-WM-METHOD_NAME" : "createProducts",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Products",
       "x-WM-TAG" : "ProductsController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/"
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/classicmodels/Products/count" : {
       "get" : {
@@ -3398,10 +3398,10 @@
         "x-WM-METHOD_NAME" : "countAllProductss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Products",
       "x-WM-TAG" : "ProductsController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/count"
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/classicmodels/Products/search" : {
       "post" : {
@@ -3462,10 +3462,10 @@
         "x-WM-METHOD_NAME" : "findProductss",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Products",
       "x-WM-TAG" : "ProductsController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/search"
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/classicmodels/Products/{id}" : {
       "get" : {
@@ -3556,10 +3556,10 @@
         "x-WM-METHOD_NAME" : "deleteProducts",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Products",
       "x-WM-TAG" : "ProductsController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}"
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/classicmodels/Products/{id}/orderdetailses" : {
       "get" : {
@@ -3613,10 +3613,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedorderdetailses",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/Products",
       "x-WM-TAG" : "ProductsController",
-      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}/orderdetailses"
+      "x-WM-BASE_PATH" : "/classicmodels/Products",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/Products/{id}/orderdetailses",
+      "x-WM-RELATIVE_PATH" : "/{id}/orderdetailses"
     },
     "/classicmodels/procedureExecutor/procedure/execute/ErrorHandling" : {
       "get" : {
@@ -3630,7 +3630,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "d7719093-97b1-4c0a-8069-15f27b57b2ef",
+          "x-WM-UUID" : "8aa5265d-d155-49a8-ba94-fce88ce3df38",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "tag_id",
@@ -3639,7 +3639,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "6f3edbfe-da4f-43d0-9987-1752ffcabb38",
+          "x-WM-UUID" : "e7fdf54a-a496-4c7d-80f2-f77e722e8427",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "blnak",
@@ -3647,7 +3647,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "272ecad5-5ce2-421d-966a-02679628f81c",
+          "x-WM-UUID" : "b7063e72-8e36-453b-82f7-fe5b3d18a9b2",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3664,7 +3664,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b9f60886-c75c-4f96-bc43-e5792f304b0e",
+        "x-WM-OPERATION_UID" : "528761ad-08f9-459a-9773-8557bbbea275",
         "x-WM-METHOD_NAME" : "executeErrorHandling",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3685,7 +3685,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "bf362a4e-b8e5-4c00-b1eb-810172505262",
+          "x-WM-UUID" : "cbd96ad2-ba7f-4e46-b88e-658e80310c77",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "inc",
@@ -3694,7 +3694,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "54dbb54f-04c0-4127-af35-531b21988ce6",
+          "x-WM-UUID" : "64bf1861-e8d7-4096-8cae-845cceff5c8f",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3711,7 +3711,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "c8b4946a-d20f-48cc-bdec-78213f621bb7",
+        "x-WM-OPERATION_UID" : "7a702ffe-8b27-48ff-b8ae-a98026158064",
         "x-WM-METHOD_NAME" : "executeInInOut",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3739,7 +3739,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "68532dd6-1119-4cb1-a043-098273cc7a06",
+        "x-WM-OPERATION_UID" : "d171d0c0-be0a-4268-a611-65f0cfbc4f77",
         "x-WM-METHOD_NAME" : "executeLoops1",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3767,7 +3767,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "55af9f4d-2ca8-415e-8a57-22436527e8b6",
+        "x-WM-OPERATION_UID" : "3dba7cb6-decf-4925-9c51-280fffe2a3a2",
         "x-WM-METHOD_NAME" : "executeLoops2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3788,7 +3788,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "dc1a3c66-265c-4ea2-9c52-ee1b83d01132",
+          "x-WM-UUID" : "2febee55-388d-4411-a627-f0fbddba42ef",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "Mul",
@@ -3797,7 +3797,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "cd3e61ec-9d9d-4550-b247-adab03c34f17",
+          "x-WM-UUID" : "899c3d2f-4f47-4fa4-898c-3e1ed6e4405b",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "Divde",
@@ -3806,7 +3806,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "6555df28-f6aa-4e6a-84c6-41c92d1578e3",
+          "x-WM-UUID" : "147f4b6f-0e08-4085-b851-451508c7b609",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "inc",
@@ -3815,7 +3815,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "0b45bcd1-04ad-4cf9-8ffc-af75fd76b0ae",
+          "x-WM-UUID" : "c2fb5261-bda1-4ecf-9ed0-ba1250b5dc4d",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3832,7 +3832,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "92714848-e5a4-4baf-8e9a-75127902d1c5",
+        "x-WM-OPERATION_UID" : "845b1643-de2e-4fae-98b3-8f25b00c3817",
         "x-WM-METHOD_NAME" : "executeMultipleINOUTs",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3860,7 +3860,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "115aed76-db23-43a3-9f28-9ed249367674",
+        "x-WM-OPERATION_UID" : "f4cdb894-5b24-4ed7-81c2-5e8f7f5f44eb",
         "x-WM-METHOD_NAME" : "executeMultipleOUTs",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3881,7 +3881,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "3c657837-47d6-41a0-bfd5-9706134c59f5",
+          "x-WM-UUID" : "c465a72f-833b-43f4-8739-94b9fdebc69f",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3898,7 +3898,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "24387409-725d-44ca-88c5-346299017778",
+        "x-WM-OPERATION_UID" : "7c3d1b62-8a2e-44b3-aea5-342a936582c4",
         "x-WM-METHOD_NAME" : "executeMultipleOUTs2",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3919,7 +3919,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "ab4e6b62-cb89-4995-81ad-ad0cdc122869",
+          "x-WM-UUID" : "9b62041a-f199-4535-9dfe-8c0ef3b1464f",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3936,7 +3936,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "cd5eab33-096f-4cea-90a2-ea8e1149655e",
+        "x-WM-OPERATION_UID" : "565c8bc3-5209-4a3f-b91e-5a1c8b5dacd5",
         "x-WM-METHOD_NAME" : "executeCaseOut",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3944,6 +3944,71 @@
       "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
       "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/caseOut",
       "x-WM-RELATIVE_PATH" : "/procedure/execute/caseOut"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/cursor" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeCursor-1-1195260122",
+        "parameters" : [ {
+          "name" : "emails",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "4cf825a4-5796-4af9-96de-6e9b7e4107c4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "d1255ca9-5fac-4e73-b2c2-fa95ba7955b7",
+        "x-WM-METHOD_NAME" : "executeCursor",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/cursor",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/cursor"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/functions" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeFunctions-0-17",
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0a2a9a95-bdbe-4400-9ec4-521ba1389f9b",
+        "x-WM-METHOD_NAME" : "executeFunctions",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/functions",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/functions"
     },
     "/classicmodels/procedureExecutor/procedure/execute/ifelse" : {
       "get" : {
@@ -3957,7 +4022,7 @@
           "type" : "integer",
           "format" : "int32",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "5cbd43a7-877d-481b-ac58-707c8ada9939",
+          "x-WM-UUID" : "8e13f2a9-aa89-48cb-84ae-35ff680236e9",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -3974,7 +4039,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "b840311c-0157-4741-a7a9-e61b9696687c",
+        "x-WM-OPERATION_UID" : "96c3ba48-d824-47ee-82b4-9fd16abc2330",
         "x-WM-METHOD_NAME" : "executeIfelse",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -3982,6 +4047,91 @@
       "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
       "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/ifelse",
       "x-WM-RELATIVE_PATH" : "/procedure/execute/ifelse"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/resignal" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeResignal-2--849622875",
+        "parameters" : [ {
+          "name" : "numerator",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "9e57ff67-eff8-4463-b30a-c8f7a4268706",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "denominator",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "220e10c6-094f-4617-886d-834a27f3a522",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "5cbe6429-c8ff-4388-b98c-02c1b0b7a97b",
+        "x-WM-METHOD_NAME" : "executeResignal",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/resignal",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/resignal"
+    },
+    "/classicmodels/procedureExecutor/procedure/execute/signal" : {
+      "get" : {
+        "tags" : [ "ProcedureExecutionController" ],
+        "description" : "Process request to execute Procedure",
+        "operationId" : "ProcedureExecutionController-executeSignal-1--2056816673",
+        "parameters" : [ {
+          "name" : "number",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
+          "x-WM-UUID" : "23873419-303b-412a-b382-1ed73532bd12",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/Object",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "8fe6726f-efde-43a3-88e6-ae979d6f0e17",
+        "x-WM-METHOD_NAME" : "executeSignal",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "ProcedureExecutionController",
+      "x-WM-BASE_PATH" : "/classicmodels/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/procedureExecutor/procedure/execute/signal",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/signal"
     },
     "/classicmodels/procedureExecutor/procedure/execute/wm_custom" : {
       "post" : {
@@ -3997,7 +4147,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomProcedure",
-          "x-WM-UUID" : "0a731927-5f22-46c8-9bea-60d611d9d792",
+          "x-WM-UUID" : "a968653c-39e3-4a01-b829-bdde5a90d6d7",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -4014,7 +4164,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "8d01bd7a-921e-47af-bc4a-c5c4fc6a04ce",
+        "x-WM-OPERATION_UID" : "679cd08b-4679-4066-949d-ae28b11ad961",
         "x-WM-METHOD_NAME" : "executeWMCustomProcedure",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -4078,10 +4228,10 @@
         "x-WM-METHOD_NAME" : "executeWMCustomQuery",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
       "x-WM-TAG" : "QueryExecutionController",
-      "x-WM-RELATIVE_PATH" : "/queries/wm_custom",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom"
+      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom"
     },
     "/classicmodels/queryExecutor/queries/wm_custom_update" : {
       "post" : {
@@ -4113,10 +4263,10 @@
         "x-WM-METHOD_NAME" : "executeWMCustomQuery",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
       "x-WM-TAG" : "QueryExecutionController",
-      "x-WM-RELATIVE_PATH" : "/queries/wm_custom_update",
-      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom_update"
+      "x-WM-BASE_PATH" : "/classicmodels/queryExecutor",
+      "x-WM-COMPLETE_PATH" : "/classicmodels/queryExecutor/queries/wm_custom_update",
+      "x-WM-RELATIVE_PATH" : "/queries/wm_custom_update"
     }
   },
   "definitions" : {
@@ -4475,6 +4625,7 @@
           },
           "content" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Object",
               "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -4506,6 +4657,7 @@
         },
         "queryParams" : {
           "type" : "array",
+          "uniqueItems" : false,
           "items" : {
             "$ref" : "#/definitions/CustomQueryParam",
             "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -4551,6 +4703,7 @@
         "properties" : {
           "orders" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Sort$Order",
               "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -4733,6 +4886,7 @@
           },
           "image" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "type" : "string",
               "format" : "byte"
@@ -4787,6 +4941,7 @@
           },
           "content" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Object",
               "x-WM-TYPE_ARGUMENTS" : [ ]

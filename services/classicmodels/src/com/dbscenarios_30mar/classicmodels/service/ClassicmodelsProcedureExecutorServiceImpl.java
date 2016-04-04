@@ -129,6 +129,50 @@ public class ClassicmodelsProcedureExecutorServiceImpl implements ClassicmodelsP
         return procedureExecutor.executeNamedProcedure("ErrorHandling", params);
 
 	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeSignal(java.lang.Integer number)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("number", number);
+        return procedureExecutor.executeNamedProcedure("signal", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeResignal(java.lang.Integer numerator,java.lang.Integer denominator)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("numerator", numerator);
+        params.put("denominator", denominator);
+        return procedureExecutor.executeNamedProcedure("resignal", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeCursor(java.lang.String emails)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("emails", emails);
+        return procedureExecutor.executeNamedProcedure("cursor", params);
+
+	}
+	@Transactional(value = "classicmodelsTransactionManager")
+	@Override
+
+	public List<Object> executeFunctions()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("functions", params);
+
+	}
 
 	@Transactional(value = "classicmodelsTransactionManager")
 	@Override

@@ -452,5 +452,121 @@
       "javaType" : "classicmodelsErrorHandlingrtnType",
       "name" : "classicmodelsErrorHandlingrtnType"
     } ]
+  }, {
+    "name" : "signal",
+    "procedure" : "call AddOrderItem(:number,\"sdf\", 23,3,3)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "number",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "10123",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ ],
+      "javaType" : "classicmodelssignalrtnType",
+      "name" : "classicmodelssignalrtnType"
+    } ]
+  }, {
+    "name" : "resignal",
+    "procedure" : "call Divide(:numerator,:denominator,:result)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "numerator",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "20",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "denominator",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "10",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    }, {
+      "paramName" : "result",
+      "procedureParamType" : "OUT",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "result",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsresignalrtnType",
+      "name" : "classicmodelsresignalrtnType"
+    } ]
+  }, {
+    "name" : "cursor",
+    "procedure" : "call build_email_list(:emails)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "emails",
+      "procedureParamType" : "IN_OUT",
+      "valueType" : "java.lang.String",
+      "testValue" : "\"\"",
+      "systemParamName" : null,
+      "list" : false,
+      "systemParam" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "emails",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelscursorrtnType",
+      "name" : "classicmodelscursorrtnType"
+    } ]
+  }, {
+    "name" : "functions",
+    "procedure" : "SELECT customerName, CustomerLevel(creditLimit) FROM customers ORDER BY customerName",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "customerName",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "CustomerLevel(creditLimit)",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "classicmodelsfunctionsrtnType",
+      "name" : "classicmodelsfunctionsrtnType"
+    } ]
   } ]
 }

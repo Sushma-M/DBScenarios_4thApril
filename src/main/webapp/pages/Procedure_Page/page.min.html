@@ -83,6 +83,27 @@ Application.$controller("grid9Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
+
+Application.$controller("grid10Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid11Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid12Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Procedure_Page.variables.json">
 var _Procedure_PagePage_Variables_ ={};
@@ -263,16 +284,68 @@ var _Procedure_PagePage_Variables_ ={};
                     </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane9">
-                    <wm-accordionheader name="accordionheader9" heading="Signal, Unsignal"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent9"></wm-accordioncontent>
+                    <wm-accordionheader name="accordionheader9" heading="Signal, Resignal"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent9">
+                        <wm-tabs name="tabs8">
+                            <wm-tabpane name="tabpane11">
+                                <wm-tabheader name="tabheader11" heading="AddOrderItem"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent11">
+                                    <wm-button class="btn-default" caption="signal" type="button" name="button2" on-click="ClassicmodelsExecuteSignal"></wm-button>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                            <wm-tabpane name="tabpane12">
+                                <wm-tabheader name="tabheader12" heading="Divide"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent12">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteResignal.dataSet" navigation="Advanced" name="grid10">
+                                        <wm-grid-column binding="result" caption="Result" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                        <wm-composite name="composite5">
+                            <wm-label class="col-md-3 control-label" name="label6" caption="Numerator"></wm-label>
+                            <wm-container class="col-md-9" name="container5">
+                                <wm-text name="text5"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-composite name="composite6">
+                            <wm-label class="col-md-3 control-label" name="label7" caption="Denominator"></wm-label>
+                            <wm-container class="col-md-9" name="container6">
+                                <wm-text name="text6"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane10">
                     <wm-accordionheader name="accordionheader10" heading="Cursor"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent10">
+                        <wm-tabs name="tabs9">
+                            <wm-tabpane name="tabpane13">
+                                <wm-tabheader name="tabheader13" heading="build_email_list"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent13">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteCursor.dataSet" navigation="Advanced" name="grid11">
+                                        <wm-grid-column binding="emails" caption="Emails" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane11">
                     <wm-accordionheader name="accordionheader11" heading="Function"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                    <wm-accordioncontent name="accordioncontent11">
+                        <wm-tabs name="tabs10">
+                            <wm-tabpane name="tabpane14">
+                                <wm-tabheader name="tabheader14"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent14">
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.ClassicmodelsExecuteFunctions.dataSet" navigation="Advanced" name="grid12">
+                                        <wm-grid-column binding="customerName" caption="Customer Name" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                        <wm-grid-column binding="CustomerLevel(creditLimit)" caption="Customer Level(credit Limit)" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabcontent>
+                            </wm-tabpane>
+                        </wm-tabs>
+                    </wm-accordioncontent>
                 </wm-accordionpane>
                 <wm-accordionpane name="accordionpane12">
                     <wm-accordionheader name="accordionheader12" heading="Date"></wm-accordionheader>

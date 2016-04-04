@@ -31,7 +31,17 @@ public class ProcedureExecutionController {
     @Autowired
     private ClassicmodelsProcedureExecutorService procedureService;
 
+    @RequestMapping(value = "/procedure/execute/functions", method = RequestMethod.GET)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeFunctions() {
+        LOGGER.debug("Executing named procedure functions");
+        List<Object> result = procedureService.executeFunctions();
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
     @RequestMapping(value = "/procedure/execute/ErrorHandling", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Process request to execute Procedure")
     public List<Object> executeErrorHandling(@RequestParam(value = "art_id", required = false) java.lang.Integer art_id, @RequestParam(value = "tag_id", required = false) java.lang.Integer tag_id, @RequestParam(value = "blnak", required = false) java.lang.String blnak) throws QueryParameterMismatchException {
         LOGGER.debug("Executing named procedure ErrorHandling");
@@ -110,12 +120,42 @@ public class ProcedureExecutionController {
         return result;
     }
 
+    @RequestMapping(value = "/procedure/execute/cursor", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeCursor(@RequestParam(value = "emails", required = false) java.lang.String emails) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure cursor");
+        List<Object> result = procedureService.executeCursor(emails);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
     @RequestMapping(value = "/procedure/execute/ifelse", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Process request to execute Procedure")
     public List<Object> executeIfelse(@RequestParam(value = "custNum", required = false) java.lang.Integer custNum) throws QueryParameterMismatchException {
         LOGGER.debug("Executing named procedure ifelse");
         List<Object> result = procedureService.executeIfelse(custNum);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/resignal", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeResignal(@RequestParam(value = "numerator", required = false) java.lang.Integer numerator, @RequestParam(value = "denominator", required = false) java.lang.Integer denominator) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure resignal");
+        List<Object> result = procedureService.executeResignal(numerator, denominator);
+        LOGGER.debug("got the result of named procedure {}", result);
+        return result;
+    }
+
+    @RequestMapping(value = "/procedure/execute/signal", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Process request to execute Procedure")
+    public List<Object> executeSignal(@RequestParam(value = "number", required = false) java.lang.Integer number) throws QueryParameterMismatchException {
+        LOGGER.debug("Executing named procedure signal");
+        List<Object> result = procedureService.executeSignal(number);
         LOGGER.debug("got the result of named procedure {}", result);
         return result;
     }
