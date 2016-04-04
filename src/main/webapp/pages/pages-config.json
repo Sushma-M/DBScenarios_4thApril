@@ -8,6 +8,9 @@
   "name" : "EditableDataGrid",
   "type" : "PAGE"
 }, {
+  "name" : "FilterAccordionPage",
+  "type" : "PAGE"
+}, {
   "name" : "LineChart_LiveVar",
   "type" : "PAGE"
 }, {

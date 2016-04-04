@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dbscenarios_30mar.dbtest_allscenarios">
+  <class table="`Composites2`" name="com.dbscenarios_30mar.dbtest_allscenarios.Composites2" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.Composites2">
+    <composite-id mapped="true" class="Composites2Id">
+      <key-property name="dateCol" type="java.sql.Date">
+        <column name="`Date Col`" length="10" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="id" type="java.lang.Integer">
+        <column name="`ID`" length="255" not-null="true" precision="10"/>
+      </key-property>
+    </composite-id>
+    <property name="stringCol3" type="java.lang.String">
+      <column name="`String Col3`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="composites1s" table="Composites1" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`Date Col1`"/>
+        <column name="`ID`"/>
+      </key>
+      <one-to-many class="Composites1"/>
+    </set>
+  </class>
+  <class table="`Composites1`" name="com.dbscenarios_30mar.dbtest_allscenarios.Composites1" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.Composites1">
+    <composite-id mapped="true" class="Composites1Id">
+      <key-property name="id" type="java.lang.Integer">
+        <column name="`ID`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="dateCol" type="java.sql.Date">
+        <column name="`Date Col`" length="10" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <many-to-one
+      name="composites2"
+      class="Composites2"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-Date Col1">
+        Date Col
+      </meta>
+      <meta attribute="mapping-ID">
+        ID
+      </meta>
+      <meta attribute="setter-override">
+        this.id = composites2.getId();
+      </meta>
+      <column name="`Date Col1`" length="10" not-null="false" precision="19"/>
+      <column name="`ID`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+  </class>
+  <class table="`CountryRegion_M2O_FromSP`" name="com.dbscenarios_30mar.dbtest_allscenarios.CountryRegionM2oFromSp" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.CountryRegionM2oFromSp">
+    <id name="countryRegionCode" type="java.lang.String">
+      <column name="`CountryRegionCode`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="java.lang.String">
+      <column name="`Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="modifiedDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`ModifiedDate`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="stateProvinceM2oAddresses" table="StateProvince_M2O_Address" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`CountryRegionCode`"/>
+      </key>
+      <one-to-many class="StateProvinceM2oAddress"/>
+    </set>
+  </class>
+  <class table="`Shift_2R_M2OVirtual_ParentForDepartment`" name="com.dbscenarios_30mar.dbtest_allscenarios.Shift2rM2ovirtualParentForDepartment" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.Shift2rM2ovirtualParentForDepartment">
+    <id name="shiftId" type="java.lang.Short">
+      <column name="`ShiftID`" length="255" not-null="true" precision="5"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="java.lang.String">
+      <column name="`Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="startTime" type="java.sql.Time">
+      <column name="`StartTime`" length="8" not-null="false" precision="19"/>
+    </property>
+    <property name="endTime" type="java.sql.Time">
+      <column name="`EndTime`" length="8" not-null="false" precision="19"/>
+    </property>
+    <set name="compositesKeyRelationses" table="CompositesKeyRelations" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`ShiftID`"/>
+      </key>
+      <one-to-many class="CompositesKeyRelations"/>
+    </set>
+  </class>
+  <class table="`Department_Composite_Parent`" name="com.dbscenarios_30mar.dbtest_allscenarios.DepartmentCompositeParent" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.DepartmentCompositeParent">
+    <id name="departmentId" type="java.lang.Short">
+      <column name="`DepartmentID`" length="255" not-null="true" precision="5"/>
+      <generator class="identity"/>
+    </id>
+    <property name="name" type="java.lang.String">
+      <column name="`Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="groupName" type="java.lang.String">
+      <column name="`GroupName`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="shift" type="java.lang.Short">
+      <column name="`Shift`" length="255" not-null="false" precision="5"/>
+    </property>
+    <set name="compositesKeyRelationses" table="CompositesKeyRelations" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`DepartmentID`"/>
+      </key>
+      <one-to-many class="CompositesKeyRelations"/>
+    </set>
+  </class>
+  <class table="`StateProvince_M2O_Address`" name="com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress">
+    <id name="stateProvinceId" type="java.lang.Integer">
+      <column name="`StateProvinceID`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="stateProvinceCode" type="java.lang.String">
+      <column name="`StateProvinceCode`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="isOnlyStateProvinceFlag" type="java.lang.Boolean">
+      <column name="`IsOnlyStateProvinceFlag`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="name" type="java.lang.String">
+      <column name="`Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="territoryId" type="java.lang.Integer">
+      <column name="`TerritoryID`" length="255" not-null="false" precision="10"/>
+    </property>
+    <many-to-one
+      name="countryRegionM2oFromSp"
+      class="CountryRegionM2oFromSp"
+      fetch="select">
+      <meta attribute="mapping-CountryRegionCode">
+        CountryRegionCode
+      </meta>
+      <column name="`CountryRegionCode`" length="255" not-null="false" precision="19"/>
+    </many-to-one>
+    <set name="addressM1Sps" table="Address_M1_SP" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`StateProvince`"/>
+      </key>
+      <one-to-many class="AddressM1Sp"/>
+    </set>
+  </class>
+  <class table="`All DB Types`" name="com.dbscenarios_30mar.dbtest_allscenarios.AllDbTypes" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.AllDbTypes">
+    <id name="id" type="java.lang.Integer">
+      <column name="`ID`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="byteCol" type="java.lang.Byte">
+      <column name="`Byte Col`" length="255" not-null="false" precision="2"/>
+    </property>
+    <property name="shortCol" type="java.lang.Short">
+      <column name="`Short Col`" length="255" not-null="false" precision="5"/>
+    </property>
+    <property name="intCol" type="java.lang.Integer">
+      <column name="`Int Col`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="longCol" type="java.math.BigInteger">
+      <column name="`Long Col`" length="255" not-null="false" precision="20"/>
+    </property>
+    <property name="bigIntCol" type="java.math.BigInteger">
+      <column name="`BigInt Col`" length="255" not-null="false" precision="20"/>
+    </property>
+    <property name="floatCol" type="java.lang.Double">
+      <column name="`Float Col`" length="255" not-null="false" precision="12" scale="4"/>
+    </property>
+    <property name="doubleCol" type="java.lang.Double">
+      <column name="`Double Col`" length="255" not-null="false" precision="18" scale="8"/>
+    </property>
+    <property name="bigDecCol" type="java.math.BigDecimal">
+      <column name="`BigDec Col`" length="255" not-null="false" precision="35" scale="15"/>
+    </property>
+    <property name="charCol" type="java.lang.Character">
+      <column name="`Char Col`" length="1" not-null="false" precision="19"/>
+    </property>
+    <property name="stringCol" type="java.lang.String">
+      <column name="`String Col`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="clobCol" type="java.lang.String">
+      <column name="`Clob Col`" length="500" not-null="false" precision="19"/>
+    </property>
+    <property name="textCol" type="java.lang.String">
+      <column name="`Text Col`" length="600" not-null="false" precision="19"/>
+    </property>
+    <property name="dateCol" type="java.sql.Date">
+      <column name="`Date Col`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="dateTimeCol" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DateTime Col`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="timeCol" type="java.sql.Time">
+      <column name="`Time Col`" length="8" not-null="false" precision="19"/>
+    </property>
+    <property name="timeStampCol" type="java.sql.Timestamp">
+      <column name="`TimeStamp Col`" length="19" not-null="true" precision="19"/>
+    </property>
+    <property name="booleanCol" type="java.lang.Boolean">
+      <column name="`Boolean Col`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="blobCol" type="binary">
+      <column name="`Blob Col`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`PhoneNumberType_O2O_PersonPhone`" name="com.dbscenarios_30mar.dbtest_allscenarios.PhoneNumberTypeO2oPersonPhone" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.PhoneNumberTypeO2oPersonPhone">
+    <id name="phoneNumberTypeId" type="java.lang.Integer">
+      <column name="`PhoneNumberTypeID`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="name" type="java.lang.String">
+      <column name="`Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="modifiedDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`ModifiedDate`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="personPhoneO2oM2o" class="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o">
+      <meta attribute="mapping-PhoneNumberTypeID">
+        PhoneNumberTypeID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`HireDate Table_M2O_FromEmployee`" name="com.dbscenarios_30mar.dbtest_allscenarios.HireDateTableM2oFromEmployee" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.HireDateTableM2oFromEmployee">
+    <id name="id" type="java.sql.Date">
+      <column name="`ID`" length="10" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="employeeName" type="java.lang.String">
+      <column name="`Employee Name`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="employeeRelationFrom2tableses" table="Employee_RelationFrom2Tables" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`HireDate`"/>
+      </key>
+      <one-to-many class="EmployeeRelationFrom2tables"/>
+    </set>
+  </class>
+  <class table="`Employee_RelationFrom2Tables`" name="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables">
+    <id name="businessEntityId" type="java.lang.Integer">
+      <column name="`BusinessEntityID`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nationalIdnumber" type="java.lang.String">
+      <column name="`NationalIDNumber`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="loginId" type="java.lang.String">
+      <column name="`LoginID`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="jobTitle" type="java.lang.String">
+      <column name="`JobTitle`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="maritalStatus" type="java.lang.String">
+      <column name="`MaritalStatus`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="gender" type="java.lang.String">
+      <column name="`Gender`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="currentFlag" type="java.lang.Boolean">
+      <column name="`CurrentFlag`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="emailId" type="java.lang.String">
+      <column name="`EmailId`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="organizationLevel" type="java.lang.Short">
+      <column name="`OrganizationLevel`" length="255" not-null="false" precision="5"/>
+    </property>
+    <property name="birthDate" type="java.sql.Date">
+      <column name="`BirthDate`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="salariedFlag" type="java.lang.Boolean">
+      <column name="`SalariedFlag`" length="255" not-null="false" precision="19"/>
+    </property>
+    <many-to-one
+      name="hireDateTableM2oFromEmployee"
+      class="HireDateTableM2oFromEmployee"
+      fetch="select">
+      <meta attribute="mapping-HireDate">
+        ID
+      </meta>
+      <column name="`HireDate`" length="10" not-null="false" precision="19"/>
+    </many-to-one>
+    <set name="compositesKeyRelationses" table="CompositesKeyRelations" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`BusinessEntityID`"/>
+      </key>
+      <one-to-many class="CompositesKeyRelations"/>
+    </set>
+    <set name="personPhoneO2oM2os" table="PersonPhone_O2O_M2O" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`BusinessEntityID`"/>
+      </key>
+      <one-to-many class="PersonPhoneO2oM2o"/>
+    </set>
+  </class>
+  <class table="`Self Relation`" name="com.dbscenarios_30mar.dbtest_allscenarios.SelfRelation" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.SelfRelation">
+    <id name="id" type="java.lang.Integer">
+      <column name="`ID`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="stringCol" type="java.lang.String">
+      <column name="`String Col`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="dateCol" type="java.sql.Date">
+      <column name="`Date Col`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="timeCol" type="java.sql.Time">
+      <column name="`Time Col`" length="8" not-null="false" precision="19"/>
+    </property>
+    <property name="booleanCol" type="java.lang.Boolean">
+      <column name="`Boolean Col`" length="255" not-null="false" precision="19"/>
+    </property>
+    <many-to-one
+      name="selfRelationByIntCol"
+      class="SelfRelation"
+      fetch="select">
+      <meta attribute="mapping-Int Col">
+        ID
+      </meta>
+      <meta attribute="ignore-properties">
+        &quot;selfRelationByIntCol&quot;, &quot;selfRelationsForIntCol&quot;
+      </meta>
+      <column name="`Int Col`" length="255" not-null="false" precision="10"/>
+    </many-to-one>
+    <set name="selfRelationsForIntCol" table="Self Relation" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`Int Col`"/>
+      </key>
+      <one-to-many class="SelfRelation"/>
+    </set>
+  </class>
+  <class table="`Address_M1_SP`" name="com.dbscenarios_30mar.dbtest_allscenarios.AddressM1Sp" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.AddressM1Sp">
+    <id name="addressId" type="java.lang.Integer">
+      <column name="`AddressID`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="addressLine1" type="java.lang.String">
+      <column name="`AddressLine1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="addressLine2" type="java.lang.String">
+      <column name="`AddressLine2`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="city" type="java.lang.String">
+      <column name="`City`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="postalCode" type="java.lang.String">
+      <column name="`PostalCode`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="spatialLocation" type="binary">
+      <column name="`SpatialLocation`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="rowguid" type="java.lang.String">
+      <column name="`rowguid`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="modifiedDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`ModifiedDate`" length="255" not-null="false" precision="19"/>
+    </property>
+    <many-to-one
+      name="stateProvinceM2oAddress"
+      class="StateProvinceM2oAddress"
+      fetch="select">
+      <meta attribute="mapping-StateProvince">
+        StateProvinceID
+      </meta>
+      <column name="`StateProvince`" length="255" not-null="false" precision="10"/>
+    </many-to-one>
+  </class>
+  <class table="`CompositesKeyRelations`" name="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations">
+    <composite-id mapped="true" class="CompositesKeyRelationsId">
+      <key-property name="businessEntityId" type="java.lang.Integer">
+        <column name="`BusinessEntityID`" length="255" not-null="true" precision="10"/>
+      </key-property>
+      <key-property name="shiftId" type="java.lang.Short">
+        <column name="`ShiftID`" length="255" not-null="true" precision="5"/>
+      </key-property>
+      <key-property name="departmentId" type="java.lang.Short">
+        <column name="`DepartmentID`" length="255" not-null="true" precision="5"/>
+      </key-property>
+    </composite-id>
+    <property name="startDate" type="java.sql.Date">
+      <column name="`StartDate`" length="10" not-null="true" precision="19"/>
+    </property>
+    <property name="endDate" type="java.sql.Date">
+      <column name="`EndDate`" length="10" not-null="false" precision="19"/>
+    </property>
+    <many-to-one
+      name="departmentCompositeParent"
+      class="DepartmentCompositeParent"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-DepartmentID">
+        DepartmentID
+      </meta>
+      <meta attribute="setter-override">
+        this.departmentId = departmentCompositeParent.getDepartmentId();
+      </meta>
+      <column name="`DepartmentID`" length="255" not-null="true" precision="5"/>
+    </many-to-one>
+    <many-to-one
+      name="employeeRelationFrom2tables"
+      class="EmployeeRelationFrom2tables"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-BusinessEntityID">
+        BusinessEntityID
+      </meta>
+      <meta attribute="setter-override">
+        this.businessEntityId = employeeRelationFrom2tables.getBusinessEntityId();
+      </meta>
+      <column name="`BusinessEntityID`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+    <many-to-one
+      name="shift2rM2ovirtualParentForDepartment"
+      class="Shift2rM2ovirtualParentForDepartment"
+      fetch="select"
+      update="false"
+      insert="false">
+      <meta attribute="mapping-ShiftID">
+        ShiftID
+      </meta>
+      <meta attribute="setter-override">
+        this.shiftId = shift2rM2ovirtualParentForDepartment.getShiftId();
+      </meta>
+      <column name="`ShiftID`" length="255" not-null="true" precision="5"/>
+    </many-to-one>
+  </class>
+  <class table="`PersonPhone_O2O_M2O`" name="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o" entity-name="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o">
+    <id name="phoneNumberTypeId" type="java.lang.Integer">
+      <column name="`PhoneNumberTypeID`" length="255" not-null="true" precision="10"/>
+      <generator class="foreign">
+        <param name="property">phoneNumberTypeO2oPersonPhone</param>
+      </generator>
+    </id>
+    <property name="phoneNumber" type="java.lang.String">
+      <column name="`PhoneNumber`" length="255" not-null="true" precision="19"/>
+    </property>
+    <property name="modifiedDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`ModifiedDate`" length="255" not-null="false" precision="19"/>
+    </property>
+    <many-to-one
+      name="employeeRelationFrom2tables"
+      class="EmployeeRelationFrom2tables"
+      fetch="select">
+      <meta attribute="mapping-BusinessEntityID">
+        BusinessEntityID
+      </meta>
+      <column name="`BusinessEntityID`" length="255" not-null="true" precision="10"/>
+    </many-to-one>
+    <one-to-one
+      name="phoneNumberTypeO2oPersonPhone"
+      class="com.dbscenarios_30mar.dbtest_allscenarios.PhoneNumberTypeO2oPersonPhone"
+      constrained="true">
+      <meta attribute="mapping-PhoneNumberTypeID">
+        PhoneNumberTypeID
+      </meta>
+    </one-to-one>
+  </class>
+</hibernate-mapping>

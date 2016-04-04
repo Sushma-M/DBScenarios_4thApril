@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dbscenarios_30mar.allo2m_o2o">
+  <class table="`Date_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneP">
+    <id name="dateId" type="java.sql.Date">
+      <column name="`DateID`" length="10" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="date1" type="java.sql.Date">
+      <column name="`Date1`" length="10" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="dateOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneC">
+      <meta attribute="mapping-DateID">
+        DateID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`BigInt_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneC">
+    <id name="bigIntId" type="java.math.BigInteger">
+      <column name="`BigIntID`" length="255" not-null="true" precision="20"/>
+      <generator class="foreign">
+        <param name="property">bigIntOne2oneP</param>
+      </generator>
+    </id>
+    <property name="bigInt1" type="java.math.BigInteger">
+      <column name="`BigInt1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <one-to-one
+      name="bigIntOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-BigIntID">
+        BigIntID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Double_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneC">
+    <id name="doubleId" type="java.lang.Double">
+      <column name="`DoubleID`" length="255" not-null="true" precision="18" scale="8"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="doubleMany2oneP"
+      class="DoubleMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-DoubleCol1">
+        DoubleID
+      </meta>
+      <column name="`DoubleCol1`" length="255" not-null="false" precision="18" scale="8"/>
+    </many-to-one>
+  </class>
+  <class table="`String_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneC">
+    <id name="stringId" type="java.lang.String">
+      <column name="`StringID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="stringMany2oneP"
+      class="StringMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-StringCol1">
+        StringID
+      </meta>
+      <column name="`StringCol1`" length="255" not-null="false" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`TimeStamp_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneP">
+    <id name="timeStampId" type="java.sql.Timestamp">
+      <column name="`TimeStampID`" length="19" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="timeStampCol1" type="java.sql.Timestamp">
+      <column name="`TimeStampCol1`" length="19" not-null="true" precision="19"/>
+    </property>
+    <set name="timeStampMany2oneCs" table="TimeStamp_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`TimeStampCol`"/>
+      </key>
+      <one-to-many class="TimeStampMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Time_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneP">
+    <id name="timeId" type="java.sql.Time">
+      <column name="`TimeID`" length="8" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="time1" type="java.sql.Time">
+      <column name="`Time1`" length="8" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="timeOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneC">
+      <meta attribute="mapping-TimeID">
+        TimeID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Int_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.IntMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.IntMany2oneP">
+    <id name="id" type="java.lang.Integer">
+      <column name="`ID`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="intCol1" type="java.lang.Integer">
+      <column name="`IntCol1`" length="255" not-null="false" precision="10"/>
+    </property>
+    <set name="intMany2oneCs" table="Int_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`IntCol1`"/>
+      </key>
+      <one-to-many class="IntMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Float_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP">
+    <id name="id" type="java.lang.Double">
+      <column name="`ID`" length="255" not-null="true" precision="12" scale="4"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="floatCol1" type="java.lang.Double">
+      <column name="`FloatCol1`" length="255" not-null="false" precision="12" scale="4"/>
+    </property>
+    <set name="floatMany2oneCs" table="Float_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`FloatCol1`"/>
+      </key>
+      <one-to-many class="FloatMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Long_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneC">
+    <id name="longId" type="java.math.BigInteger">
+      <column name="`LongID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="longMany2oneP"
+      class="LongMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-LongCol1">
+        LongID
+      </meta>
+      <column name="`LongCol1`" length="255" not-null="false" precision="20"/>
+    </many-to-one>
+  </class>
+  <class table="`Date_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DateMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DateMany2oneP">
+    <id name="dateId" type="java.sql.Date">
+      <column name="`DateID`" length="10" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="dateCol1" type="java.sql.Date">
+      <column name="`DateCol1`" length="10" not-null="false" precision="19"/>
+    </property>
+    <set name="dateMany2oneCs" table="Date_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`DateCol1`"/>
+      </key>
+      <one-to-many class="DateMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Int_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.IntMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.IntMany2oneC">
+    <id name="id" type="java.lang.Integer">
+      <column name="`ID`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="intMany2oneP"
+      class="IntMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-IntCol1">
+        ID
+      </meta>
+      <column name="`IntCol1`" length="255" not-null="false" precision="10"/>
+    </many-to-one>
+  </class>
+  <class table="`Long_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneP">
+    <id name="longId" type="java.math.BigInteger">
+      <column name="`LongID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="longCol1" type="java.math.BigInteger">
+      <column name="`LongCol1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <set name="longMany2oneCs" table="Long_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`LongCol1`"/>
+      </key>
+      <one-to-many class="LongMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Date_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DateMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DateMany2oneC">
+    <id name="dateId" type="java.sql.Date">
+      <column name="`DateID`" length="10" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="dateMany2oneP"
+      class="DateMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-DateCol1">
+        DateID
+      </meta>
+      <column name="`DateCol1`" length="10" not-null="false" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`Bigdec_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.BigdecMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigdecMany2oneP">
+    <id name="bigdecId" type="java.math.BigDecimal">
+      <column name="`BigdecID`" length="255" not-null="true" precision="35" scale="15"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="bigDecCol1" type="java.math.BigDecimal">
+      <column name="`BigDecCol1`" length="255" not-null="false" precision="35" scale="15"/>
+    </property>
+    <set name="bigdecMany2oneCs" table="Bigdec_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`BigDecCol1`"/>
+      </key>
+      <one-to-many class="BigdecMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Char_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.CharMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.CharMany2oneP">
+    <id name="charId" type="java.lang.Character">
+      <column name="`CharID`" length="1" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="charCol1" type="java.lang.Character">
+      <column name="`CharCol1`" length="1" not-null="false" precision="19"/>
+    </property>
+    <set name="charMany2oneCs" table="Char_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`CharCol1`"/>
+      </key>
+      <one-to-many class="CharMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Byte_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneP">
+    <id name="byteId" type="java.lang.Byte">
+      <column name="`ByteID`" length="255" not-null="true" precision="2"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="byte1" type="java.lang.Byte">
+      <column name="`Byte1`" length="255" not-null="false" precision="2"/>
+    </property>
+    <one-to-one name="byteOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneC">
+      <meta attribute="mapping-ByteID">
+        ByteID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Datetime_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneP">
+    <id name="datetimeId" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DatetimeID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="datetime1" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`Datetime1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="datetimeOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneC">
+      <meta attribute="mapping-DatetimeID">
+        DatetimeID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Double_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneP">
+    <id name="doubleId" type="java.lang.Double">
+      <column name="`DoubleID`" length="255" not-null="true" precision="18" scale="8"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="double1" type="java.lang.Double">
+      <column name="`Double1`" length="255" not-null="false" precision="18" scale="8"/>
+    </property>
+    <one-to-one name="doubleOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneC">
+      <meta attribute="mapping-DoubleID">
+        DoubleID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`TimeStamp_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneC">
+    <id name="timeStampId" type="java.sql.Timestamp">
+      <column name="`TimeStampId`" length="19" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="timeStampMany2oneP"
+      class="TimeStampMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-TimeStampCol">
+        TimeStampID
+      </meta>
+      <column name="`TimeStampCol`" length="19" not-null="true" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`Datetime_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneC">
+    <id name="datetimeId" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DatetimeID`" length="255" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">datetimeOne2oneP</param>
+      </generator>
+    </id>
+    <property name="datetime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`Datetime`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="datetimeOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-DatetimeID">
+        DatetimeID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Date_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneC">
+    <id name="dateId" type="java.sql.Date">
+      <column name="`DateID`" length="10" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">dateOne2oneP</param>
+      </generator>
+    </id>
+    <property name="date1" type="java.sql.Date">
+      <column name="`Date1`" length="10" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="dateOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.DateOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-DateID">
+        DateID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Double_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneP">
+    <id name="doubleId" type="java.lang.Double">
+      <column name="`DoubleID`" length="255" not-null="true" precision="18" scale="8"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="doubleCol1" type="java.lang.Double">
+      <column name="`DoubleCol1`" length="255" not-null="false" precision="18" scale="8"/>
+    </property>
+    <set name="doubleMany2oneCs" table="Double_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`DoubleCol1`"/>
+      </key>
+      <one-to-many class="DoubleMany2oneC"/>
+    </set>
+  </class>
+  <class table="`String_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneP">
+    <id name="stringId" type="java.lang.String">
+      <column name="`StringID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="string1" type="java.lang.String">
+      <column name="`String1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="stringOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneC">
+      <meta attribute="mapping-StringID">
+        StringID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`String_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneP">
+    <id name="stringId" type="java.lang.String">
+      <column name="`StringID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="stringCol1" type="java.lang.String">
+      <column name="`StringCol1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="stringMany2oneCs" table="String_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`StringCol1`"/>
+      </key>
+      <one-to-many class="StringMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Bigdec_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.BigdecMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigdecMany2oneC">
+    <id name="bigdecId" type="java.math.BigDecimal">
+      <column name="`BigdecID`" length="255" not-null="true" precision="35" scale="15"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="bigdecMany2oneP"
+      class="BigdecMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-BigDecCol1">
+        BigdecID
+      </meta>
+      <column name="`BigDecCol1`" length="255" not-null="false" precision="35" scale="15"/>
+    </many-to-one>
+  </class>
+  <class table="`String_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneC">
+    <id name="stringId" type="java.lang.String">
+      <column name="`StringID`" length="255" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">stringOne2oneP</param>
+      </generator>
+    </id>
+    <property name="string1" type="java.lang.String">
+      <column name="`String1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="stringOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-StringID">
+        StringID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Bigdec_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneP">
+    <id name="bigdecId" type="java.math.BigDecimal">
+      <column name="`BigdecID`" length="255" not-null="true" precision="35" scale="15"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="bigdec1" type="java.math.BigDecimal">
+      <column name="`Bigdec1`" length="255" not-null="false" precision="35" scale="15"/>
+    </property>
+    <one-to-one name="bigdecOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneC">
+      <meta attribute="mapping-BigdecID">
+        BigdecID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Long_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneC">
+    <id name="longId" type="java.math.BigInteger">
+      <column name="`LongID`" length="255" not-null="true" precision="20"/>
+      <generator class="foreign">
+        <param name="property">longOne2oneP</param>
+      </generator>
+    </id>
+    <property name="long1" type="java.math.BigInteger">
+      <column name="`Long1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <one-to-one
+      name="longOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-LongID">
+        LongID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Short_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneP">
+    <id name="shortId" type="java.lang.Short">
+      <column name="`ShortID`" length="255" not-null="true" precision="5"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="shortCol1" type="java.lang.Short">
+      <column name="`ShortCol1`" length="255" not-null="false" precision="5"/>
+    </property>
+    <set name="shortMany2oneCs" table="Short_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`ShortCol1`"/>
+      </key>
+      <one-to-many class="ShortMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Int_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneC">
+    <id name="intId" type="java.lang.Integer">
+      <column name="`IntID`" length="255" not-null="true" precision="10"/>
+      <generator class="foreign">
+        <param name="property">intOne2oneP</param>
+      </generator>
+    </id>
+    <property name="string1" type="java.lang.String">
+      <column name="`String1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="intOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-IntID">
+        IntID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Byte_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneP">
+    <id name="byteId" type="java.lang.Byte">
+      <column name="`ByteID`" length="255" not-null="true" precision="2"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="byteCol1" type="java.lang.Byte">
+      <column name="`ByteCol1`" length="255" not-null="false" precision="2"/>
+    </property>
+    <set name="byteMany2oneCs" table="Byte_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`ByteCol1`"/>
+      </key>
+      <one-to-many class="ByteMany2oneC"/>
+    </set>
+  </class>
+  <class table="`BigInt_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneC">
+    <id name="bigIntId" type="java.math.BigInteger">
+      <column name="`BigIntID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="bigIntMany2oneP"
+      class="BigIntMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-BigIntCol1">
+        BigIntID
+      </meta>
+      <column name="`BigIntCol1`" length="255" not-null="false" precision="20"/>
+    </many-to-one>
+  </class>
+  <class table="`Char_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneP">
+    <id name="charId" type="java.lang.Character">
+      <column name="`CharID`" length="1" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="char1" type="java.lang.Character">
+      <column name="`Char1`" length="1" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="charOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneC">
+      <meta attribute="mapping-CharID">
+        CharID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Bigdec_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneC">
+    <id name="bigdecId" type="java.math.BigDecimal">
+      <column name="`BigdecID`" length="255" not-null="true" precision="35" scale="15"/>
+      <generator class="foreign">
+        <param name="property">bigdecOne2oneP</param>
+      </generator>
+    </id>
+    <property name="bigdec1" type="java.math.BigDecimal">
+      <column name="`Bigdec1`" length="255" not-null="false" precision="35" scale="15"/>
+    </property>
+    <one-to-one
+      name="bigdecOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-BigdecID">
+        BigdecID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Time_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.TimeMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeMany2oneC">
+    <id name="timeId" type="java.sql.Time">
+      <column name="`TimeID`" length="8" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="timeMany2oneP"
+      class="TimeMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-TimeCol1">
+        TimeID
+      </meta>
+      <column name="`TimeCol1`" length="8" not-null="false" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`Double_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneC">
+    <id name="doubleId" type="java.lang.Double">
+      <column name="`DoubleID`" length="255" not-null="true" precision="18" scale="8"/>
+      <generator class="foreign">
+        <param name="property">doubleOne2oneP</param>
+      </generator>
+    </id>
+    <property name="double1" type="java.lang.Double">
+      <column name="`Double1`" length="255" not-null="false" precision="18" scale="8"/>
+    </property>
+    <one-to-one
+      name="doubleOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-DoubleID">
+        DoubleID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Byte_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneC">
+    <id name="byteId" type="java.lang.Byte">
+      <column name="`ByteID`" length="255" not-null="true" precision="2"/>
+      <generator class="foreign">
+        <param name="property">byteOne2oneP</param>
+      </generator>
+    </id>
+    <property name="byte1" type="java.lang.Byte">
+      <column name="`Byte1`" length="255" not-null="false" precision="2"/>
+    </property>
+    <one-to-one
+      name="byteOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.ByteOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-ByteID">
+        ByteID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Char_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.CharMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.CharMany2oneC">
+    <id name="charId" type="java.lang.Character">
+      <column name="`CharID`" length="1" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="charMany2oneP"
+      class="CharMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-CharCol1">
+        CharID
+      </meta>
+      <column name="`CharCol1`" length="1" not-null="false" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`Long_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneP">
+    <id name="longId" type="java.math.BigInteger">
+      <column name="`LongID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="long1" type="java.math.BigInteger">
+      <column name="`Long1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <one-to-one name="longOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.LongOne2oneC">
+      <meta attribute="mapping-LongID">
+        LongID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Char_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneC">
+    <id name="charId" type="java.lang.Character">
+      <column name="`CharID`" length="1" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">charOne2oneP</param>
+      </generator>
+    </id>
+    <property name="char1" type="java.lang.Character">
+      <column name="`Char1`" length="1" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="charOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-CharID">
+        CharID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Byte_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC">
+    <id name="byteId" type="java.lang.Byte">
+      <column name="`ByteID`" length="255" not-null="true" precision="2"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one
+      name="byteMany2oneP"
+      class="ByteMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-ByteCol1">
+        ByteID
+      </meta>
+      <column name="`ByteCol1`" length="255" not-null="false" precision="2"/>
+    </many-to-one>
+  </class>
+  <class table="`TimeStamp_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneC">
+    <id name="timestampId" type="java.sql.Timestamp">
+      <column name="`TimestampID`" length="19" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">timeStampOne2oneP</param>
+      </generator>
+    </id>
+    <property name="timeStamp1" type="java.sql.Timestamp">
+      <column name="`TimeStamp1`" length="19" not-null="true" precision="19"/>
+    </property>
+    <one-to-one
+      name="timeStampOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-TimestampID">
+        TimeStamp
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Datetime_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.DatetimeMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.DatetimeMany2oneC">
+    <id name="datetimeId" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DatetimeID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="datetimeMany2oneP"
+      class="DatetimeMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-Datetime">
+        DatetimeID
+      </meta>
+      <column name="`Datetime`" length="255" not-null="false" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`Float_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneP">
+    <id name="floatId" type="java.lang.Double">
+      <column name="`FloatID`" length="255" not-null="true" precision="12" scale="4"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="float1" type="java.lang.Double">
+      <column name="`Float1`" length="255" not-null="false" precision="12" scale="4"/>
+    </property>
+    <one-to-one name="floatOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneC">
+      <meta attribute="mapping-FloatID">
+        FloatID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Time_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.TimeMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeMany2oneP">
+    <id name="timeId" type="java.sql.Time">
+      <column name="`TimeID`" length="8" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="timeCol1" type="java.sql.Time">
+      <column name="`TimeCol1`" length="8" not-null="false" precision="19"/>
+    </property>
+    <set name="timeMany2oneCs" table="Time_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`TimeCol1`"/>
+      </key>
+      <one-to-many class="TimeMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Float_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneC">
+    <id name="floatId" type="java.lang.Double">
+      <column name="`FloatID`" length="255" not-null="true" precision="12" scale="4"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="floatMany2oneP"
+      class="FloatMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-FloatCol1">
+        ID
+      </meta>
+      <column name="`FloatCol1`" length="255" not-null="false" precision="12" scale="4"/>
+    </many-to-one>
+  </class>
+  <class table="`Float_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneC">
+    <id name="floatId" type="java.lang.Double">
+      <column name="`FloatID`" length="255" not-null="true" precision="12" scale="4"/>
+      <generator class="foreign">
+        <param name="property">floatOne2oneP</param>
+      </generator>
+    </id>
+    <property name="float1" type="java.lang.Double">
+      <column name="`Float1`" length="255" not-null="false" precision="12" scale="4"/>
+    </property>
+    <one-to-one
+      name="floatOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-FloatID">
+        FloatID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`TimeStamp_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneP">
+    <id name="timeStamp" type="java.sql.Timestamp">
+      <column name="`TimeStamp`" length="19" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="timestamp1" type="java.sql.Timestamp">
+      <column name="`Timestamp1`" length="19" not-null="true" precision="19"/>
+    </property>
+    <one-to-one name="timeStampOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneC">
+      <meta attribute="mapping-TimeStamp">
+        TimestampID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Datetime_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.DatetimeMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.DatetimeMany2oneP">
+    <id name="datetimeId" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DatetimeID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="datetimeCol1" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`DatetimeCol1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="datetimeMany2oneCs" table="Datetime_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`Datetime`"/>
+      </key>
+      <one-to-many class="DatetimeMany2oneC"/>
+    </set>
+  </class>
+  <class table="`Short_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC">
+    <id name="shortId" type="java.lang.Short">
+      <column name="`ShortID`" length="255" not-null="true" precision="5"/>
+      <generator class="foreign">
+        <param name="property">shortOne2oneP</param>
+      </generator>
+    </id>
+    <property name="short1" type="java.lang.Short">
+      <column name="`Short1`" length="255" not-null="false" precision="5"/>
+    </property>
+    <one-to-one
+      name="shortOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-ShortID">
+        ShortID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`BigInt_Many2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneP">
+    <id name="bigIntId" type="java.math.BigInteger">
+      <column name="`BigIntID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="bigIntCol1" type="java.math.BigInteger">
+      <column name="`BigIntCol1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <set name="bigIntMany2oneCs" table="BigInt_Many2One_C" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`BigIntCol1`"/>
+      </key>
+      <one-to-many class="BigIntMany2oneC"/>
+    </set>
+  </class>
+  <class table="`BigInt_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneP">
+    <id name="bigIntId" type="java.math.BigInteger">
+      <column name="`BigIntID`" length="255" not-null="true" precision="20"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="bigInt1" type="java.math.BigInteger">
+      <column name="`BigInt1`" length="255" not-null="false" precision="20"/>
+    </property>
+    <one-to-one name="bigIntOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.BigIntOne2oneC">
+      <meta attribute="mapping-BigIntID">
+        BigIntID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Short_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP">
+    <id name="shortId" type="java.lang.Short">
+      <column name="`ShortID`" length="255" not-null="true" precision="5"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="short1" type="java.lang.Short">
+      <column name="`Short1`" length="255" not-null="false" precision="5"/>
+    </property>
+    <one-to-one name="shortOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC">
+      <meta attribute="mapping-ShortID">
+        ShortID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Short_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneC">
+    <id name="shortId" type="java.lang.Short">
+      <column name="`ShortID`" length="255" not-null="true" precision="5"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one
+      name="shortMany2oneP"
+      class="ShortMany2oneP"
+      fetch="select">
+      <meta attribute="mapping-ShortCol1">
+        ShortID
+      </meta>
+      <column name="`ShortCol1`" length="255" not-null="false" precision="5"/>
+    </many-to-one>
+  </class>
+  <class table="`Int_One2One_P`" name="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneP" entity-name="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneP">
+    <id name="intId" type="java.lang.Integer">
+      <column name="`IntID`" length="255" not-null="true" precision="10"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="string1" type="java.lang.String">
+      <column name="`String1`" length="255" not-null="false" precision="19"/>
+    </property>
+    <one-to-one name="intOne2oneC" class="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneC">
+      <meta attribute="mapping-IntID">
+        IntID
+      </meta>
+    </one-to-one>
+  </class>
+  <class table="`Time_One2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneC">
+    <id name="timeId" type="java.sql.Time">
+      <column name="`TimeID`" length="8" not-null="true" precision="19"/>
+      <generator class="foreign">
+        <param name="property">timeOne2oneP</param>
+      </generator>
+    </id>
+    <property name="time1" type="java.sql.Time">
+      <column name="`Time1`" length="8" not-null="false" precision="19"/>
+    </property>
+    <one-to-one
+      name="timeOne2oneP"
+      class="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneP"
+      constrained="true">
+      <meta attribute="mapping-TimeID">
+        TimeID
+      </meta>
+    </one-to-one>
+  </class>
+</hibernate-mapping>

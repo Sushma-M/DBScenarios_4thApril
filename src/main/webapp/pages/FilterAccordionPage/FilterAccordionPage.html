@@ -1,0 +1,145 @@
+<wm-page data-ng-controller="FilterAccordionPagePageController" pagetitle="Filter Accordion Page" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="Filters With DBTest DB"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-panel class="panel-primary" name="panel1" title="Filter for All DataTypes Table" enablefullscreen="true" collapsible="true">
+                            <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                            <wm-livefilter title="Filter All DB Types" dataset="bind:Variables.DbtestAllDbTypesData.dataSet" captionalign="left" captionposition="left" name="livefilter1" enableemptyfilter="null,empty" collapsible="true">
+                                <wm-layoutgrid name="layoutgrid1">
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                            <wm-filter-field name="id" field="id" displayname="Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="number"
+                                            primary-key="false" is-related="false" key="id" placeholder="Enter value" max-placeholder="Enter Max value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                            <wm-filter-field name="stringCol" field="stringCol" displayname="String Col" widget="select" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="stringCol" placeholder="Enter value" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                            <wm-filter-field name="byteCol" field="byteCol" displayname="Byte Col" widget="checkboxset" is-range="false" type="byte" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="byteCol" placeholder="Enter value" max-placeholder="Enter Max value" datafield="key" displayfield="value" layout="inline"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                            <wm-filter-field name="clobCol" field="clobCol" displayname="Clob Col" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="clobCol" placeholder="Type ahead" matchmode="start" datafield="key" searchkey="value" displaylabel="value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                            <wm-filter-field name="shortCol" field="shortCol" displayname="Short Col" widget="radioset" is-range="false" type="short" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="shortCol" placeholder="Enter value" datafield="key" displayfield="value" layout="inline"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                            <wm-filter-field name="textCol" field="textCol" displayname="Text Col" widget="select" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="textCol" placeholder="Enter value" matchmode="start" datafield="key" displayfield="value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                            <wm-filter-field name="intCol" field="intCol" displayname="Int Col" widget="number" is-range="false" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="intCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                                            <wm-filter-field name="dateCol" field="dateCol" displayname="Date Col" placeholder="Enter Value" max-placeholder="Max Date" widget="date" is-range="true" type="date" is-primary-key="false" generator="assigned" show="true"
+                                            pc-display="true" mobile-display="true" primary-key="false" is-related="false" key="dateCol"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                            <wm-filter-field name="longCol" field="longCol" displayname="Long Col" widget="number" is-range="false" type="big_integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="longCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                                            <wm-filter-field name="dateTimeCol" field="dateTimeCol" displayname="Date Time Col" placeholder="Enter Value" max-placeholder="Max DateTime" widget="datetime" is-range="true" type="datetime" is-primary-key="false"
+                                            generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" is-related="false" key="dateTimeCol" disabled="false"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn11">
+                                            <wm-filter-field name="bigIntCol" field="bigIntCol" displayname="Big Int Col" widget="number" is-range="false" type="big_integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="bigIntCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn12">
+                                            <wm-filter-field name="timeCol" field="timeCol" displayname="Time Col" placeholder="Enter Value" max-placeholder="Max Time" widget="time" is-range="true" type="time" is-primary-key="false" generator="assigned" show="true"
+                                            pc-display="true" mobile-display="true" primary-key="false" is-related="false" key="timeCol" hourstep="1"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow7">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                                            <wm-filter-field name="floatCol" field="floatCol" displayname="Float Col" widget="number" is-range="false" type="double" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="floatCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                                            <wm-filter-field name="timeStampCol" field="timeStampCol" displayname="Time Stamp Col" placeholder="Enter Value" max-placeholder="Max TimeStamp" widget="timestamp" is-range="true" type="timestamp" is-primary-key="false"
+                                            generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" is-related="false" key="timeStampCol"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow8">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                                            <wm-filter-field name="doubleCol" field="doubleCol" displayname="Double Col" widget="number" is-range="false" type="double" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="doubleCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn16">
+                                            <wm-filter-field name="booleanCol" field="booleanCol" displayname="Boolean Col" widget="checkbox" is-range="false" type="boolean" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="booleanCol"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                            <wm-filter-field name="bigDecCol" field="bigDecCol" displayname="Big Dec Col" widget="number" is-range="false" type="big_decimal" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="number" primary-key="false" is-related="false" key="bigDecCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                            <wm-filter-field name="blobCol" field="blobCol" displayname="Blob Col" widget="upload" is-range="false" type="blob" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            primary-key="false" is-related="false" key="blobCol" disabled="disabled"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow10">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn19">
+                                            <wm-filter-field name="charCol" field="charCol" displayname="Char Col" widget="text" is-range="false" type="character" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            inputtype="text" primary-key="false" is-related="false" key="charCol" placeholder="Enter value"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" type="button"></wm-filter-action>
+                                <wm-filter-action key="clear" display-name="Clear" show="true" class="btn" iconclass="wi wi-cancel" action="clearFilter()" type="button"></wm-filter-action>
+                            </wm-livefilter>
+                            <wm-grid readonlygrid="false" insertrow="true" updaterow="true" deleterow="true" dataset="bind:Widgets.livefilter1.result" navigation="Advanced" name="grid1" showrecordcount="false" showrowindex="false">
+                                <wm-grid-column binding="id" caption="Id" type="integer" width="px" primary-key="true" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="byteCol" caption="Byte" type="byte" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="shortCol" caption="Short" type="short" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="intCol" caption="Int" type="integer" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="longCol" caption="Long" type="big_integer" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="bigIntCol" caption="BigInt" type="big_integer" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="floatCol" caption="Float" type="double" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="doubleCol" caption="Double" type="double" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="bigDecCol" caption="BigDec" type="big_decimal" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="charCol" caption="Char" type="character" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="stringCol" caption="String" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="clobCol" caption="Clob" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="textCol" caption="Text" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="dateCol" caption="Date" type="date" width="px" generator="assigned" search-placeholder="Enter date in yyyy-mm-dd" pcdisplay="true" mobiledisplay="true" edit-widget-type="date" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="dateTimeCol" caption="DateTime" type="datetime" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="datetime" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="timeCol" caption="Time" type="time" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="time" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="timeStampCol" caption="TimeStamp" type="timestamp" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="datetime" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="booleanCol" caption="Boolean" type="boolean" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="checkbox" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="blobCol" caption="Blob" type="blob" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="upload" readonly="false"><a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a>
+                                </wm-grid-column>
+                                <wm-grid-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" action="addNewRow()"></wm-grid-action>
+                            </wm-grid>
+                        </wm-panel>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

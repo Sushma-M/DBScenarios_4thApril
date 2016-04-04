@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.dbscenarios_30mar.allo2m_o2o.controller,com.dbscenarios_30mar.allo2m_o2o.service,com.dbscenarios_30mar.allo2m_o2o.dao"/>
+    <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>
+                    classpath:AllO2M_O2O.properties
+                </value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+   <bean id="AllO2M_O2OWMManagedDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" depends-on="systemPropertyInitializer" lazy-init="true"
+                      p:driverClass="${AllO2M_O2O.driverClass}"
+                      p:jdbcUrl="${AllO2M_O2O.url}"
+                      p:user="${AllO2M_O2O.username}"
+                      p:password="${AllO2M_O2O.password}"
+                      p:maxPoolSize="4"
+                      p:minPoolSize="2"
+                      p:maxIdleTime="600"
+                      p:maxStatements="50"
+                      p:maxStatementsPerConnection="20"
+                      p:checkoutTimeout="10000"
+                      p:idleConnectionTestPeriod="300"
+                      p:unreturnedConnectionTimeout="300"
+                      p:debugUnreturnedConnectionStackTraces="true"
+                      p:acquireRetryAttempts="3"
+                      p:acquireRetryDelay="1000"
+                      p:contextClassLoaderSource="library"
+                      p:privilegeSpawnedThreads="true"
+                      />
+    
+    <bean id="AllO2M_O2OSessionFactory" class="com.wavemaker.runtime.data.factory.TypeResolverSessionFactoryBean">
+        <property name="dataSource" ref="AllO2M_O2ODataSource"/>
+        <property name="packagesToScan" value="com.dbscenarios_30mar.allo2m_o2o"/>
+        <property name="mappingResources">
+            <list>
+                <value>
+                    AllO2M_O2O-queries.hbm.xml
+                </value>
+            </list>
+        </property>
+        <property name="customTypes">
+            <array value-type="com.wavemaker.runtime.data.CustomType">
+                <ref bean="dateTimeCustomType"/>
+            </array>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    ${AllO2M_O2O.dialect}
+                </prop>
+                <prop key="hibernate.show_sql">
+                    false
+                </prop>
+                <prop key="hibernate.globally_quoted_identifiers">
+                    false
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">
+                    ${AllO2M_O2O.hbm2ddl}
+                </prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="AllO2M_O2OTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="AllO2M_O2OSessionFactory"/>
+    </bean>
+    <bean id="AllO2M_O2OTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+        <property name="sessionFactory" ref="AllO2M_O2OSessionFactory"/>
+    </bean>
+    <bean id="AllO2M_O2OWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
+        <property name="template" ref="AllO2M_O2OTemplate"/>
+    </bean>
+    <bean id="AllO2M_O2OWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
+        <property name="template" ref="AllO2M_O2OTemplate"/>
+        <property name="serviceId" value="AllO2M_O2O" />
+    </bean>
+
+    <bean id="persistentLocalDateTimeType" class="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime"/>
+    <bean id="dateTimeCustomType" class="com.wavemaker.runtime.data.CustomType">
+        <property name="type" ref="persistentLocalDateTimeType"/>
+        <property name="keys">
+            <list>
+                <value>DateTime</value>
+                <value>org.joda.time.LocalDateTime</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="AllO2M_O2OPageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
+        <property name="pageParameterName" value="page"/>
+        <property name="sizeParameterName" value="size"/>
+        <property name="oneIndexedParameters" value="true"/>
+        <property name="maxPageSize" value="${AllO2M_O2O.maxPageSize}"/>
+        <property name="fallbackPageable">
+         <bean  class="org.springframework.data.domain.PageRequest">
+            <constructor-arg  value="0"/>
+            <constructor-arg  value="20"/>
+         </bean>
+         </property>
+    </bean>
+
+    <bean id="AllO2M_O2ODataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
+           <property name="dataSourceType" value="${AllO2M_O2O.dataSourceType}"/>
+           <property name="jndiName" value="${AllO2M_O2O.jndiName}"/>
+           <property name="serviceId" value="AllO2M_O2O"/>
+    </bean>
+
+
+    <tx:annotation-driven/>
+
+</beans>
+

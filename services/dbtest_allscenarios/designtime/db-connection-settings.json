@@ -1,0 +1,23 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a2621157e686d791a50777e47367b6a3120",
+  "url" : "jdbc:mysql://ec2-54-87-2-36.compute-1.amazonaws.com:3306/dbtest_allscenarios?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "dbtest_allscenarios",
+  "packageName" : "com.dbscenarios_30mar.dbtest_allscenarios",
+  "dbType" : "MySQL",
+  "host" : "ec2-54-87-2-36.compute-1.amazonaws.com",
+  "dbName" : "dbtest_allscenarios",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ "Address_M1_SP", "All DB Types", "Composites1", "Composites2", "CompositesKeyRelations", "CountryRegion_M2O_FromSP", "Department_Composite_Parent", "Employee_RelationFrom2Tables", "HireDate Table_M2O_FromEmployee", "PersonPhone_O2O_M2O", "PhoneNumberType_O2O_PersonPhone", "Self Relation", "Shift_2R_M2OVirtual_ParentForDepartment", "StateProvince_M2O_Address" ],
+  "schemaFilter" : [ ".*" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "readOnly" : false
+}

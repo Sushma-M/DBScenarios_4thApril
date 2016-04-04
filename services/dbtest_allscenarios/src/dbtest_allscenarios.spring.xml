@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.dbscenarios_30mar.dbtest_allscenarios.controller,com.dbscenarios_30mar.dbtest_allscenarios.service,com.dbscenarios_30mar.dbtest_allscenarios.dao"/>
+    <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>
+                    classpath:dbtest_allscenarios.properties
+                </value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+   <bean id="dbtest_allscenariosWMManagedDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" depends-on="systemPropertyInitializer" lazy-init="true"
+                      p:driverClass="${dbtest_allscenarios.driverClass}"
+                      p:jdbcUrl="${dbtest_allscenarios.url}"
+                      p:user="${dbtest_allscenarios.username}"
+                      p:password="${dbtest_allscenarios.password}"
+                      p:maxPoolSize="4"
+                      p:minPoolSize="2"
+                      p:maxIdleTime="600"
+                      p:maxStatements="50"
+                      p:maxStatementsPerConnection="20"
+                      p:checkoutTimeout="10000"
+                      p:idleConnectionTestPeriod="300"
+                      p:unreturnedConnectionTimeout="300"
+                      p:debugUnreturnedConnectionStackTraces="true"
+                      p:acquireRetryAttempts="3"
+                      p:acquireRetryDelay="1000"
+                      p:contextClassLoaderSource="library"
+                      p:privilegeSpawnedThreads="true"
+                      />
+    
+    <bean id="dbtest_allscenariosSessionFactory" class="com.wavemaker.runtime.data.factory.TypeResolverSessionFactoryBean">
+        <property name="dataSource" ref="dbtest_allscenariosDataSource"/>
+        <property name="packagesToScan" value="com.dbscenarios_30mar.dbtest_allscenarios"/>
+        <property name="mappingResources">
+            <list>
+                <value>
+                    dbtest_allscenarios-queries.hbm.xml
+                </value>
+            </list>
+        </property>
+        <property name="customTypes">
+            <array value-type="com.wavemaker.runtime.data.CustomType">
+                <ref bean="dateTimeCustomType"/>
+            </array>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    ${dbtest_allscenarios.dialect}
+                </prop>
+                <prop key="hibernate.show_sql">
+                    false
+                </prop>
+                <prop key="hibernate.globally_quoted_identifiers">
+                    false
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">
+                    ${dbtest_allscenarios.hbm2ddl}
+                </prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="dbtest_allscenariosTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="dbtest_allscenariosSessionFactory"/>
+    </bean>
+    <bean id="dbtest_allscenariosTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+        <property name="sessionFactory" ref="dbtest_allscenariosSessionFactory"/>
+    </bean>
+    <bean id="dbtest_allscenariosWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
+        <property name="template" ref="dbtest_allscenariosTemplate"/>
+    </bean>
+    <bean id="dbtest_allscenariosWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
+        <property name="template" ref="dbtest_allscenariosTemplate"/>
+        <property name="serviceId" value="dbtest_allscenarios" />
+    </bean>
+
+    <bean id="persistentLocalDateTimeType" class="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime"/>
+    <bean id="dateTimeCustomType" class="com.wavemaker.runtime.data.CustomType">
+        <property name="type" ref="persistentLocalDateTimeType"/>
+        <property name="keys">
+            <list>
+                <value>DateTime</value>
+                <value>org.joda.time.LocalDateTime</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="dbtest_allscenariosPageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
+        <property name="pageParameterName" value="page"/>
+        <property name="sizeParameterName" value="size"/>
+        <property name="oneIndexedParameters" value="true"/>
+        <property name="maxPageSize" value="${dbtest_allscenarios.maxPageSize}"/>
+        <property name="fallbackPageable">
+         <bean  class="org.springframework.data.domain.PageRequest">
+            <constructor-arg  value="0"/>
+            <constructor-arg  value="20"/>
+         </bean>
+         </property>
+    </bean>
+
+    <bean id="dbtest_allscenariosDataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
+           <property name="dataSourceType" value="${dbtest_allscenarios.dataSourceType}"/>
+           <property name="jndiName" value="${dbtest_allscenarios.jndiName}"/>
+           <property name="serviceId" value="dbtest_allscenarios"/>
+    </bean>
+
+
+    <tx:annotation-driven/>
+
+</beans>
+

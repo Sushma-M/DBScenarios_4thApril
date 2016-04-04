@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="dbtest_allscenarios" type="DataService" springFile="dbtest_allscenarios.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.DepartmentCompositeParent">
+            <element name="groupName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="departmentId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="compositesKeyRelationses" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations" isList="true" allowNull="true"/>
+            <element name="shift" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.Composites2">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="stringCol3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="composites1s" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.Composites1" isList="true" allowNull="true"/>
+            <element name="dateCol" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.Composites1">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="composites2" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.Composites2" allowNull="true"/>
+            <element name="dateCol" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o">
+            <element name="phoneNumberTypeId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeRelationFrom2tables" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables" allowNull="true"/>
+            <element name="phoneNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="phoneNumberTypeO2oPersonPhone" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.PhoneNumberTypeO2oPersonPhone" allowNull="true"/>
+            <element name="modifiedDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.Shift2rM2ovirtualParentForDepartment">
+            <element name="startTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="compositesKeyRelationses" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations" isList="true" allowNull="true"/>
+            <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="shiftId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.HireDateTableM2oFromEmployee">
+            <element name="id" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeRelationFrom2tableses" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables" isList="true" allowNull="true"/>
+            <element name="employeeName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.AllDbTypes">
+            <element name="doubleCol" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="bigDecCol" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="intCol" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="stringCol" typeRef="java.lang.String" allowNull="true"/>
+            <element name="timeCol" typeRef="java.util.Date" allowNull="true"/>
+            <element name="dateTimeCol" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="shortCol" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="floatCol" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="blobCol" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="booleanCol" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="dateCol" typeRef="java.util.Date" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="longCol" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="timeStampCol" typeRef="java.util.Date" allowNull="true"/>
+            <element name="textCol" typeRef="java.lang.String" allowNull="true"/>
+            <element name="charCol" typeRef="java.lang.String" allowNull="true"/>
+            <element name="bigIntCol" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="clobCol" typeRef="java.lang.String" allowNull="true"/>
+            <element name="byteCol" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.SelfRelation">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="stringCol" typeRef="java.lang.String" allowNull="true"/>
+            <element name="timeCol" typeRef="java.util.Date" allowNull="true"/>
+            <element name="selfRelationsForIntCol" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.SelfRelation" isList="true" allowNull="true"/>
+            <element name="selfRelationByIntCol" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.SelfRelation" allowNull="true"/>
+            <element name="booleanCol" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="dateCol" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress">
+            <element name="territoryId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="isOnlyStateProvinceFlag" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="stateProvinceCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="stateProvinceId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="countryRegionM2oFromSp" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.CountryRegionM2oFromSp" allowNull="true"/>
+            <element name="addressM1Sps" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.AddressM1Sp" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables">
+            <element name="nationalIdnumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="loginId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="salariedFlag" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="currentFlag" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="businessEntityId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="personPhoneO2oM2os" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o" isList="true" allowNull="true"/>
+            <element name="compositesKeyRelationses" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations" isList="true" allowNull="true"/>
+            <element name="maritalStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="emailId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="organizationLevel" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="gender" typeRef="java.lang.String" allowNull="true"/>
+            <element name="birthDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="jobTitle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="hireDateTableM2oFromEmployee" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.HireDateTableM2oFromEmployee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.CountryRegionM2oFromSp">
+            <element name="stateProvinceM2oAddresses" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modifiedDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="countryRegionCode" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.PhoneNumberTypeO2oPersonPhone">
+            <element name="phoneNumberTypeId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modifiedDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="personPhoneO2oM2o" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.PersonPhoneO2oM2o" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.AddressM1Sp">
+            <element name="postalCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rowguid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="stateProvinceM2oAddress" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress" allowNull="true"/>
+            <element name="addressLine2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modifiedDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="spatialLocation" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="addressLine1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="addressId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.dbtest_allscenarios.CompositesKeyRelations">
+            <element name="departmentCompositeParent" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.DepartmentCompositeParent" allowNull="true"/>
+            <element name="startDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeRelationFrom2tables" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.EmployeeRelationFrom2tables" allowNull="true"/>
+            <element name="businessEntityId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="departmentId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="shift2rM2ovirtualParentForDepartment" typeRef="com.dbscenarios_30mar.dbtest_allscenarios.Shift2rM2ovirtualParentForDepartment" allowNull="true"/>
+            <element name="shiftId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>
