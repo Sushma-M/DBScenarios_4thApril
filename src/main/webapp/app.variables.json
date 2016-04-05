@@ -9747,14 +9747,14 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
-  "goToPage_Page2323" : {
-    "_id" : "wm-goToPage_Page2323-wm.NavigationVariable-1459856087160",
-    "name" : "goToPage_Page2323",
+  "goToPage_Page23" : {
+    "_id" : "wm-goToPage_Page23-wm.NavigationVariable-1459856150221",
+    "name" : "goToPage_Page23",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
-    "pageName" : "Page2323",
+    "pageName" : "Page23",
     "pageTransitions" : "none"
   },
   "goToPage_PagewithCharts" : {

@@ -1,4 +1,4 @@
-Application.$controller("Page2323PageController", ["$scope", function ($scope) {
+Application.$controller("Page23PageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
