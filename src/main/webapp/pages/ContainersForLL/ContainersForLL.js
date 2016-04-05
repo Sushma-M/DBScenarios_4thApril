@@ -1,4 +1,4 @@
-Application.$controller("LineChart_LiveVarPageController", ["$scope", function ($scope) {
+Application.$controller("ContainersForLLPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,18 +15,3 @@ Application.$controller("LineChart_LiveVarPageController", ["$scope", function (
     };
 
 }]);
-
-
-Application.$controller("dialog1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("dialog2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

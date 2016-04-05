@@ -9,6 +9,18 @@
   },
   "basePath" : "/",
   "tags" : [ {
+    "name" : "VacationController",
+    "description" : "Exposes APIs to work with Vacation resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.VacationController",
+    "x-WM-CONTROLLER_NAME" : "Vacation",
+    "x-WM-VERSION" : ""
+  }, {
+    "name" : "EmployeeController",
+    "description" : "Exposes APIs to work with Employee resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.EmployeeController",
+    "x-WM-CONTROLLER_NAME" : "Employee",
+    "x-WM-VERSION" : ""
+  }, {
     "name" : "UserController",
     "description" : "Exposes APIs to work with User resource.",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.UserController",
@@ -21,28 +33,16 @@
     "x-WM-CONTROLLER_NAME" : "ProcedureExecution",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "VacationController",
-    "description" : "Exposes APIs to work with Vacation resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.VacationController",
-    "x-WM-CONTROLLER_NAME" : "Vacation",
-    "x-WM-VERSION" : ""
-  }, {
-    "name" : "DepartmentController",
-    "description" : "Exposes APIs to work with Department resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.DepartmentController",
-    "x-WM-CONTROLLER_NAME" : "Department",
-    "x-WM-VERSION" : ""
-  }, {
     "name" : "QueryExecutionController",
     "description" : "Controller class for query execution",
     "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.QueryExecutionController",
     "x-WM-CONTROLLER_NAME" : "QueryExecution",
     "x-WM-VERSION" : ""
   }, {
-    "name" : "EmployeeController",
-    "description" : "Exposes APIs to work with Employee resource.",
-    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.EmployeeController",
-    "x-WM-CONTROLLER_NAME" : "Employee",
+    "name" : "DepartmentController",
+    "description" : "Exposes APIs to work with Department resource.",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.hrdb.controller.DepartmentController",
+    "x-WM-CONTROLLER_NAME" : "Department",
     "x-WM-VERSION" : ""
   } ],
   "schemes" : [ "https", "http" ],
@@ -120,10 +120,10 @@
         "x-WM-METHOD_NAME" : "createDepartment",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Department",
       "x-WM-TAG" : "DepartmentController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Department/"
+      "x-WM-BASE_PATH" : "/hrdb/Department",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Department/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/hrdb/Department/count" : {
       "get" : {
@@ -143,10 +143,10 @@
         "x-WM-METHOD_NAME" : "countAllDepartments",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Department",
       "x-WM-TAG" : "DepartmentController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Department/count"
+      "x-WM-BASE_PATH" : "/hrdb/Department",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Department/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/hrdb/Department/search" : {
       "post" : {
@@ -207,10 +207,10 @@
         "x-WM-METHOD_NAME" : "findDepartments",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Department",
       "x-WM-TAG" : "DepartmentController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Department/search"
+      "x-WM-BASE_PATH" : "/hrdb/Department",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Department/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/hrdb/Department/{id}" : {
       "get" : {
@@ -304,10 +304,10 @@
         "x-WM-METHOD_NAME" : "deleteDepartment",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Department",
       "x-WM-TAG" : "DepartmentController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Department/{id}"
+      "x-WM-BASE_PATH" : "/hrdb/Department",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Department/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/hrdb/Department/{id}/employees" : {
       "get" : {
@@ -362,10 +362,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedemployees",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Department",
       "x-WM-TAG" : "DepartmentController",
-      "x-WM-RELATIVE_PATH" : "/{id}/employees",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Department/{id}/employees"
+      "x-WM-BASE_PATH" : "/hrdb/Department",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Department/{id}/employees",
+      "x-WM-RELATIVE_PATH" : "/{id}/employees"
     },
     "/hrdb/Employee/" : {
       "get" : {
@@ -440,10 +440,10 @@
         "x-WM-METHOD_NAME" : "createEmployee",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/hrdb/Employee/count" : {
       "get" : {
@@ -463,10 +463,10 @@
         "x-WM-METHOD_NAME" : "countAllEmployees",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/count"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/hrdb/Employee/search" : {
       "post" : {
@@ -527,10 +527,10 @@
         "x-WM-METHOD_NAME" : "findEmployees",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/search"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/hrdb/Employee/{id}" : {
       "get" : {
@@ -624,10 +624,10 @@
         "x-WM-METHOD_NAME" : "deleteEmployee",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/hrdb/Employee/{id}/employeesForManagerid" : {
       "get" : {
@@ -682,10 +682,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedemployeesForManagerid",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/{id}/employeesForManagerid",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}/employeesForManagerid"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}/employeesForManagerid",
+      "x-WM-RELATIVE_PATH" : "/{id}/employeesForManagerid"
     },
     "/hrdb/Employee/{id}/vacations" : {
       "get" : {
@@ -740,10 +740,10 @@
         "x-WM-METHOD_NAME" : "findAssociatedvacations",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Employee",
       "x-WM-TAG" : "EmployeeController",
-      "x-WM-RELATIVE_PATH" : "/{id}/vacations",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}/vacations"
+      "x-WM-BASE_PATH" : "/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Employee/{id}/vacations",
+      "x-WM-RELATIVE_PATH" : "/{id}/vacations"
     },
     "/hrdb/User/" : {
       "get" : {
@@ -818,10 +818,10 @@
         "x-WM-METHOD_NAME" : "createUser",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/User",
       "x-WM-TAG" : "UserController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/hrdb/User/"
+      "x-WM-BASE_PATH" : "/hrdb/User",
+      "x-WM-COMPLETE_PATH" : "/hrdb/User/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/hrdb/User/count" : {
       "get" : {
@@ -841,10 +841,10 @@
         "x-WM-METHOD_NAME" : "countAllUsers",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/User",
       "x-WM-TAG" : "UserController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/hrdb/User/count"
+      "x-WM-BASE_PATH" : "/hrdb/User",
+      "x-WM-COMPLETE_PATH" : "/hrdb/User/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/hrdb/User/search" : {
       "post" : {
@@ -905,10 +905,10 @@
         "x-WM-METHOD_NAME" : "findUsers",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/User",
       "x-WM-TAG" : "UserController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/hrdb/User/search"
+      "x-WM-BASE_PATH" : "/hrdb/User",
+      "x-WM-COMPLETE_PATH" : "/hrdb/User/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/hrdb/User/{id}" : {
       "get" : {
@@ -1002,10 +1002,10 @@
         "x-WM-METHOD_NAME" : "deleteUser",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/User",
       "x-WM-TAG" : "UserController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/hrdb/User/{id}"
+      "x-WM-BASE_PATH" : "/hrdb/User",
+      "x-WM-COMPLETE_PATH" : "/hrdb/User/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/hrdb/Vacation/" : {
       "get" : {
@@ -1080,10 +1080,10 @@
         "x-WM-METHOD_NAME" : "createVacation",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Vacation",
       "x-WM-TAG" : "VacationController",
-      "x-WM-RELATIVE_PATH" : "/",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/"
+      "x-WM-BASE_PATH" : "/hrdb/Vacation",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/",
+      "x-WM-RELATIVE_PATH" : "/"
     },
     "/hrdb/Vacation/count" : {
       "get" : {
@@ -1103,10 +1103,10 @@
         "x-WM-METHOD_NAME" : "countAllVacations",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Vacation",
       "x-WM-TAG" : "VacationController",
-      "x-WM-RELATIVE_PATH" : "/count",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/count"
+      "x-WM-BASE_PATH" : "/hrdb/Vacation",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/count",
+      "x-WM-RELATIVE_PATH" : "/count"
     },
     "/hrdb/Vacation/search" : {
       "post" : {
@@ -1167,10 +1167,10 @@
         "x-WM-METHOD_NAME" : "findVacations",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Vacation",
       "x-WM-TAG" : "VacationController",
-      "x-WM-RELATIVE_PATH" : "/search",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/search"
+      "x-WM-BASE_PATH" : "/hrdb/Vacation",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/search",
+      "x-WM-RELATIVE_PATH" : "/search"
     },
     "/hrdb/Vacation/{id}" : {
       "get" : {
@@ -1264,10 +1264,10 @@
         "x-WM-METHOD_NAME" : "deleteVacation",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/Vacation",
       "x-WM-TAG" : "VacationController",
-      "x-WM-RELATIVE_PATH" : "/{id}",
-      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/{id}"
+      "x-WM-BASE_PATH" : "/hrdb/Vacation",
+      "x-WM-COMPLETE_PATH" : "/hrdb/Vacation/{id}",
+      "x-WM-RELATIVE_PATH" : "/{id}"
     },
     "/hrdb/procedureExecutor/procedure/execute/wm_custom" : {
       "post" : {
@@ -1291,6 +1291,7 @@
             "description" : "Success",
             "schema" : {
               "type" : "array",
+              "uniqueItems" : false,
               "items" : {
                 "$ref" : "#/definitions/Object",
                 "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -1303,68 +1304,10 @@
         "x-WM-METHOD_NAME" : "executeWMCustomProcedure",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
-      "x-WM-BASE_PATH" : "/hrdb/procedureExecutor",
       "x-WM-TAG" : "ProcedureExecutionController",
-      "x-WM-RELATIVE_PATH" : "/procedure/execute/wm_custom",
-      "x-WM-COMPLETE_PATH" : "/hrdb/procedureExecutor/procedure/execute/wm_custom"
-    },
-    "/hrdb/queryExecutor/queries/chartdata1" : {
-      "get" : {
-        "tags" : [ "QueryExecutionController" ],
-        "description" : "Process request to execute queries",
-        "operationId" : "QueryExecutionController-executeChartdata1-2-2141222769",
-        "parameters" : [ {
-          "name" : "data",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int32",
-          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Integer",
-          "x-WM-UUID" : "9af1178a-bcd6-4247-b565-0f9f4b9c5df9",
-          "x-WM-EDITABLE" : true
-        }, {
-          "name" : "page",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int32",
-          "x-WM-EDITABLE" : false,
-          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable"
-        }, {
-          "name" : "size",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer",
-          "default" : 20,
-          "format" : "int32",
-          "x-WM-EDITABLE" : false
-        }, {
-          "name" : "sort",
-          "in" : "query",
-          "required" : false,
-          "type" : "string",
-          "x-WM-EDITABLE" : false
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Success",
-            "schema" : {
-              "$ref" : "#/definitions/Page",
-              "x-WM-TYPE_ARGUMENTS" : [ {
-                "$ref" : "#/definitions/Object",
-                "x-WM-TYPE_ARGUMENTS" : [ ]
-              } ]
-            }
-          }
-        },
-        "x-WM-OPERATION_UID" : "7fa3da2e-3e1d-483f-9da2-b2fae6518de2",
-        "x-WM-METHOD_NAME" : "executeChartdata1",
-        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
-      },
-      "x-WM-TAG" : "QueryExecutionController",
-      "x-WM-BASE_PATH" : "/hrdb/queryExecutor",
-      "x-WM-COMPLETE_PATH" : "/hrdb/queryExecutor/queries/chartdata1",
-      "x-WM-RELATIVE_PATH" : "/queries/chartdata1"
+      "x-WM-BASE_PATH" : "/hrdb/procedureExecutor",
+      "x-WM-COMPLETE_PATH" : "/hrdb/procedureExecutor/procedure/execute/wm_custom",
+      "x-WM-RELATIVE_PATH" : "/procedure/execute/wm_custom"
     },
     "/hrdb/queryExecutor/queries/wm_custom" : {
       "post" : {
@@ -1380,7 +1323,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "76e31828-a486-4e3f-8421-d871360bb8e1",
+          "x-WM-UUID" : "ea02efde-ab57-4f59-984b-80877bcfb7a8",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "page",
@@ -1417,7 +1360,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "d489a4f9-0ef9-4507-89f0-89554834e8a4",
+        "x-WM-OPERATION_UID" : "f36be9c2-40c0-4eba-8be0-8e4df35e1b04",
         "x-WM-METHOD_NAME" : "executeWMCustomQuery",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -1440,7 +1383,7 @@
             "x-WM-TYPE_ARGUMENTS" : [ ]
           },
           "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.CustomQuery",
-          "x-WM-UUID" : "d33391b1-a076-4709-9b0e-a4f21f984279",
+          "x-WM-UUID" : "e6de703c-045f-46d0-a513-513e3b29de88",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -1452,7 +1395,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "52384cdb-b97f-4fc7-a8ba-ba73191efc00",
+        "x-WM-OPERATION_UID" : "c94ffeda-e1b3-4abf-abcd-3cc4bfbad398",
         "x-WM-METHOD_NAME" : "executeWMCustomQuery",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -1499,6 +1442,7 @@
         "properties" : {
           "orders" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Sort$Order",
               "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -1701,6 +1645,7 @@
           },
           "content" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Object",
               "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -1725,6 +1670,7 @@
         },
         "procedureParams" : {
           "type" : "array",
+          "uniqueItems" : false,
           "items" : {
             "$ref" : "#/definitions/CustomProcedureParam",
             "x-WM-TYPE_ARGUMENTS" : [ ]
@@ -1769,6 +1715,7 @@
           },
           "content" : {
             "type" : "array",
+            "uniqueItems" : false,
             "items" : {
               "$ref" : "#/definitions/Object",
               "x-WM-TYPE_ARGUMENTS" : [ ]

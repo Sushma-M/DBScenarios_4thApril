@@ -1,4 +1,4 @@
-Application.$controller("AllDatatypes_NonePageController", ["$scope", function ($scope) {
+Application.$controller("AccLLProfileListPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,13 +15,3 @@ Application.$controller("AllDatatypes_NonePageController", ["$scope", function (
     };
 
 }]);
-
-
-
-
-Application.$controller("grid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

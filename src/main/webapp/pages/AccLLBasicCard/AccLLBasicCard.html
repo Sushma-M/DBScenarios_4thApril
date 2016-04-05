@@ -1,0 +1,308 @@
+<wm-page data-ng-controller="AccLLBasicCardPageController" pagetitle="Acc Ll Basic Card" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-label name="label1" caption="BASIC CARD TEMPLATE" fontsize="20" fontweight="bold"></wm-label>
+            <wm-panel class="panel-primary" name="panel1" title="With dbset DataBase" collapsible="true">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-accordion name="accordion1">
+                    <wm-accordionpane name="accordionpane1">
+                        <wm-accordionheader name="accordionheader1" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent1">
+                            <wm-accordion name="accordion2">
+                                <wm-accordionpane name="accordionpane2">
+                                    <wm-accordionheader name="accordionheader2" heading="All DB Types Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent2">
+                                        <wm-accordion name="accordion3">
+                                            <wm-accordionpane name="accordionpane3">
+                                                <wm-accordionheader name="accordionheader3" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent3">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="livelist6_1">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate6_1">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile6_1">
+                                                                <wm-layoutgrid name="layoutgrid6_1">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow11_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn11_1">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].blobCol" width="50%" name="Picture" height="50%"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow12_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].bigIntCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].bigDecCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="livelist11">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate11">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile11">
+                                                                <wm-layoutgrid name="layoutgrid11">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow21">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn21">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow22">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.id"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.stringCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane4">
+                                                <wm-accordionheader name="accordionheader4" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent4">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="livelist7_1">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate7_1">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile7_1">
+                                                                <wm-layoutgrid name="layoutgrid7_1">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow13_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn13_1">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow14_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].byteCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].charCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane5">
+                                                <wm-accordionheader name="accordionheader5" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent5">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Inline" name="livelist8_1">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate8_1">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile8_1">
+                                                                <wm-layoutgrid name="layoutgrid8_1">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow15_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn15_1">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow16_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].clobCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].dateCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane6">
+                                                <wm-accordionheader name="accordionheader6" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent6">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="livelist9_1">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate9_1">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile9_1">
+                                                                <wm-layoutgrid name="layoutgrid9_1">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow17_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn17_1">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow18_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].dateTimeCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].doubleCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane7">
+                                                <wm-accordionheader name="accordionheader7" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent7">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Scroll" name="livelist10_1">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate10_1">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile10_1">
+                                                                <wm-layoutgrid name="layoutgrid10_1">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow19_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn19_1">
+                                                                            <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow20_1">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].floatCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.data[$i].timeStampCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel2" collapsible="true" title="With Virtual Relations DB">
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                <wm-accordion name="accordion4">
+                    <wm-accordionpane name="accordionpane8">
+                        <wm-accordionheader name="accordionheader8" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent8">
+                            <wm-accordion name="accordion5">
+                                <wm-accordionpane name="accordionpane9">
+                                    <wm-accordionheader name="accordionheader9" heading="All Virtual Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent9">
+                                        <wm-accordion name="accordion6">
+                                            <wm-accordionpane name="accordionpane10">
+                                                <wm-accordionheader name="accordionheader10" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent10">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet" navigation="None" name="livelist6">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate6">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile6">
+                                                                <wm-layoutgrid name="layoutgrid6">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow11">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn11">
+                                                                            <wm-picture picturesource="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow12">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="Title"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="Description"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane11">
+                                                <wm-accordionheader name="accordionheader11" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent11">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet" navigation="Basic" name="livelist7">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate7">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile7">
+                                                                <wm-layoutgrid name="layoutgrid7">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow13">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn13">
+                                                                            <wm-picture picturesource="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow14">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.data[$i].bigIntCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.data[$i].doubleCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane12">
+                                                <wm-accordionheader name="accordionheader12" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent12">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet" navigation="Inline" name="livelist8">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate8">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile8">
+                                                                <wm-layoutgrid name="layoutgrid8">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow15">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn15">
+                                                                            <wm-picture picturesource="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet['bigIntVirtual.bigIntId']" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow16">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.data[$i].blobCol"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.data[$i].timeStampCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane13">
+                                                <wm-accordionheader name="accordionheader13" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent13">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet" navigation="Advanced" name="livelist9">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate9">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile9">
+                                                                <wm-layoutgrid name="layoutgrid9">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow17">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn17">
+                                                                            <wm-picture picturesource="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow18">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet['stringVirtual.timeCol']"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet['doubleVirtual.timeCol']"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane14">
+                                                <wm-accordionheader name="accordionheader14" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent14">
+                                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet" navigation="Scroll" name="livelist10">
+                                                        <wm-listtemplate layout="thumbnail" name="listtemplate10">
+                                                            <wm-tile marginbottom="1" marginleft="1" marginunit="em" marginright="1" margintop="1" name="tile10">
+                                                                <wm-layoutgrid name="layoutgrid10">
+                                                                    <wm-gridrow paddingunit="em" name="gridrow19">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" columnwidth="12" name="gridcolumn19">
+                                                                            <wm-picture picturesource="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet.blobCol" width="100%" name="Picture"></wm-picture>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow borderleft="0" borderbottom="0" borderright="0" bordertop="1" borderstyle="solid" bordercolor="#f8f8f8" name="gridrow20">
+                                                                        <wm-gridcolumn paddingunit="em" paddingbottom="1" paddingright="1" paddingleft="1" paddingtop="1" name="gridcolumn4" columnwidth="12">
+                                                                            <wm-label class="h4" width="100%" name="Title" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet['bigIntVirtual.bigIntId']"></wm-label>
+                                                                            <wm-label class="text-muted" width="100%" name="Description" caption="bind:Variables.VirtualRelationsDBAllVirtualTableData.dataSet['shortVirtual.booleanCol']"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-tile>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

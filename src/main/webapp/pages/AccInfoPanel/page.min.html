@@ -1,0 +1,292 @@
+<style id="AccInfoPanel.css">
+
+</style>
+<script id="AccInfoPanel.js">
+Application.$controller("AccInfoPanelPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="AccInfoPanel.variables.json">
+var _AccInfoPanelPage_Variables_ ={};
+</script>
+<script id="AccInfoPanel.html" type="text/ng-template">
+<wm-page data-ng-controller="AccInfoPanelPageController" pagetitle="Acc Info Panel" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-label name="label1" caption="INFORMATION PANEL TEMPLATE" fontsize="20" fontweight="bold"></wm-label>
+            <wm-panel class="panel-primary" name="panel1" title="With dbtest DB" collapsible="true" badgetype="default">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-accordion name="accordion1">
+                    <wm-accordionpane name="accordionpane1">
+                        <wm-accordionheader name="accordionheader1" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent1">
+                            <wm-accordion name="accordion2">
+                                <wm-accordionpane name="accordionpane2">
+                                    <wm-accordionheader name="accordionheader2" heading="All DB Types Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent2">
+                                        <wm-accordion name="accordion3">
+                                            <wm-accordionpane name="accordionpane3">
+                                                <wm-accordionheader name="accordionheader3" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent3">
+                                                    <wm-livelist listclass="list-group" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="livelist1" itemsperrow="4">
+                                                        <wm-listtemplate layout="panel" name="listtemplate1">
+                                                            <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="Panel" marginleft="1" marginunit="em" marginright="1" margintop="1">
+                                                                <wm-composite name="composite1">
+                                                                    <wm-label class="col-xs-3" caption="First name" name="label2"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.id" name="Firstname"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite2">
+                                                                    <wm-label class="col-xs-3" caption="Last name" name="label4"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Lastname" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.byteCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite3">
+                                                                    <wm-label class="col-xs-3" caption="Department" name="label6"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Department" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.shortCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite4">
+                                                                    <wm-label class="col-xs-3" caption="Role" name="label8"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Role" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.intCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite5">
+                                                                    <wm-label class="col-xs-3" caption="Mobile" name="label10"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Mobile" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite6">
+                                                                    <wm-label class="col-xs-3" caption="City" name="label12"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="City" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite7">
+                                                                    <wm-label class="col-xs-3" caption="State" name="label14"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="State" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol"></wm-label>
+                                                                </wm-composite>
+                                                            </wm-panel>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane4">
+                                                <wm-accordionheader name="accordionheader4" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent4">
+                                                    <wm-livelist listclass="list-group" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="livelist2" itemsperrow="4">
+                                                        <wm-listtemplate layout="panel" name="listtemplate2">
+                                                            <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="Panel" marginleft="1" marginunit="em" marginright="1" margintop="1">
+                                                                <wm-composite name="composite8">
+                                                                    <wm-label class="col-xs-3" caption="First name" name="label16"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.doubleCol" name="Firstname"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite9">
+                                                                    <wm-label class="col-xs-3" caption="Last name" name="label18"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Lastname" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite10">
+                                                                    <wm-label class="col-xs-3" caption="Department" name="label20"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Department" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite11">
+                                                                    <wm-label class="col-xs-3" caption="Role" name="label22"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Role" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.stringCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite12">
+                                                                    <wm-label class="col-xs-3" caption="Mobile" name="label24"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Mobile" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.clobCol" height="35"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite13">
+                                                                    <wm-label class="col-xs-3" caption="City" name="label26"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="City" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol" height="34" width="36"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite14">
+                                                                    <wm-label class="col-xs-3" caption="State" name="label28"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="State" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateCol"></wm-label>
+                                                                </wm-composite>
+                                                            </wm-panel>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane5">
+                                                <wm-accordionheader name="accordionheader5" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent5">
+                                                    <wm-livelist listclass="list-group" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Inline" name="livelist3">
+                                                        <wm-listtemplate layout="panel" name="listtemplate3">
+                                                            <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="Panel" marginleft="1" marginunit="em" marginright="1" margintop="1">
+                                                                <wm-composite name="composite15">
+                                                                    <wm-label class="col-xs-3" caption="First name" name="label30"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateTimeCol" name="Firstname"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite16">
+                                                                    <wm-label class="col-xs-3" caption="Last name" name="label32"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Lastname" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite17">
+                                                                    <wm-label class="col-xs-3" caption="Department" name="label34"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Department" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeStampCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite18">
+                                                                    <wm-label class="col-xs-3" caption="Role" name="label36"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Role" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.booleanCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite19">
+                                                                    <wm-label class="col-xs-3" caption="Mobile" name="label38"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Mobile" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.booleanCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite20">
+                                                                    <wm-label class="col-xs-3" caption="City" name="label40"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="City" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.doubleCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite21">
+                                                                    <wm-label class="col-xs-3" caption="State" name="label42"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="State" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol"></wm-label>
+                                                                </wm-composite>
+                                                            </wm-panel>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane6">
+                                                <wm-accordionheader name="accordionheader6" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent6">
+                                                    <wm-livelist listclass="list-group" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="livelist4" itemsperrow="4">
+                                                        <wm-listtemplate layout="panel" name="listtemplate4">
+                                                            <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="Panel" marginleft="1" marginunit="em" marginright="1" margintop="1">
+                                                                <wm-composite name="composite22">
+                                                                    <wm-label class="col-xs-3" caption="First name" name="label44"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol" name="Firstname"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite23">
+                                                                    <wm-label class="col-xs-3" caption="Last name" name="label46"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Lastname" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite24">
+                                                                    <wm-label class="col-xs-3" caption="Department" name="label48"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Department" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.doubleCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite25">
+                                                                    <wm-label class="col-xs-3" caption="Role" name="label50"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Role" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite26">
+                                                                    <wm-label class="col-xs-3" caption="Mobile" name="label52"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Mobile" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.stringCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite27">
+                                                                    <wm-label class="col-xs-3" caption="City" name="label54"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="City" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.clobCol" height="36"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite28">
+                                                                    <wm-label class="col-xs-3" caption="State" name="label56"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="State" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol"></wm-label>
+                                                                </wm-composite>
+                                                            </wm-panel>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane7">
+                                                <wm-accordionheader name="accordionheader7" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent7">
+                                                    <wm-livelist listclass="list-group" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Scroll" name="livelist5" itemsperrow="4" height="400px">
+                                                        <wm-listtemplate layout="panel" name="listtemplate5">
+                                                            <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="Panel" marginleft="1" marginunit="em" marginright="1" margintop="1">
+                                                                <wm-composite name="composite29">
+                                                                    <wm-label class="col-xs-3" caption="First name" name="label58"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol" name="Firstname"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite30">
+                                                                    <wm-label class="col-xs-3" caption="Last name" name="label60"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Lastname" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite31">
+                                                                    <wm-label class="col-xs-3" caption="Department" name="label62"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Department" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.shortCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite32">
+                                                                    <wm-label class="col-xs-3" caption="Role" name="label64"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Role" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite33">
+                                                                    <wm-label class="col-xs-3" caption="Mobile" name="label66"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="Mobile" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite34">
+                                                                    <wm-label class="col-xs-3" caption="City" name="label68"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="City" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.booleanCol"></wm-label>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite35">
+                                                                    <wm-label class="col-xs-3" caption="State" name="label70"></wm-label>
+                                                                    <wm-label class="col-xs-9 text-muted" name="State" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeStampCol"></wm-label>
+                                                                </wm-composite>
+                                                            </wm-panel>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel2" title="With Virtual Relations DB" collapsible="true">
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                <wm-accordion name="accordion4">
+                    <wm-accordionpane name="accordionpane8">
+                        <wm-accordionheader name="accordionheader8" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent8">
+                            <wm-accordion name="accordion5">
+                                <wm-accordionpane name="accordionpane9">
+                                    <wm-accordionheader name="accordionheader9" heading="All Virtual Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent9">
+                                        <wm-accordion name="accordion6">
+                                            <wm-accordionpane name="accordionpane10">
+                                                <wm-accordionheader name="accordionheader10" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane11">
+                                                <wm-accordionheader name="accordionheader11" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane12">
+                                                <wm-accordionheader name="accordionheader12" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent12"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane13">
+                                                <wm-accordionheader name="accordionheader13" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent13"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane14">
+                                                <wm-accordionheader name="accordionheader14" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent14"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

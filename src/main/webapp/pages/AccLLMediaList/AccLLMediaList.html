@@ -1,0 +1,149 @@
+<wm-page data-ng-controller="AccLLMediaListPageController" pagetitle="Acc Ll Media List" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-label name="label14" caption="MEDIA LIST TEMPLATE" fontsize="20" fontweight="bold"></wm-label>
+            <wm-panel class="panel-primary" name="panel1" title="With dbtest DataBase" collapsible="true">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-accordion name="accordion1">
+                    <wm-accordionpane name="accordionpane1">
+                        <wm-accordionheader name="accordionheader1" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent1">
+                            <wm-accordion name="accordion2">
+                                <wm-accordionpane name="accordionpane2">
+                                    <wm-accordionheader name="accordionheader2" heading="All DB Types Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent2">
+                                        <wm-accordion name="accordion3">
+                                            <wm-accordionpane name="accordionpane3">
+                                                <wm-accordionheader name="accordionheader3" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent3">
+                                                    <wm-livelist listclass="media-list" itemclass="media" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="livelist1">
+                                                        <wm-listtemplate layout="media" name="listtemplate1">
+                                                            <wm-container class="media-left media-top" paddingleft="15" name="container1">
+                                                                <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" name="Picture" class="media-object"></wm-picture>
+                                                            </wm-container>
+                                                            <wm-container class="media-body" paddingright="15" name="container2">
+                                                                <wm-label class="h4 media-heading" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.byteCol" name="Media-heading"></wm-label>
+                                                                <wm-label width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.shortCol" name="Description"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane4">
+                                                <wm-accordionheader name="accordionheader4" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent4">
+                                                    <wm-livelist listclass="media-list" itemclass="media" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="livelist2">
+                                                        <wm-listtemplate layout="media" name="listtemplate2">
+                                                            <wm-container class="media-left media-top" paddingleft="15" name="container3">
+                                                                <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" name="Picture" class="media-object"></wm-picture>
+                                                            </wm-container>
+                                                            <wm-container class="media-body" paddingright="15" name="container4">
+                                                                <wm-label class="h4 media-heading" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.intCol" name="Media-heading"></wm-label>
+                                                                <wm-label width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol" name="Description"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane5">
+                                                <wm-accordionheader name="accordionheader5" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent5">
+                                                    <wm-livelist listclass="media-list" itemclass="media" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Inline" name="livelist3">
+                                                        <wm-listtemplate layout="media" name="listtemplate3">
+                                                            <wm-container class="media-left media-top" paddingleft="15" name="container5">
+                                                                <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" name="Picture" class="media-object"></wm-picture>
+                                                            </wm-container>
+                                                            <wm-container class="media-body" paddingright="15" name="container6">
+                                                                <wm-label class="h4 media-heading" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol" name="Media-heading"></wm-label>
+                                                                <wm-label width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol" name="Description"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane6">
+                                                <wm-accordionheader name="accordionheader6" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent6">
+                                                    <wm-livelist listclass="media-list" itemclass="media" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="livelist4">
+                                                        <wm-listtemplate layout="media" name="listtemplate4">
+                                                            <wm-container class="media-left media-top" paddingleft="15" name="container7">
+                                                                <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" name="Picture" class="media-object"></wm-picture>
+                                                            </wm-container>
+                                                            <wm-container class="media-body" paddingright="15" name="container8">
+                                                                <wm-label class="h4 media-heading" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.doubleCol" name="Media-heading"></wm-label>
+                                                                <wm-label width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol" name="Description"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane7">
+                                                <wm-accordionheader name="accordionheader7" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent7">
+                                                    <wm-livelist listclass="media-list" itemclass="media" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Scroll" name="livelist5" height="400px">
+                                                        <wm-listtemplate layout="media" name="listtemplate5">
+                                                            <wm-container class="media-left media-top" paddingleft="15" name="container9">
+                                                                <wm-picture picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol" name="Picture" class="media-object"></wm-picture>
+                                                            </wm-container>
+                                                            <wm-container class="media-body" paddingright="15" name="container10">
+                                                                <wm-label class="h4 media-heading" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol" name="Media-heading"></wm-label>
+                                                                <wm-label width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.clobCol" name="Description"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel2" title="With Virtual Relations DB" collapsible="true">
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                <wm-accordion name="accordion4">
+                    <wm-accordionpane name="accordionpane8">
+                        <wm-accordionheader name="accordionheader8" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent8">
+                            <wm-accordion name="accordion5">
+                                <wm-accordionpane name="accordionpane9">
+                                    <wm-accordionheader name="accordionheader9" heading="All Virtual Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent9">
+                                        <wm-accordion name="accordion6">
+                                            <wm-accordionpane name="accordionpane10">
+                                                <wm-accordionheader name="accordionheader10" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane11">
+                                                <wm-accordionheader name="accordionheader11" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane12">
+                                                <wm-accordionheader name="accordionheader12" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent12"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane13">
+                                                <wm-accordionheader name="accordionheader13" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent13"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane14">
+                                                <wm-accordionheader name="accordionheader14" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent14"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

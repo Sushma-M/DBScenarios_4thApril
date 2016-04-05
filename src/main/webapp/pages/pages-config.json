@@ -1,17 +1,23 @@
 [ {
-  "name" : "Acc_EditableDataGrid",
+  "name" : "AccInfoPanel",
+  "type" : "PAGE"
+}, {
+  "name" : "AccLLBasicCard",
+  "type" : "PAGE"
+}, {
+  "name" : "AccLLDefault",
+  "type" : "PAGE"
+}, {
+  "name" : "AccLLMediaList",
+  "type" : "PAGE"
+}, {
+  "name" : "AccLLProfileList",
   "type" : "PAGE"
 }, {
   "name" : "Acc_ReadOnlyDataGrid",
   "type" : "PAGE"
 }, {
   "name" : "AllDatatpes_Advanced",
-  "type" : "PARTIAL"
-}, {
-  "name" : "AllDatatypes_Basic",
-  "type" : "PARTIAL"
-}, {
-  "name" : "AllDatatypes_None",
   "type" : "PARTIAL"
 }, {
   "name" : "Chart2",
@@ -23,10 +29,16 @@
   "name" : "Common",
   "type" : "PARTIAL"
 }, {
+  "name" : "ContainersForLL",
+  "type" : "PAGE"
+}, {
   "name" : "EditableDataGrid",
   "type" : "PAGE"
 }, {
   "name" : "FilterAccordionPage",
+  "type" : "PAGE"
+}, {
+  "name" : "LLTemplates",
   "type" : "PAGE"
 }, {
   "name" : "LineChart_LiveVar",
@@ -56,22 +68,10 @@
   "name" : "Panel_ReadOnlyGrid",
   "type" : "PAGE"
 }, {
-  "name" : "Partial_ReadOnlyGrid",
-  "type" : "PAGE"
-}, {
-  "name" : "Popover_ReadOnlyGrid",
-  "type" : "PAGE"
-}, {
   "name" : "Procedure_Page",
   "type" : "PAGE"
 }, {
   "name" : "ReadOnlyDataGrid",
-  "type" : "PAGE"
-}, {
-  "name" : "Self_Relation",
-  "type" : "PARTIAL"
-}, {
-  "name" : "Tab_EditableDataGrid",
   "type" : "PAGE"
 }, {
   "name" : "Tabs_ReadOnlyGrid",

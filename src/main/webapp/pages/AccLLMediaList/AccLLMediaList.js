@@ -1,4 +1,4 @@
-Application.$controller("Partial_ReadOnlyGridPageController", ["$scope", function ($scope) {
+Application.$controller("AccLLMediaListPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */

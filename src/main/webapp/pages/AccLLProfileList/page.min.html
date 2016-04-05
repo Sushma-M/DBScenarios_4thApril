@@ -1,0 +1,292 @@
+<style id="AccLLProfileList.css">
+
+</style>
+<script id="AccLLProfileList.js">
+Application.$controller("AccLLProfileListPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="AccLLProfileList.variables.json">
+var _AccLLProfileListPage_Variables_ ={};
+</script>
+<script id="AccLLProfileList.html" type="text/ng-template">
+<wm-page data-ng-controller="AccLLProfileListPageController" pagetitle="Acc Ll Profile List" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-label name="label1" caption="PROFILE LIST TEMPLATE" fontsize="20" fontweight="bold"></wm-label>
+            <wm-panel class="panel-primary" name="panel1" title="With dbset DataBase" collapsible="true">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-accordion name="accordion1">
+                    <wm-accordionpane name="accordionpane1">
+                        <wm-accordionheader name="accordionheader1" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent1">
+                            <wm-accordion name="accordion2">
+                                <wm-accordionpane name="accordionpane2">
+                                    <wm-accordionheader name="accordionheader2" heading="All DB Types Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent2">
+                                        <wm-accordion name="accordion3">
+                                            <wm-accordionpane name="accordionpane3">
+                                                <wm-accordionheader name="accordionheader3" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent3">
+                                                    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="livelist11">
+                                                        <wm-listtemplate layout="inline" name="listtemplate11">
+                                                            <wm-layoutgrid class="inline" name="layoutgrid11">
+                                                                <wm-gridrow name="gridrow21">
+                                                                    <wm-gridcolumn class="text-center col-xs-3" columnwidth="1" data-template-ctr="true" name="gridcolumn21">
+                                                                        <wm-picture width="24pt" height="24pt" name="Picture" shape="circle" picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn class="col-xs-9" name="gridcolumn22">
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn23">
+                                                                            <wm-label name="Firstname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.byteCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn24">
+                                                                            <wm-label name="Lastname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.id"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn25">
+                                                                            <wm-label name="Department" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn26">
+                                                                            <wm-label name="Role" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn27">
+                                                                            <wm-label name="Mobile" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn28">
+                                                                            <wm-label name="City" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn29">
+                                                                            <wm-label name="State" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.clobCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane4">
+                                                <wm-accordionheader name="accordionheader4" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent4">
+                                                    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="livelist12">
+                                                        <wm-listtemplate layout="inline" name="listtemplate12">
+                                                            <wm-layoutgrid class="inline" name="layoutgrid12">
+                                                                <wm-gridrow name="gridrow22">
+                                                                    <wm-gridcolumn class="text-center col-xs-3" columnwidth="1" data-template-ctr="true" name="gridcolumn30">
+                                                                        <wm-picture width="24pt" height="24pt" name="Picture" shape="circle" picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn class="col-xs-9" name="gridcolumn31">
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn32">
+                                                                            <wm-label name="Firstname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.shortCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn33">
+                                                                            <wm-label name="Lastname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn34">
+                                                                            <wm-label name="Department" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn35">
+                                                                            <wm-label name="Role" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn36">
+                                                                            <wm-label name="Mobile" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.longCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn37">
+                                                                            <wm-label name="City" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeStampCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn38">
+                                                                            <wm-label name="State" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane5">
+                                                <wm-accordionheader name="accordionheader5" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent5">
+                                                    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Inline" name="livelist13">
+                                                        <wm-listtemplate layout="inline" name="listtemplate13">
+                                                            <wm-layoutgrid class="inline" name="layoutgrid13">
+                                                                <wm-gridrow name="gridrow23">
+                                                                    <wm-gridcolumn class="text-center col-xs-3" columnwidth="1" data-template-ctr="true" name="gridcolumn39">
+                                                                        <wm-picture width="24pt" height="24pt" name="Picture" shape="circle" picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn class="col-xs-9" name="gridcolumn40">
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn41">
+                                                                            <wm-label name="Firstname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn42">
+                                                                            <wm-label name="Lastname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.intCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn43">
+                                                                            <wm-label name="Department" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn44">
+                                                                            <wm-label name="Role" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn45">
+                                                                            <wm-label name="Mobile" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.doubleCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn46">
+                                                                            <wm-label name="City" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.stringCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn47">
+                                                                            <wm-label name="State" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane6">
+                                                <wm-accordionheader name="accordionheader6" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent6">
+                                                    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="livelist14">
+                                                        <wm-listtemplate layout="inline" name="listtemplate14">
+                                                            <wm-layoutgrid class="inline" name="layoutgrid14">
+                                                                <wm-gridrow name="gridrow24">
+                                                                    <wm-gridcolumn class="text-center col-xs-3" columnwidth="1" data-template-ctr="true" name="gridcolumn48">
+                                                                        <wm-picture width="24pt" height="24pt" name="Picture" shape="circle" picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn class="col-xs-9" name="gridcolumn49">
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn50">
+                                                                            <wm-label name="Firstname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.floatCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn51">
+                                                                            <wm-label name="Lastname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn52">
+                                                                            <wm-label name="Department" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateTimeCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn53">
+                                                                            <wm-label name="Role" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.clobCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn54">
+                                                                            <wm-label name="Mobile" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.id"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn55">
+                                                                            <wm-label name="City" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigIntCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn56">
+                                                                            <wm-label name="State" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.bigDecCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane7">
+                                                <wm-accordionheader name="accordionheader7" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent7">
+                                                    <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Scroll" name="livelist15" height="400px">
+                                                        <wm-listtemplate layout="inline" name="listtemplate15">
+                                                            <wm-layoutgrid class="inline" name="layoutgrid15">
+                                                                <wm-gridrow name="gridrow25">
+                                                                    <wm-gridcolumn class="text-center col-xs-3" columnwidth="1" data-template-ctr="true" name="gridcolumn57">
+                                                                        <wm-picture width="24pt" height="24pt" name="Picture" shape="circle" picturesource="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.blobCol"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn class="col-xs-9" name="gridcolumn58">
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn59">
+                                                                            <wm-label name="Firstname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.charCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn60">
+                                                                            <wm-label name="Lastname" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn61">
+                                                                            <wm-label name="Department" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.stringCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="2" data-template-ctr="true" class="col-xs-12" name="gridcolumn62">
+                                                                            <wm-label name="Role" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.textCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn63">
+                                                                            <wm-label name="Mobile" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.dateTimeCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn64">
+                                                                            <wm-label name="City" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.timeCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                        <wm-gridcolumn columnwidth="1" data-template-ctr="true" class="col-xs-12" name="gridcolumn65">
+                                                                            <wm-label name="State" width="100%" caption="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet.booleanCol"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-listtemplate>
+                                                    </wm-livelist>
+                                                </wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+            <wm-panel class="panel-primary" name="panel2" collapsible="true" title="With Virtual Relations DB">
+                <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                <wm-accordion name="accordion4">
+                    <wm-accordionpane name="accordionpane8">
+                        <wm-accordionheader name="accordionheader8" heading="Live List With Live Variables"></wm-accordionheader>
+                        <wm-accordioncontent name="accordioncontent8">
+                            <wm-accordion name="accordion5">
+                                <wm-accordionpane name="accordionpane9">
+                                    <wm-accordionheader name="accordionheader9" heading="All Virtual Table"></wm-accordionheader>
+                                    <wm-accordioncontent name="accordioncontent9">
+                                        <wm-accordion name="accordion6">
+                                            <wm-accordionpane name="accordionpane10">
+                                                <wm-accordionheader name="accordionheader10" heading="With Navigation NONE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent10"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane11">
+                                                <wm-accordionheader name="accordionheader11" heading="With Navigation BASIC"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent11"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane12">
+                                                <wm-accordionheader name="accordionheader12" heading="With Navigation INLINE"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent12"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane13">
+                                                <wm-accordionheader name="accordionheader13" heading="With Navigation ADVANCED"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent13"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                            <wm-accordionpane name="accordionpane14">
+                                                <wm-accordionheader name="accordionheader14" heading="With Navigation SCROLL"></wm-accordionheader>
+                                                <wm-accordioncontent name="accordioncontent14"></wm-accordioncontent>
+                                            </wm-accordionpane>
+                                        </wm-accordion>
+                                    </wm-accordioncontent>
+                                </wm-accordionpane>
+                            </wm-accordion>
+                        </wm-accordioncontent>
+                    </wm-accordionpane>
+                </wm-accordion>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

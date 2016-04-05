@@ -9589,16 +9589,6 @@
     } ],
     "package" : "com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress"
   },
-  "goToPage_Acc_EditableDataGrid" : {
-    "_id" : "wm-goToPage_Acc_EditableDataGrid-wm.NavigationVariable-1459839665078",
-    "name" : "goToPage_Acc_EditableDataGrid",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Acc_EditableDataGrid",
-    "pageTransitions" : "none"
-  },
   "goToPage_Acc_ReadOnlyDataGrid" : {
     "_id" : "wm-goToPage_Acc_ReadOnlyDataGrid-wm.NavigationVariable-1459420740122",
     "name" : "goToPage_Acc_ReadOnlyDataGrid",
@@ -9609,34 +9599,54 @@
     "pageName" : "Acc_ReadOnlyDataGrid",
     "pageTransitions" : "none"
   },
-  "goToPage_AllDatatpes_Advanced" : {
-    "_id" : "wm-goToPage_AllDatatpes_Advanced-wm.NavigationVariable-1459838450719",
-    "name" : "goToPage_AllDatatpes_Advanced",
+  "goToPage_AccInfoPanel" : {
+    "_id" : "wm-goToPage_AccInfoPanel-wm.NavigationVariable-1459841555259",
+    "name" : "goToPage_AccInfoPanel",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
-    "pageName" : "AllDatatpes_Advanced",
+    "pageName" : "AccInfoPanel",
     "pageTransitions" : "none"
   },
-  "goToPage_AllDatatypes_Basic" : {
-    "_id" : "wm-goToPage_AllDatatypes_Basic-wm.NavigationVariable-1459838407839",
-    "name" : "goToPage_AllDatatypes_Basic",
+  "goToPage_AccLLBasicCard" : {
+    "_id" : "wm-goToPage_AccLLBasicCard-wm.NavigationVariable-1459840976107",
+    "name" : "goToPage_AccLLBasicCard",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
-    "pageName" : "AllDatatypes_Basic",
+    "pageName" : "AccLLBasicCard",
     "pageTransitions" : "none"
   },
-  "goToPage_AllDatatypes_None" : {
-    "_id" : "wm-goToPage_AllDatatypes_None-wm.NavigationVariable-1459838339095",
-    "name" : "goToPage_AllDatatypes_None",
+  "goToPage_AccLLDefault" : {
+    "_id" : "wm-goToPage_AccLLDefault-wm.NavigationVariable-1459840894962",
+    "name" : "goToPage_AccLLDefault",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
-    "pageName" : "AllDatatypes_None",
+    "pageName" : "AccLLDefault",
+    "pageTransitions" : "none"
+  },
+  "goToPage_AccLLMediaList" : {
+    "_id" : "wm-goToPage_AccLLMediaList-wm.NavigationVariable-1459841051865",
+    "name" : "goToPage_AccLLMediaList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AccLLMediaList",
+    "pageTransitions" : "none"
+  },
+  "goToPage_AccLLProfileList" : {
+    "_id" : "wm-goToPage_AccLLProfileList-wm.NavigationVariable-1459850328348",
+    "name" : "goToPage_AccLLProfileList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AccLLProfileList",
     "pageTransitions" : "none"
   },
   "goToPage_Chart2" : {
@@ -9657,6 +9667,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "Cntainr_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_ContainersForLL" : {
+    "_id" : "wm-goToPage_ContainersForLL-wm.NavigationVariable-1459840753743",
+    "name" : "goToPage_ContainersForLL",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ContainersForLL",
     "pageTransitions" : "none"
   },
   "goToPage_EditableDataGrid" : {
@@ -9707,6 +9727,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "List_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_LLTemplates" : {
+    "_id" : "wm-goToPage_LLTemplates-wm.NavigationVariable-1459840596158",
+    "name" : "goToPage_LLTemplates",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "LLTemplates",
     "pageTransitions" : "none"
   },
   "goToPage_Main" : {
@@ -9767,26 +9797,6 @@
     "pageName" : "Panel_ReadOnlyGrid",
     "pageTransitions" : "none"
   },
-  "goToPage_Partial_ReadOnlyGrid" : {
-    "_id" : "wm-goToPage_Partial_ReadOnlyGrid-wm.NavigationVariable-1459838839399",
-    "name" : "goToPage_Partial_ReadOnlyGrid",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Partial_ReadOnlyGrid",
-    "pageTransitions" : "none"
-  },
-  "goToPage_Popover_ReadOnlyGrid" : {
-    "_id" : "wm-goToPage_Popover_ReadOnlyGrid-wm.NavigationVariable-1459838175063",
-    "name" : "goToPage_Popover_ReadOnlyGrid",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Popover_ReadOnlyGrid",
-    "pageTransitions" : "none"
-  },
   "goToPage_Procedure_Page" : {
     "_id" : "wm-goToPage_Procedure_Page-wm.NavigationVariable-1459760363731",
     "name" : "goToPage_Procedure_Page",
@@ -9805,26 +9815,6 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "ReadOnlyDataGrid",
-    "pageTransitions" : "none"
-  },
-  "goToPage_Self_Relation" : {
-    "_id" : "wm-goToPage_Self_Relation-wm.NavigationVariable-1459838477329",
-    "name" : "goToPage_Self_Relation",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Self_Relation",
-    "pageTransitions" : "none"
-  },
-  "goToPage_Tab_EditableDataGrid" : {
-    "_id" : "wm-goToPage_Tab_EditableDataGrid-wm.NavigationVariable-1459841411016",
-    "name" : "goToPage_Tab_EditableDataGrid",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Tab_EditableDataGrid",
     "pageTransitions" : "none"
   },
   "goToPage_Tabs_ReadOnlyGrid" : {
@@ -9998,7 +9988,7 @@
       "primaryFields" : [ "deptid" ]
     },
     "isDefault" : true,
-    "bindCount" : 3,
+    "bindCount" : 1,
     "tableName" : "DEPARTMENT",
     "tableType" : "TABLE",
     "dbSystem" : "HSQLDB",
@@ -10700,58 +10690,6 @@
       "package" : "com.hrdb.Employee"
     } ],
     "package" : "com.hrdb.Employee"
-  },
-  "HrdbExecuteChartdata1" : {
-    "_id" : "wm-HrdbExecuteChartdata1-wm.ServiceVariable-1459847988846",
-    "name" : "HrdbExecuteChartdata1",
-    "owner" : "App",
-    "category" : "wm.ServiceVariable",
-    "dataBinding" : [ {
-      "target" : "data",
-      "value" : "bind:Widgets.chart4.selecteditem.q1||Widgets.chart2.selecteditem.q1",
-      "type" : "integer"
-    } ],
-    "type" : "hrdbchartdata1rtnType",
-    "service" : "hrdb",
-    "operation" : "executeChartdata1",
-    "operationType" : "get",
-    "serviceType" : "DataService",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/hrdb/queryExecutor/queries/chartdata1",
-      "httpMethod" : "get",
-      "name" : "executeChartdata1",
-      "parameters" : [ {
-        "name" : "data",
-        "parameterType" : "query",
-        "type" : "integer"
-      }, {
-        "name" : "page",
-        "parameterType" : "query",
-        "type" : "integer"
-      }, {
-        "name" : "size",
-        "parameterType" : "query",
-        "type" : "integer"
-      }, {
-        "name" : "sort",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
-    },
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "isList" : false,
-    "firstRow" : 0,
-    "maxResults" : 20,
-    "designMaxResults" : 10,
-    "startUpdate" : true,
-    "autoUpdate" : true,
-    "inFlightBehavior" : "executeLast",
-    "transformationRequired" : false,
-    "saveInPhonegap" : false,
-    "isDefault" : true,
-    "controller" : "QueryExecution"
   },
   "HrdbUserData" : {
     "_id" : "wm-HrdbUserData-wm.LiveVariable-1459427080720",

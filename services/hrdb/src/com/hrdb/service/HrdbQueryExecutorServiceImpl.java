@@ -1,3 +1,7 @@
+/*Copyright (c) 2016-2017 gmail.com All Rights Reserved.
+ This software is the confidential and proprietary information of gmail.com You shall not disclose such Confidential Information and shall use it only in accordance
+ with the terms of the source code license agreement you entered into with gmail.com*/
+
 
 package com.hrdb.service;
 
@@ -29,14 +33,6 @@ public class HrdbQueryExecutorServiceImpl implements HrdbQueryExecutorService {
 	@Qualifier("hrdbWMQueryExecutor")
 	private WMQueryExecutor queryExecutor;
 
-	@Transactional(value = "hrdbTransactionManager")
-	@Override
-	public Page<Object> executeChartdata1(Pageable pageable, java.lang.Integer data)
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("data", data);
-        return queryExecutor.executeNamedQuery("chartdata1", params, pageable);
-	}
 
 	@Transactional(value = "hrdbTransactionManager")
 	@Override

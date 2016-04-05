@@ -1,4 +1,4 @@
-Application.$controller("Popover_ReadOnlyGridPageController", ["$scope", function ($scope) {
+Application.$controller("LLTemplatesPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */

@@ -1,0 +1,70 @@
+<style id="LLTemplates.css">
+
+</style>
+<script id="LLTemplates.js">
+Application.$controller("LLTemplatesPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="LLTemplates.variables.json">
+var _LLTemplatesPage_Variables_ ={};
+</script>
+<script id="LLTemplates.html" type="text/ng-template">
+<wm-page data-ng-controller="LLTemplatesPageController" pagetitle="Lltemplates" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-panel class="panel-primary" name="panel1" title="LIVE LIST TEMPLATES" collapsible="true">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                <wm-layoutgrid name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                            <wm-button class="btn-default" caption="DEFAULT" type="button" name="button1" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5" marginunit="em"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                            <wm-button class="btn-default" caption="MEDIA LIST" type="button" name="button2" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5" marginunit="em"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                            <wm-button class="btn-default" caption="INFORMATION PANEL" type="button" name="button3" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5" marginunit="em"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn4"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn5"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn7">
+                            <wm-button class="btn-default" caption="BASIC CARD" type="button" name="button4" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5" marginunit="em"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn8">
+                            <wm-button class="btn-default" caption="PROFILE LIST" type="button" name="button5" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn9">
+                            <wm-button class="btn-default" caption="GRID LAYOUT" type="button" name="button6" marginleft="1.5" margintop="1.5" marginright="1.5" marginbottom="1.5" marginunit="em"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>
