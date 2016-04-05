@@ -1,4 +1,4 @@
-Application.$controller("FilterAddressPartialPageController", ["$scope", function ($scope) {
+Application.$controller("FilterAllDBTypesPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */

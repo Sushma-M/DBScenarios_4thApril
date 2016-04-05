@@ -1,54 +1,132 @@
-<wm-partial data-ng-controller="FilterAddressPartialPageController" name="partial1">
-    <wm-livefilter title="Filter Address_M1_SP" dataset="bind:Variables.Dbtest_allscenariosAddressM1SpData.dataSet" captionalign="left" captionposition="left" name="livefilter1">
-        <wm-layoutgrid name="layoutgrid1">
-            <wm-gridrow name="gridrow1">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn1">
-                    <wm-filter-field name="stateProvinceM2oAddress" field="stateProvinceM2oAddress" displayname="State Province M2o Address" widget="number" lookup-type="StateProvinceM2oAddress" lookup-field="stateProvinceId" is-related="true" related-entity-name="StateProvinceM2oAddress"
-                    is-range="false" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow2">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn2">
-                    <wm-filter-field name="addressId" field="addressId" displayname="Address Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow3">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn3">
-                    <wm-filter-field name="addressLine1" field="addressLine1" displayname="Address Line1" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow4">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn4">
-                    <wm-filter-field name="addressLine2" field="addressLine2" displayname="Address Line2" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow5">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn5">
-                    <wm-filter-field name="city" field="city" displayname="City" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow6">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn6">
-                    <wm-filter-field name="postalCode" field="postalCode" displayname="Postal Code" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow7">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn7">
-                    <wm-filter-field name="spatialLocation" field="spatialLocation" displayname="Spatial Location" widget="upload" is-range="false" type="blob" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow8">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn8">
-                    <wm-filter-field name="rowguid" field="rowguid" displayname="Rowguid" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-            <wm-gridrow name="gridrow9">
-                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn9">
-                    <wm-filter-field name="modifiedDate" field="modifiedDate" displayname="Modified Date" widget="datetime" is-range="false" type="datetime" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
-                </wm-gridcolumn>
-            </wm-gridrow>
-        </wm-layoutgrid>
-        <wm-filter-action key="filter" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" display-name="Filter" show="true" type="button"></wm-filter-action>
-        <wm-filter-action key="clear" class="btn" iconclass="wi wi-cancel" action="clearFilter()" display-name="Clear" show="true" type="button"></wm-filter-action>
-    </wm-livefilter>
+<wm-partial data-ng-controller="FilterAddressPartialPageController">
+    <wm-accordion name="accordion1">
+        <wm-accordionpane name="accordionpane1">
+            <wm-accordionheader name="accordionheader1" heading="Filter With Page Partial"></wm-accordionheader>
+            <wm-accordioncontent name="accordioncontent1">
+                <wm-livefilter title="Filter Address_M1_SP" dataset="bind:Variables.Dbtest_allscenariosAddressM1SpData.dataSet" captionalign="left" captionposition="left" name="livefilter1" enableemptyfilter="null,empty">
+                    <wm-layoutgrid name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                <wm-filter-field name="stateProvinceM2oAddress" field="stateProvinceM2oAddress" displayname="State Province M2o Address" widget="select" lookup-type="StateProvinceM2oAddress" lookup-field="stateProvinceId" is-related="true" related-entity-name="StateProvinceM2oAddress"
+                                is-range="false" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="number" primary-key="false" key="stateProvinceM2oAddress" placeholder="Enter value"></wm-filter-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                <wm-filter-field name="postalCode" field="postalCode" displayname="Postal Code" widget="checkboxset" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false"
+                                is-related="false" key="postalCode" placeholder="Enter value" matchmode="start" layout="inline"></wm-filter-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                <wm-filter-field name="addressId" field="addressId" displayname="Address Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true" inputtype="number" primary-key="false"
+                                is-related="false" key="addressId" placeholder="Enter value"></wm-filter-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                <wm-filter-field name="spatialLocation" field="spatialLocation" displayname="Spatial Location" widget="upload" is-range="false" type="blob" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false"
+                                is-related="false" key="spatialLocation"></wm-filter-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                <wm-filter-field name="addressLine1" field="addressLine1" displayname="Address Line1" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false"
+                                is-related="false" key="addressLine1" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                <wm-filter-field name="rowguid" field="rowguid" displayname="Rowguid" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false"
+                                is-related="false" key="rowguid" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                <wm-filter-field name="addressLine2" field="addressLine2" displayname="Address Line2" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false"
+                                is-related="false" key="addressLine2" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                                <wm-filter-field name="modifiedDate" field="modifiedDate" displayname="Modified Date" widget="date" is-range="true" type="datetime" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" is-related="false"
+                                key="modifiedDate" placeholder="Select date time" max-placeholder="Enter Max Date"></wm-filter-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                <wm-filter-field name="city" field="city" displayname="City" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false" is-related="false"
+                                key="city" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" type="button"></wm-filter-action>
+                    <wm-filter-action key="clear" display-name="Clear" show="true" class="btn" iconclass="wi wi-cancel" action="clearFilter()" type="button"></wm-filter-action>
+                </wm-livefilter>
+                <wm-livegrid formlayout="dialog" name="livegrid1">
+                    <wm-grid gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false" dataset="bind:Widgets.livefilter1.result" navigation="Advanced" name="grid1">
+                        <wm-grid-column binding="addressId" caption="Address Id" type="integer" width="px" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="addressLine1" caption="Address Line1" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="addressLine2" caption="Address Line2" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="city" caption="City" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="postalCode" caption="Postal Code" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="spatialLocation" caption="Spatial Location" type="blob" widget-type="image" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"><img width="48px" class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}">
+                        </wm-grid-column>
+                        <wm-grid-column binding="rowguid" caption="Rowguid" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="modifiedDate" caption="Modified Date" type="datetime" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="stateProvinceM2oAddress.stateProvinceId" caption="State Province M2o Address State Province Id" type="integer" width="px" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="stateProvinceM2oAddress.stateProvinceCode" caption="State Province M2o Address State Province Code" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="stateProvinceM2oAddress.isOnlyStateProvinceFlag" caption="State Province M2o Address Is Only State Province Flag" type="boolean" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="stateProvinceM2oAddress.name" caption="State Province M2o Address Name" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-column binding="stateProvinceM2oAddress.territoryId" caption="State Province M2o Address Territory Id" type="integer" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                        <wm-grid-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" action="addNewRow()"></wm-grid-action>
+                    </wm-grid>
+                    <wm-liveform novalidate="false" formlayout="dialog" dataset="bind:Widgets.livefilter1.result" captionalign="left" captionposition="left" name="liveform1">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="12" show="hide" name="gridcolumn10">
+                                    <wm-form-field name="addressId" displayname="Address Id" required="true" show="false" generator="identity" primary-key="true" key="addressId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn11">
+                                    <wm-form-field name="addressLine1" displayname="Address Line1" required="false" show="true" generator="assigned" primary-key="false" key="addressLine1" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn12">
+                                    <wm-form-field name="addressLine2" displayname="Address Line2" required="false" show="true" generator="assigned" primary-key="false" key="addressLine2" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn13">
+                                    <wm-form-field name="city" displayname="City" required="false" show="true" generator="assigned" primary-key="false" key="city" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow9">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn14">
+                                    <wm-form-field name="postalCode" displayname="Postal Code" required="false" show="true" generator="assigned" primary-key="false" key="postalCode" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow10">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn15">
+                                    <wm-form-field name="spatialLocation" displayname="Spatial Location" required="false" show="true" generator="assigned" primary-key="false" key="spatialLocation" type="blob" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="upload"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow11">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn16">
+                                    <wm-form-field name="rowguid" displayname="Rowguid" required="false" show="true" generator="assigned" primary-key="false" key="rowguid" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow12">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn17">
+                                    <wm-form-field name="modifiedDate" displayname="Modified Date" required="false" show="true" generator="assigned" primary-key="false" key="modifiedDate" type="datetime" is-related="false" pc-display="true" mobile-display="true" widget="datetime"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow13">
+                                <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn18">
+                                    <wm-form-field name="stateProvinceM2oAddress" displayname="State Province M2o Address" required="false" show="true" generator="assigned" primary-key="false" key="stateProvinceM2oAddress" type="list" is-related="true" pc-display="true" mobile-display="true"
+                                    widget="select"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14"></wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                    </wm-liveform>
+                </wm-livegrid>
+                <wm-button class="btn-default" caption="Back" type="button" name="button1" iconclass="glyphicon glyphicon-backward" on-click="goToPage_FilterAccordionPage"></wm-button>
+            </wm-accordioncontent>
+        </wm-accordionpane>
+    </wm-accordion>
 </wm-partial>

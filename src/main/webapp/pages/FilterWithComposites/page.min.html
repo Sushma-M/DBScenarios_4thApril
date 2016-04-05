@@ -1,0 +1,97 @@
+<style id="FilterWithComposites.css">
+
+</style>
+<script id="FilterWithComposites.js">
+Application.$controller("FilterWithCompositesPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="FilterWithComposites.variables.json">
+var _FilterWithCompositesPage_Variables_ ={};
+</script>
+<script id="FilterWithComposites.html" type="text/ng-template">
+<wm-partial data-ng-controller="FilterWithCompositesPageController">
+    <wm-panel class="panel-primary" name="panel3" title="Filter With Composites">
+        <wm-panel-footer name="panel_footer3">
+            <wm-button class="btn-default" caption="Back" type="button" name="button1" on-click="goToPage_FilterAccordionPage" iconclass="glyphicon glyphicon-backward"></wm-button>
+        </wm-panel-footer>
+        <wm-livefilter title="Filter CompositesKeyRelations" dataset="bind:Variables.Dbtest_allscenariosCompositesKeyRelationsData.dataSet" captionalign="left" captionposition="left" name="livefilterComposites" enableemptyfilter="null,empty">
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow24">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn45">
+                        <wm-filter-field name="departmentCompositeParent" field="departmentCompositeParent" displayname="Department Composite Parent" widget="select" lookup-type="DepartmentCompositeParent" lookup-field="departmentId" is-related="true" related-entity-name="DepartmentCompositeParent"
+                        is-range="true" type="short" is-primary-key="true" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" key="departmentCompositeParent" placeholder="Enter Min Value" max-placeholder="Enter Max Result"
+                        datafield="key" displayfield="value" multiple="multiple"></wm-filter-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn46">
+                        <wm-filter-field name="startDate" field="startDate" displayname="Start Date" widget="date" is-range="true" type="date" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" is-related="false"
+                        key="startDate" placeholder="Select date" max-placeholder="Enter Max Date"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow25">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn47">
+                        <wm-filter-field name="employeeRelationFrom2tables" field="employeeRelationFrom2tables" displayname="Employee Relation From2tables" widget="select" lookup-type="EmployeeRelationFrom2tables" lookup-field="businessEntityId" is-related="true" related-entity-name="EmployeeRelationFrom2tables"
+                        is-range="true" type="integer" is-primary-key="true" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" key="employeeRelationFrom2tables" placeholder="Enter Min Value" max-placeholder="Enter Max Result"
+                        datafield="key" displayfield="value" multiple="multiple"></wm-filter-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn48">
+                        <wm-filter-field name="endDate" field="endDate" displayname="End Date" widget="date" is-range="true" type="date" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" is-related="false" key="endDate"
+                        placeholder="Select date" max-placeholder="Enter Max Date"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn49">
+                        <wm-filter-field name="shift2rM2ovirtualParentForDepartment" field="shift2rM2ovirtualParentForDepartment" displayname="Shift2r M2ovirtual Parent For Department" widget="select" lookup-type="Shift2rM2ovirtualParentForDepartment" lookup-field="shiftId"
+                        is-related="true" related-entity-name="Shift2rM2ovirtualParentForDepartment" is-range="true" type="short" is-primary-key="true" generator="assigned" show="true" pc-display="true" mobile-display="true" primary-key="false" key="shift2rM2ovirtualParentForDepartment"
+                        placeholder="Enter Min Value" max-placeholder="Enter Max Result" datafield="key" displayfield="value"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" type="button"></wm-filter-action>
+            <wm-filter-action key="clear" display-name="Clear" show="true" class="btn" iconclass="wi wi-cancel" action="clearFilter()" type="button"></wm-filter-action>
+        </wm-livefilter>
+        <wm-grid readonlygrid="false" insertrow="true" updaterow="true" deleterow="true" dataset="bind:Widgets.livefilterComposites.result" navigation="Advanced" name="grid5">
+            <wm-grid-column binding="startDate" caption="Start Date" type="date" width="px" generator="assigned" search-placeholder="Enter date in yyyy-mm-dd" pcdisplay="true" mobiledisplay="true" edit-widget-type="date" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="endDate" caption="End Date" type="date" width="px" generator="assigned" search-placeholder="Enter date in yyyy-mm-dd" pcdisplay="true" mobiledisplay="true" edit-widget-type="date" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="departmentCompositeParent.departmentId" caption="Department Composite Parent Department Id" type="short" width="px" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true" edit-widget-type="select"
+            dataset="bind:Widgets.livefilterComposites.result" datafield="departmentCompositeParent.departmentId" displayfield="departmentCompositeParent.departmentId"></wm-grid-column>
+            <wm-grid-column binding="departmentCompositeParent.name" caption="Department Composite Parent Name" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="departmentCompositeParent.groupName" caption="Department Composite Parent Group Name" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="departmentCompositeParent.shift" caption="Department Composite Parent Shift" type="short" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.businessEntityId" caption="Employee Relation From2tables Business Entity Id" type="integer" width="px" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true" edit-widget-type="select"
+            dataset="bind:Widgets.livefilterComposites.result" datafield="employeeRelationFrom2tables.businessEntityId" displayfield="employeeRelationFrom2tables.businessEntityId"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.nationalIdnumber" caption="Employee Relation From2tables National Idnumber" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.loginId" caption="Employee Relation From2tables Login Id" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.jobTitle" caption="Employee Relation From2tables Job Title" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.maritalStatus" caption="Employee Relation From2tables Marital Status" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.gender" caption="Employee Relation From2tables Gender" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.currentFlag" caption="Employee Relation From2tables Current Flag" type="boolean" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.emailId" caption="Employee Relation From2tables Email Id" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.organizationLevel" caption="Employee Relation From2tables Organization Level" type="short" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.birthDate" caption="Employee Relation From2tables Birth Date" type="date" width="px" generator="assigned" search-placeholder="Enter date in yyyy-mm-dd" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="employeeRelationFrom2tables.salariedFlag" caption="Employee Relation From2tables Salaried Flag" type="boolean" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="shift2rM2ovirtualParentForDepartment.shiftId" caption="Shift2r M2ovirtual Parent For Department Shift Id" type="short" width="px" primary-key="true" generator="assigned" pcdisplay="true" mobiledisplay="true" edit-widget-type="select"
+            dataset="bind:Widgets.livefilterComposites.result" datafield="shift2rM2ovirtualParentForDepartment.shiftId" displayfield="shift2rM2ovirtualParentForDepartment.shiftId" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="shift2rM2ovirtualParentForDepartment.name" caption="Shift2r M2ovirtual Parent For Department Name" type="string" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="shift2rM2ovirtualParentForDepartment.startTime" caption="Shift2r M2ovirtual Parent For Department Start Time" type="time" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-column binding="shift2rM2ovirtualParentForDepartment.endTime" caption="Shift2r M2ovirtual Parent For Department End Time" type="time" width="px" generator="assigned" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+            <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
+        </wm-grid>
+    </wm-panel>
+</wm-partial>
+</script>

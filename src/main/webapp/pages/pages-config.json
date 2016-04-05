@@ -20,6 +20,9 @@
   "name" : "AllDatatpes_Advanced",
   "type" : "PARTIAL"
 }, {
+  "name" : "Chart2",
+  "type" : "PARTIAL"
+}, {
   "name" : "Cntainr_ReadOnlyGrid",
   "type" : "PAGE"
 }, {
@@ -34,6 +37,21 @@
 }, {
   "name" : "FilterAccordionPage",
   "type" : "PAGE"
+}, {
+  "name" : "FilterAddressPartial",
+  "type" : "PARTIAL"
+}, {
+  "name" : "FilterAllDBTypes",
+  "type" : "PARTIAL"
+}, {
+  "name" : "FilterSelfRelation",
+  "type" : "PARTIAL"
+}, {
+  "name" : "FilterStateProvince",
+  "type" : "PARTIAL"
+}, {
+  "name" : "FilterWithComposites",
+  "type" : "PARTIAL"
 }, {
   "name" : "FilterAddressPartial",
   "type" : "PARTIAL"
@@ -54,6 +72,9 @@
   "type" : "PAGE"
 }, {
   "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "Page23",
   "type" : "PAGE"
 }, {
   "name" : "PagewithCharts",

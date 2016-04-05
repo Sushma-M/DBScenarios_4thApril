@@ -9650,6 +9650,16 @@
     "pageName" : "AccLLProfileList",
     "pageTransitions" : "none"
   },
+  "goToPage_Chart2" : {
+    "_id" : "wm-goToPage_Chart2-wm.NavigationVariable-1459835364989",
+    "name" : "goToPage_Chart2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Chart2",
+    "pageTransitions" : "none"
+  },
   "goToPage_Cntainr_ReadOnlyGrid" : {
     "_id" : "wm-goToPage_Cntainr_ReadOnlyGrid-wm.NavigationVariable-1459837415918",
     "name" : "goToPage_Cntainr_ReadOnlyGrid",
@@ -9688,6 +9698,56 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "FilterAccordionPage",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterAddressPartial" : {
+    "_id" : "wm-goToPage_FilterAddressPartial-wm.NavigationVariable-1459857272405",
+    "name" : "goToPage_FilterAddressPartial",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterAddressPartial",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterAllDBTypes" : {
+    "_id" : "wm-goToPage_FilterAllDBTypes-wm.NavigationVariable-1459857350766",
+    "name" : "goToPage_FilterAllDBTypes",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterAllDBTypes",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterSelfRelation" : {
+    "_id" : "wm-goToPage_FilterSelfRelation-wm.NavigationVariable-1459857430446",
+    "name" : "goToPage_FilterSelfRelation",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterSelfRelation",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterStateProvince" : {
+    "_id" : "wm-goToPage_FilterStateProvince-wm.NavigationVariable-1459857483205",
+    "name" : "goToPage_FilterStateProvince",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterStateProvince",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterWithComposites" : {
+    "_id" : "wm-goToPage_FilterWithComposites-wm.NavigationVariable-1459857529592",
+    "name" : "goToPage_FilterWithComposites",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterWithComposites",
     "pageTransitions" : "none"
   },
   "goToPage_FilterAddressPartial" : {
@@ -9747,6 +9807,16 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_Page23" : {
+    "_id" : "wm-goToPage_Page23-wm.NavigationVariable-1459856150221",
+    "name" : "goToPage_Page23",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page23",
+    "pageTransitions" : "none"
   },
   "goToPage_PagewithCharts" : {
     "_id" : "wm-goToPage_PagewithCharts-wm.NavigationVariable-1459336371788",

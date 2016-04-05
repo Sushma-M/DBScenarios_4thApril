@@ -1,0 +1,117 @@
+<style id="FilterStateProvince.css">
+
+</style>
+<script id="FilterStateProvince.js">
+Application.$controller("FilterStateProvincePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="FilterStateProvince.variables.json">
+var _FilterStateProvincePage_Variables_ ={};
+</script>
+<script id="FilterStateProvince.html" type="text/ng-template">
+<wm-partial data-ng-controller="FilterStateProvincePageController">
+    <wm-panel class="panel-primary" name="panel1" title="Filter On &quot;StateProvince&quot; Table">
+        <wm-panel-footer name="panel_footer1">
+            <wm-button class="btn-default" caption="Back" type="button" name="button1" on-click="goToPage_FilterAccordionPage" iconclass="glyphicon glyphicon-backward"></wm-button>
+        </wm-panel-footer>
+        <wm-livefilter title="Filter StateProvince_M2O_Address" dataset="bind:Variables.Dbtest_allscenariosStateProvinceM2oAddressData.dataSet" captionalign="left" captionposition="left" name="livefilter1" enableemptyfilter="null,empty">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-filter-field name="countryRegionM2oFromSp" field="countryRegionM2oFromSp" displayname="Country Region M2o From Sp" widget="select" lookup-type="CountryRegionM2oFromSp" lookup-field="countryRegionCode" is-related="true" related-entity-name="CountryRegionM2oFromSp"
+                        is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false" key="countryRegionM2oFromSp" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                        <wm-filter-field name="isOnlyStateProvinceFlag" field="isOnlyStateProvinceFlag" displayname="Is Only State Province Flag" widget="checkbox" is-range="false" type="boolean" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                        primary-key="false" is-related="false" key="isOnlyStateProvinceFlag"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-filter-field name="stateProvinceId" field="stateProvinceId" displayname="State Province Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true" inputtype="number"
+                        primary-key="false" is-related="false" key="stateProvinceId" placeholder="Enter value"></wm-filter-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                        <wm-filter-field name="name" field="name" displayname="Name" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text" primary-key="false" is-related="false"
+                        key="name" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                        <wm-filter-field name="stateProvinceCode" field="stateProvinceCode" displayname="State Province Code" widget="typeahead" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="text"
+                        primary-key="false" is-related="false" key="stateProvinceCode" placeholder="Enter value" matchmode="start"></wm-filter-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                        <wm-filter-field name="territoryId" field="territoryId" displayname="Territory Id" widget="typeahead" is-range="false" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true" inputtype="number" primary-key="false"
+                        is-related="false" key="territoryId" placeholder="Enter value"></wm-filter-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-filter-action key="filter" display-name="Filter" show="true" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" type="button"></wm-filter-action>
+            <wm-filter-action key="clear" display-name="Clear" show="true" class="btn" iconclass="wi wi-cancel" action="clearFilter()" type="button"></wm-filter-action>
+        </wm-livefilter>
+        <wm-livegrid formlayout="dialog" name="livegrid1">
+            <wm-grid gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false" dataset="bind:Widgets.livefilter1.result" navigation="Advanced" name="grid1">
+                <wm-grid-column binding="stateProvinceId" caption="State Province Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true"></wm-grid-column>
+                <wm-grid-column binding="stateProvinceCode" caption="State Province Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                <wm-grid-column binding="isOnlyStateProvinceFlag" caption="Is Only State Province Flag" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean"></wm-grid-column>
+                <wm-grid-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                <wm-grid-column binding="territoryId" caption="Territory Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-grid-column>
+                <wm-grid-column binding="countryRegionM2oFromSp.countryRegionCode" caption="Country Region M2o From Sp Country Region Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" primary-key="true"></wm-grid-column>
+                <wm-grid-column binding="countryRegionM2oFromSp.name" caption="Country Region M2o From Sp Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                <wm-grid-column binding="countryRegionM2oFromSp.modifiedDate" caption="Country Region M2o From Sp Modified Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="datetime"></wm-grid-column>
+            </wm-grid>
+            <wm-liveform novalidate="false" formlayout="dialog" dataset="bind:Widgets.livefilter1.result" captionalign="left" captionposition="left" name="liveform1">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="6" show="hide" name="gridcolumn7">
+                            <wm-form-field name="stateProvinceId" displayname="State Province Id" required="true" show="false" generator="identity" primary-key="true" key="stateProvinceId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" show="show" name="gridcolumn8">
+                            <wm-form-field name="stateProvinceCode" displayname="State Province Code" required="false" show="true" generator="assigned" primary-key="false" key="stateProvinceCode" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" show="show" name="gridcolumn9">
+                            <wm-form-field name="name" displayname="Name" required="false" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn columnwidth="6" show="show" name="gridcolumn10">
+                            <wm-form-field name="isOnlyStateProvinceFlag" displayname="Is Only State Province Flag" required="false" show="true" generator="assigned" primary-key="false" key="isOnlyStateProvinceFlag" type="boolean" is-related="false" pc-display="true" mobile-display="true"
+                            widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" show="show" name="gridcolumn11">
+                            <wm-form-field name="territoryId" displayname="Territory Id" required="false" show="true" generator="assigned" primary-key="false" key="territoryId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn12"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" show="show" name="gridcolumn13">
+                            <wm-form-field name="countryRegionM2oFromSp" displayname="Country Region M2o From Sp" required="false" show="true" generator="assigned" primary-key="false" key="countryRegionM2oFromSp" type="list" is-related="true" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+            </wm-liveform>
+        </wm-livegrid>
+    </wm-panel>
+</wm-partial>
+</script>

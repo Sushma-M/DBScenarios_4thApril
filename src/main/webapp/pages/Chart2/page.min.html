@@ -1,4 +1,8 @@
-Application.$controller("FilterAddressPartialPageController", ["$scope", function ($scope) {
+<style id="Chart2.css">
+
+</style>
+<script id="Chart2.js">
+Application.$controller("Chart2PageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,3 +19,16 @@ Application.$controller("FilterAddressPartialPageController", ["$scope", functio
     };
 
 }]);
+
+</script>
+<script id="Chart2.variables.json">
+var _Chart2Page_Variables_ ={};
+</script>
+<script id="Chart2.html" type="text/ng-template">
+<wm-partial data-ng-controller="Chart2PageController" name="partial1">
+    <wm-chart type="Area" name="Area_chart1" theme="Azure"></wm-chart>
+    <wm-panel class="panel-primary" name="panel1" title="Title_00999">
+        <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+    </wm-panel>
+</wm-partial>
+</script>
