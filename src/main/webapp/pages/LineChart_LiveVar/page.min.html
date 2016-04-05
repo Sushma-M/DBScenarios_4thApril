@@ -34,6 +34,13 @@ Application.$controller("dialog2Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="LineChart_LiveVar.variables.json">
 var _LineChart_LiveVarPage_Variables_ ={ }
@@ -91,7 +98,19 @@ var _LineChart_LiveVarPage_Variables_ ={ }
         <wm-dialog dialogtype="design-dialog" modal="true" name="dialog2">
             <wm-dialogheader caption="LineChart to Grid" iconclass="wi wi-edit" name="dialogheader2"></wm-dialogheader>
             <wm-dialogcontent name="dialogcontent2">
-                <wm-chart type="Line" name="chart4" theme="Terrestrial"></wm-chart>
+                <wm-chart type="Line" name="chart4" theme="Terrestrial" xaxisdatakey="deptcode" yaxisdatakey="q1,q2,q3,q4" dataset="bind:Variables.HrdbDepartmentData.dataSet" highlightpoints="true"></wm-chart>
+                <wm-grid readonlygrid="true" dataset="bind:Variables.HrdbExecuteChartdata1.dataSet" navigation="Advanced" name="grid1">
+                    <wm-grid-column binding="BUDGET" caption="BUDGET" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="LOCATION" caption="LOCATION" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="Q1" caption="Q1" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="Q2" caption="Q2" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="Q3" caption="Q3" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="Q4" caption="Q4" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="DEPTCODE" caption="DEPTCODE" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="TENANTID" caption="TENANTID" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="DEPTID" caption="DEPTID" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                </wm-grid>
             </wm-dialogcontent>
             <wm-dialogactions name="dialogactions2">
                 <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button5"></wm-button>

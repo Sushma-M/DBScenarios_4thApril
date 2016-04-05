@@ -714,8 +714,9 @@
         "notNull" : true,
         "length" : 255,
         "precision" : 2,
-        "generator" : "identity",
+        "generator" : "assigned",
         "isRelated" : false,
+        "defaultValue" : "",
         "scale" : 0
       } ],
       "entityName" : "ByteMany2oneC",
@@ -2304,6 +2305,18 @@
           "generator" : "assigned",
           "isRelated" : false,
           "scale" : 4
+        }, {
+          "fieldName" : "floatId",
+          "type" : "big_decimal",
+          "fullyQualifiedType" : "big_decimal",
+          "columnName" : "FloatID",
+          "isPrimaryKey" : false,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 22,
+          "generator" : "assigned",
+          "isRelated" : false,
+          "scale" : 9
         } ]
       }, {
         "fieldName" : "floatId",
@@ -2385,6 +2398,18 @@
         "generator" : "assigned",
         "isRelated" : false,
         "scale" : 4
+      }, {
+        "fieldName" : "floatId",
+        "type" : "big_decimal",
+        "fullyQualifiedType" : "big_decimal",
+        "columnName" : "FloatID",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 22,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 9
       } ],
       "entityName" : "FloatMany2oneP",
       "fullyQualifiedName" : "com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP",
@@ -9891,7 +9916,7 @@
       "primaryFields" : [ "deptid" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 2,
     "tableName" : "DEPARTMENT",
     "tableType" : "TABLE",
     "dbSystem" : "HSQLDB",
@@ -10593,6 +10618,58 @@
       "package" : "com.hrdb.Employee"
     } ],
     "package" : "com.hrdb.Employee"
+  },
+  "HrdbExecuteChartdata1" : {
+    "_id" : "wm-HrdbExecuteChartdata1-wm.ServiceVariable-1459847988846",
+    "name" : "HrdbExecuteChartdata1",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "data",
+      "value" : "bind:Widgets.chart4.selecteditem.q1",
+      "type" : "integer"
+    } ],
+    "type" : "hrdbchartdata1rtnType",
+    "service" : "hrdb",
+    "operation" : "executeChartdata1",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/chartdata1",
+      "httpMethod" : "get",
+      "name" : "executeChartdata1",
+      "parameters" : [ {
+        "name" : "data",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
   },
   "HrdbUserData" : {
     "_id" : "wm-HrdbUserData-wm.LiveVariable-1459427080720",
