@@ -9649,16 +9649,6 @@
     "pageName" : "AccLLProfileList",
     "pageTransitions" : "none"
   },
-  "goToPage_Chart2" : {
-    "_id" : "wm-goToPage_Chart2-wm.NavigationVariable-1459835364989",
-    "name" : "goToPage_Chart2",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Chart2",
-    "pageTransitions" : "none"
-  },
   "goToPage_Cntainr_ReadOnlyGrid" : {
     "_id" : "wm-goToPage_Cntainr_ReadOnlyGrid-wm.NavigationVariable-1459837415918",
     "name" : "goToPage_Cntainr_ReadOnlyGrid",
@@ -9746,16 +9736,6 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
-  },
-  "goToPage_Page23" : {
-    "_id" : "wm-goToPage_Page23-wm.NavigationVariable-1459856150221",
-    "name" : "goToPage_Page23",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "Page23",
-    "pageTransitions" : "none"
   },
   "goToPage_PagewithCharts" : {
     "_id" : "wm-goToPage_PagewithCharts-wm.NavigationVariable-1459336371788",
