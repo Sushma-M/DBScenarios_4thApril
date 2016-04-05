@@ -8,6 +8,7 @@ package com.dbscenarios_30mar.allo2m_o2o;
 
 
 import javax.persistence.PrimaryKeyJoinColumn;
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -40,6 +41,8 @@ public class FloatMany2oneP  implements java.io.Serializable {
     
     private Double floatCol1;
     
+    private BigDecimal floatId;
+    
     private Set<FloatMany2oneC> floatMany2oneCs = new HashSet<FloatMany2oneC>(0);
 
     public FloatMany2oneP() {
@@ -67,6 +70,17 @@ public class FloatMany2oneP  implements java.io.Serializable {
     
     public void setFloatCol1(Double floatCol1) {
         this.floatCol1 = floatCol1;
+    }
+
+    
+
+    @Column(name="`FloatID`", precision=22, scale=9)
+    public BigDecimal getFloatId() {
+        return this.floatId;
+    }
+    
+    public void setFloatId(BigDecimal floatId) {
+        this.floatId = floatId;
     }
 
     @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="floatMany2oneP")

@@ -11,8 +11,6 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -45,7 +43,7 @@ public class ByteMany2oneC  implements java.io.Serializable {
     }
 
 
-    @Id @GeneratedValue(strategy=IDENTITY)
+    @Id 
     
 
     @Column(name="`ByteID`", precision=2)

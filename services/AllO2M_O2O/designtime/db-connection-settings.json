@@ -10,7 +10,7 @@
   "host" : "ec2-54-87-2-36.compute-1.amazonaws.com",
   "dbName" : "AllO2M_O2O",
   "port" : "3306",
-  "schemaName" : null,
+  "schemaName" : "AllO2M_O2O",
   "tableFilter" : [ "Bigdec_Many2One_C", "Bigdec_Many2One_P", "Bigdec_One2One_C", "Bigdec_One2One_P", "BigInt_Many2One_C", "BigInt_Many2One_P", "BigInt_One2One_C", "BigInt_One2One_P", "Byte_Many2One_C", "Byte_Many2One_P", "Byte_One2One_C", "Byte_One2One_P", "Char_Many2One_C", "Char_Many2One_P", "Char_One2One_C", "Char_One2One_P", "Date_Many2One_C", "Date_Many2One_P", "Date_One2One_C", "Date_One2One_P", "Datetime_Many2One_C", "Datetime_Many2One_P", "Datetime_One2One_C", "Datetime_One2One_P", "Double_Many2One_C", "Double_Many2One_P", "Double_One2One_C", "Double_One2One_P", "Float_Many2One_C", "Float_Many2One_P", "Float_One2One_C", "Float_One2One_P", "Int_Many2One_C", "Int_Many2One_P", "Int_One2One_C", "Int_One2One_P", "Long_Many2One_C", "Long_Many2One_P", "Long_One2One_C", "Long_One2One_P", "Short_Many2One_C", "Short_Many2One_P", "Short_One2One_C", "Short_One2One_P", "String_Many2One_C", "String_Many2One_P", "String_One2One_C", "String_One2One_P", "Time_Many2One_C", "Time_Many2One_P", "Time_One2One_C", "Time_One2One_P", "TimeStamp_Many2One_C", "TimeStamp_Many2One_P", "TimeStamp_One2One_C", "TimeStamp_One2One_P" ],
   "schemaFilter" : [ ".*" ],
   "impersonateUser" : false,

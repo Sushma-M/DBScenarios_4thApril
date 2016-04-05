@@ -5,15 +5,15 @@
             <element name="stringMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneP" allowNull="true"/>
             <element name="stringId" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP">
-            <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="shortOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC" allowNull="true"/>
-            <element name="short1" typeRef="java.lang.Integer" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneP">
             <element name="bigdecId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="bigdecOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.BigdecOne2oneC" allowNull="true"/>
             <element name="bigdec1" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP">
+            <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="shortOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC" allowNull="true"/>
+            <element name="short1" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneP">
             <element name="datetimeOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.DatetimeOne2oneC" allowNull="true"/>
@@ -55,6 +55,11 @@
             <element name="intId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="intOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneC" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC">
+            <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="shortOne2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP" allowNull="true"/>
+            <element name="short1" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneC">
             <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="shortMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneP" allowNull="true"/>
@@ -64,19 +69,14 @@
             <element name="datetimeId" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
             <element name="datetime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneC">
-            <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="shortOne2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.ShortOne2oneP" allowNull="true"/>
-            <element name="short1" typeRef="java.lang.Integer" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneC">
-            <element name="floatMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP" allowNull="true"/>
-            <element name="floatId" typeRef="java.lang.Double" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneC">
             <element name="string1" typeRef="java.lang.String" allowNull="true"/>
             <element name="stringOne2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.StringOne2oneP" allowNull="true"/>
             <element name="stringId" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneC">
+            <element name="floatMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP" allowNull="true"/>
+            <element name="floatId" typeRef="java.lang.Double" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.FloatOne2oneC">
             <element name="floatId" typeRef="java.lang.Double" allowNull="true"/>
@@ -88,14 +88,14 @@
             <element name="longMany2oneCs" typeRef="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneC" isList="true" allowNull="true"/>
             <element name="longId" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneC">
+            <element name="timeStampId" typeRef="java.util.Date" allowNull="true"/>
+            <element name="timeStampMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneP" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneP">
             <element name="id" typeRef="java.lang.Double" allowNull="true"/>
             <element name="floatCol1" typeRef="java.lang.Double" allowNull="true"/>
             <element name="floatMany2oneCs" typeRef="com.dbscenarios_30mar.allo2m_o2o.FloatMany2oneC" isList="true" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneC">
-            <element name="timeStampId" typeRef="java.util.Date" allowNull="true"/>
-            <element name="timeStampMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeStampMany2oneP" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ShortMany2oneP">
             <element name="shortId" typeRef="java.lang.Integer" allowNull="true"/>
@@ -117,14 +117,14 @@
             <element name="bigInt1" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="bigIntId" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneC">
-            <element name="longId" typeRef="java.lang.Integer" allowNull="true"/>
-            <element name="longMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneP" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneC">
             <element name="intOne2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.IntOne2oneP" allowNull="true"/>
             <element name="string1" typeRef="java.lang.String" allowNull="true"/>
             <element name="intId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneC">
+            <element name="longId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="longMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.LongMany2oneP" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneP">
             <element name="byteId" typeRef="java.lang.String" allowNull="true"/>
@@ -135,14 +135,14 @@
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="intMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.IntMany2oneP" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC">
-            <element name="byteId" typeRef="java.lang.String" allowNull="true"/>
-            <element name="byteMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneP" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneP">
             <element name="stringCol1" typeRef="java.lang.String" allowNull="true"/>
             <element name="stringMany2oneCs" typeRef="com.dbscenarios_30mar.allo2m_o2o.StringMany2oneC" isList="true" allowNull="true"/>
             <element name="stringId" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC">
+            <element name="byteId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="byteMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneP" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneC">
             <element name="bigIntMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.BigIntMany2oneP" allowNull="true"/>
@@ -242,25 +242,25 @@
             <element name="timeId" typeRef="java.util.Date" allowNull="true"/>
             <element name="timeMany2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeMany2oneP" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneP">
-            <element name="timeStamp" typeRef="java.util.Date" allowNull="true"/>
-            <element name="timeStampOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneC" allowNull="true"/>
-            <element name="timestamp1" typeRef="java.util.Date" allowNull="true"/>
-        </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneC">
             <element name="time1" typeRef="java.util.Date" allowNull="true"/>
             <element name="timeOne2oneP" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeOne2oneP" allowNull="true"/>
             <element name="timeId" typeRef="java.util.Date" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneP">
-            <element name="charId" typeRef="java.lang.String" allowNull="true"/>
-            <element name="charOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneC" allowNull="true"/>
-            <element name="char1" typeRef="java.lang.String" allowNull="true"/>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneP">
+            <element name="timeStamp" typeRef="java.util.Date" allowNull="true"/>
+            <element name="timeStampOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.TimeStampOne2oneC" allowNull="true"/>
+            <element name="timestamp1" typeRef="java.util.Date" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneP">
             <element name="doubleId" typeRef="java.lang.Double" allowNull="true"/>
             <element name="doubleCol1" typeRef="java.lang.Double" allowNull="true"/>
             <element name="doubleMany2oneCs" typeRef="com.dbscenarios_30mar.allo2m_o2o.DoubleMany2oneC" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneP">
+            <element name="charId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="charOne2oneC" typeRef="com.dbscenarios_30mar.allo2m_o2o.CharOne2oneC" allowNull="true"/>
+            <element name="char1" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbscenarios_30mar.allo2m_o2o.DoubleOne2oneC">
             <element name="doubleId" typeRef="java.lang.Double" allowNull="true"/>

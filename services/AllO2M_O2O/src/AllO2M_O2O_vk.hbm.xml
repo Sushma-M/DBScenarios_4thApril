@@ -116,6 +116,9 @@
     <property name="floatCol1" type="java.lang.Double">
       <column name="`FloatCol1`" length="255" not-null="false" precision="12" scale="4"/>
     </property>
+    <property name="floatId" type="java.math.BigDecimal">
+      <column name="`FloatID`" length="255" not-null="true" precision="22" scale="9"/>
+    </property>
     <set name="floatMany2oneCs" table="Float_Many2One_C" inverse="true" lazy="true" fetch="select">
       <key>
         <column name="`FloatCol1`"/>
@@ -635,7 +638,7 @@
   <class table="`Byte_Many2One_C`" name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC" entity-name="com.dbscenarios_30mar.allo2m_o2o.ByteMany2oneC">
     <id name="byteId" type="java.lang.Byte">
       <column name="`ByteID`" length="255" not-null="true" precision="2"/>
-      <generator class="identity"/>
+      <generator class="assigned"/>
     </id>
     <many-to-one
       name="byteMany2oneP"

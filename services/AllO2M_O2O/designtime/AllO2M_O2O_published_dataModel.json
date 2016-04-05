@@ -510,6 +510,24 @@
       "sequenceName" : null,
       "sqlType" : "number",
       "unique" : false
+    }, {
+      "defaultValue" : null,
+      "fieldName" : "floatId",
+      "foreignKey" : false,
+      "generator" : "assigned",
+      "javaType" : "big_decimal",
+      "length" : 255,
+      "name" : "FloatID",
+      "nullable" : false,
+      "oldName" : "FloatID",
+      "partOfAnyRelation" : false,
+      "partOfPrimaryKey" : false,
+      "precision" : 22,
+      "primaryKey" : false,
+      "scale" : 9,
+      "sequenceName" : null,
+      "sqlType" : "number",
+      "unique" : false
     } ],
     "constraints" : [ ],
     "entityName" : "FloatMany2oneP",
@@ -2686,10 +2704,10 @@
   }, {
     "catalog" : "AllO2M_O2O",
     "columns" : [ {
-      "defaultValue" : null,
+      "defaultValue" : "",
       "fieldName" : "byteId",
       "foreignKey" : false,
-      "generator" : "identity",
+      "generator" : "assigned",
       "javaType" : "byte",
       "length" : 255,
       "name" : "ByteID",
