@@ -34,6 +34,13 @@ Application.$controller("dialog2Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="LineChart_LiveVar.variables.json">
 var _LineChart_LiveVarPage_Variables_ ={ }
@@ -106,7 +113,6 @@ var _LineChart_LiveVarPage_Variables_ ={ }
                     <wm-grid-column binding="DEPTID" caption="DEPTID" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
                 </wm-grid>
                 <wm-label name="label3" caption="Note: select Q1 to see the second chart populate"></wm-label>
-                <wm-chart type="Line" name="chart4" theme="Terrestrial"></wm-chart>
             </wm-dialogcontent>
             <wm-dialogactions name="dialogactions2">
                 <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button5"></wm-button>
