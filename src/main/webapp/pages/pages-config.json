@@ -20,9 +20,6 @@
   "name" : "AllDatatpes_Advanced",
   "type" : "PARTIAL"
 }, {
-  "name" : "Chart2",
-  "type" : "PARTIAL"
-}, {
   "name" : "Cntainr_ReadOnlyGrid",
   "type" : "PAGE"
 }, {
@@ -53,9 +50,6 @@
   "name" : "FilterWithComposites",
   "type" : "PARTIAL"
 }, {
-  "name" : "FilterAddressPartial",
-  "type" : "PARTIAL"
-}, {
   "name" : "LLTemplates",
   "type" : "PAGE"
 }, {
@@ -72,9 +66,6 @@
   "type" : "PAGE"
 }, {
   "name" : "Main",
-  "type" : "PAGE"
-}, {
-  "name" : "Page23",
   "type" : "PAGE"
 }, {
   "name" : "PagewithCharts",
