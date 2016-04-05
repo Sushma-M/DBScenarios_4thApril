@@ -9747,6 +9747,16 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_Page2323" : {
+    "_id" : "wm-goToPage_Page2323-wm.NavigationVariable-1459856087160",
+    "name" : "goToPage_Page2323",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page2323",
+    "pageTransitions" : "none"
+  },
   "goToPage_PagewithCharts" : {
     "_id" : "wm-goToPage_PagewithCharts-wm.NavigationVariable-1459336371788",
     "name" : "goToPage_PagewithCharts",

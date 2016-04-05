@@ -56,6 +56,9 @@
   "name" : "Main",
   "type" : "PAGE"
 }, {
+  "name" : "Page2323",
+  "type" : "PAGE"
+}, {
   "name" : "PagewithCharts",
   "type" : "PAGE"
 }, {
