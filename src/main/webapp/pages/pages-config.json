@@ -2,6 +2,9 @@
   "name" : "Acc_ReadOnlyDataGrid",
   "type" : "PAGE"
 }, {
+  "name" : "Chart2",
+  "type" : "PARTIAL"
+}, {
   "name" : "Common",
   "type" : "PARTIAL"
 }, {

@@ -9569,6 +9569,16 @@
     "pageName" : "Acc_ReadOnlyDataGrid",
     "pageTransitions" : "none"
   },
+  "goToPage_Chart2" : {
+    "_id" : "wm-goToPage_Chart2-wm.NavigationVariable-1459835364989",
+    "name" : "goToPage_Chart2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Chart2",
+    "pageTransitions" : "none"
+  },
   "goToPage_EditableDataGrid" : {
     "_id" : "wm-goToPage_EditableDataGrid-wm.NavigationVariable-1459493532815",
     "name" : "goToPage_EditableDataGrid",
