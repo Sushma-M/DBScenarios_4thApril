@@ -1,0 +1,89 @@
+<style id="FilterAddressPartial.css">
+
+</style>
+<script id="FilterAddressPartial.js">
+Application.$controller("FilterAddressPartialPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+
+Application.$controller("livefilter1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="FilterAddressPartial.variables.json">
+var _FilterAddressPartialPage_Variables_ ={};
+</script>
+<script id="FilterAddressPartial.html" type="text/ng-template">
+<wm-partial data-ng-controller="FilterAddressPartialPageController" name="partial1">
+    <wm-livefilter title="Filter Address_M1_SP" dataset="bind:Variables.Dbtest_allscenariosAddressM1SpData.dataSet" captionalign="left" captionposition="left" name="livefilter1">
+        <wm-layoutgrid name="layoutgrid1">
+            <wm-gridrow name="gridrow1">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn1">
+                    <wm-filter-field name="stateProvinceM2oAddress" field="stateProvinceM2oAddress" displayname="State Province M2o Address" widget="number" lookup-type="StateProvinceM2oAddress" lookup-field="stateProvinceId" is-related="true" related-entity-name="StateProvinceM2oAddress"
+                    is-range="false" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow2">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn2">
+                    <wm-filter-field name="addressId" field="addressId" displayname="Address Id" widget="number" is-range="false" type="integer" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow3">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn3">
+                    <wm-filter-field name="addressLine1" field="addressLine1" displayname="Address Line1" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow4">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn4">
+                    <wm-filter-field name="addressLine2" field="addressLine2" displayname="Address Line2" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow5">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn5">
+                    <wm-filter-field name="city" field="city" displayname="City" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow6">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn6">
+                    <wm-filter-field name="postalCode" field="postalCode" displayname="Postal Code" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow7">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn7">
+                    <wm-filter-field name="spatialLocation" field="spatialLocation" displayname="Spatial Location" widget="upload" is-range="false" type="blob" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow8">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn8">
+                    <wm-filter-field name="rowguid" field="rowguid" displayname="Rowguid" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow9">
+                <wm-gridcolumn columnwidth="12" show="true" name="gridcolumn9">
+                    <wm-filter-field name="modifiedDate" field="modifiedDate" displayname="Modified Date" widget="datetime" is-range="false" type="datetime" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"></wm-filter-field>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-filter-action key="filter" class="btn-primary" iconclass="wi wi-filter-list" action="filter()" display-name="Filter" show="true" type="button"></wm-filter-action>
+        <wm-filter-action key="clear" class="btn" iconclass="wi wi-cancel" action="clearFilter()" display-name="Clear" show="true" type="button"></wm-filter-action>
+    </wm-livefilter>
+</wm-partial>
+</script>

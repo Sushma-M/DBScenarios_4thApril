@@ -1136,7 +1136,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -1205,6 +1205,7 @@
       "primaryFields" : [ "charId" ]
     },
     "isDefault" : true,
+    "bindCount" : 1,
     "tableName" : "Char_One2One_C",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -7500,7 +7501,7 @@
       "primaryFields" : [ "addressId" ]
     },
     "isDefault" : true,
-    "bindCount" : 1,
+    "bindCount" : 3,
     "tableName" : "Address_M1_SP",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -9687,6 +9688,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "FilterAccordionPage",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FilterAddressPartial" : {
+    "_id" : "wm-goToPage_FilterAddressPartial-wm.NavigationVariable-1459861797561",
+    "name" : "goToPage_FilterAddressPartial",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FilterAddressPartial",
     "pageTransitions" : "none"
   },
   "goToPage_LineChart_LiveVar" : {

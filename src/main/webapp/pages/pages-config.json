@@ -35,6 +35,9 @@
   "name" : "FilterAccordionPage",
   "type" : "PAGE"
 }, {
+  "name" : "FilterAddressPartial",
+  "type" : "PARTIAL"
+}, {
   "name" : "LLTemplates",
   "type" : "PAGE"
 }, {
