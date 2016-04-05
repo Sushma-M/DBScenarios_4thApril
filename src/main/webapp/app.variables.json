@@ -7298,7 +7298,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -7500,6 +7500,7 @@
       "primaryFields" : [ "addressId" ]
     },
     "isDefault" : true,
+    "bindCount" : 1,
     "tableName" : "Address_M1_SP",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -7772,7 +7773,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 18,
+    "bindCount" : 28,
     "tableName" : "All DB Types",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -7981,7 +7982,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -8315,6 +8316,7 @@
       "primaryFields" : [ "businessEntityId", "departmentId", "shiftId" ]
     },
     "isDefault" : true,
+    "bindCount" : 2,
     "tableName" : "CompositesKeyRelations",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -9329,7 +9331,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
-    "bindCount" : 6,
+    "bindCount" : 9,
     "tableName" : "Self Relation",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -9587,6 +9589,16 @@
     } ],
     "package" : "com.dbscenarios_30mar.dbtest_allscenarios.StateProvinceM2oAddress"
   },
+  "goToPage_Acc_EditableDataGrid" : {
+    "_id" : "wm-goToPage_Acc_EditableDataGrid-wm.NavigationVariable-1459839665078",
+    "name" : "goToPage_Acc_EditableDataGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Acc_EditableDataGrid",
+    "pageTransitions" : "none"
+  },
   "goToPage_Acc_ReadOnlyDataGrid" : {
     "_id" : "wm-goToPage_Acc_ReadOnlyDataGrid-wm.NavigationVariable-1459420740122",
     "name" : "goToPage_Acc_ReadOnlyDataGrid",
@@ -9595,6 +9607,36 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "Acc_ReadOnlyDataGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_AllDatatpes_Advanced" : {
+    "_id" : "wm-goToPage_AllDatatpes_Advanced-wm.NavigationVariable-1459838450719",
+    "name" : "goToPage_AllDatatpes_Advanced",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AllDatatpes_Advanced",
+    "pageTransitions" : "none"
+  },
+  "goToPage_AllDatatypes_Basic" : {
+    "_id" : "wm-goToPage_AllDatatypes_Basic-wm.NavigationVariable-1459838407839",
+    "name" : "goToPage_AllDatatypes_Basic",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AllDatatypes_Basic",
+    "pageTransitions" : "none"
+  },
+  "goToPage_AllDatatypes_None" : {
+    "_id" : "wm-goToPage_AllDatatypes_None-wm.NavigationVariable-1459838339095",
+    "name" : "goToPage_AllDatatypes_None",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "AllDatatypes_None",
     "pageTransitions" : "none"
   },
   "goToPage_Chart2" : {
@@ -9725,6 +9767,26 @@
     "pageName" : "Panel_ReadOnlyGrid",
     "pageTransitions" : "none"
   },
+  "goToPage_Partial_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_Partial_ReadOnlyGrid-wm.NavigationVariable-1459838839399",
+    "name" : "goToPage_Partial_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Partial_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Popover_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_Popover_ReadOnlyGrid-wm.NavigationVariable-1459838175063",
+    "name" : "goToPage_Popover_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Popover_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
   "goToPage_Procedure_Page" : {
     "_id" : "wm-goToPage_Procedure_Page-wm.NavigationVariable-1459760363731",
     "name" : "goToPage_Procedure_Page",
@@ -9743,6 +9805,26 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "ReadOnlyDataGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Self_Relation" : {
+    "_id" : "wm-goToPage_Self_Relation-wm.NavigationVariable-1459838477329",
+    "name" : "goToPage_Self_Relation",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Self_Relation",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Tab_EditableDataGrid" : {
+    "_id" : "wm-goToPage_Tab_EditableDataGrid-wm.NavigationVariable-1459841411016",
+    "name" : "goToPage_Tab_EditableDataGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Tab_EditableDataGrid",
     "pageTransitions" : "none"
   },
   "goToPage_Tabs_ReadOnlyGrid" : {

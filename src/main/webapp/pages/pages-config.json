@@ -1,6 +1,18 @@
 [ {
+  "name" : "Acc_EditableDataGrid",
+  "type" : "PAGE"
+}, {
   "name" : "Acc_ReadOnlyDataGrid",
   "type" : "PAGE"
+}, {
+  "name" : "AllDatatpes_Advanced",
+  "type" : "PARTIAL"
+}, {
+  "name" : "AllDatatypes_Basic",
+  "type" : "PARTIAL"
+}, {
+  "name" : "AllDatatypes_None",
+  "type" : "PARTIAL"
 }, {
   "name" : "Chart2",
   "type" : "PARTIAL"
@@ -44,10 +56,22 @@
   "name" : "Panel_ReadOnlyGrid",
   "type" : "PAGE"
 }, {
+  "name" : "Partial_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "Popover_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
   "name" : "Procedure_Page",
   "type" : "PAGE"
 }, {
   "name" : "ReadOnlyDataGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "Self_Relation",
+  "type" : "PARTIAL"
+}, {
+  "name" : "Tab_EditableDataGrid",
   "type" : "PAGE"
 }, {
   "name" : "Tabs_ReadOnlyGrid",

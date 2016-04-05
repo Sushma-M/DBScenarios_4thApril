@@ -1,0 +1,29 @@
+<wm-page data-ng-controller="Popover_ReadOnlyGridPageController" pagetitle="Popover Read Only Grid" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="With Normal DB"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-container name="container1" margintop="10" marginbottom="10">
+                            <wm-popover popoverwidth="240" popoverheight="360" name="popover1" caption="All DB Types List with None Navigation" content="AllDatatypes_None" popoverplacement="top"></wm-popover>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container2">
+                            <wm-popover popoverwidth="240" popoverheight="360" caption="All DB Types List with Basic Navigation" name="popover3" content="AllDatatypes_Basic"></wm-popover>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container3">
+                            <wm-popover popoverwidth="240" popoverheight="360" caption="All DB Types List with Advanced Navigation" name="popover4" content="AllDatatpes_Advanced"></wm-popover>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container4">
+                            <wm-popover popoverwidth="240" popoverheight="360" caption="Self Relation" name="popover5" content="Self_Relation" popoverplacement="right"></wm-popover>
+                        </wm-container>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
