@@ -85,8 +85,9 @@ var _LineChart_LiveVarPage_Variables_ ={ }
         <wm-dialog dialogtype="design-dialog" modal="true" name="dialog1">
             <wm-dialogheader caption="LineChart to Donut" iconclass="wi wi-edit" name="dialogheader1"></wm-dialogheader>
             <wm-dialogcontent name="dialogcontent1">
-                <wm-chart type="Line" name="chart2" theme="Terrestrial"></wm-chart>
-                <wm-chart type="Donut" name="chart3" theme="Azure"></wm-chart>
+                <wm-chart type="Line" name="chart2" theme="Terrestrial" xaxisdatakey="location" yaxisdatakey="q1,q2,q3,q4" dataset="bind:Variables.HrdbDepartmentData.dataSet" highlightpoints="true" legendtype="classic"></wm-chart>
+                <wm-chart type="Donut" name="chart3" theme="Azure" dataset="bind:Variables.HrdbExecuteChartdata1.dataSet" xaxisdatakey="BUDGET" yaxisdatakey="DEPTID"></wm-chart>
+                <wm-label name="label2" caption="Note: select Q1 to see the second chart populate"></wm-label>
             </wm-dialogcontent>
             <wm-dialogactions name="dialogactions1">
                 <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button3"></wm-button>
@@ -111,6 +112,7 @@ var _LineChart_LiveVarPage_Variables_ ={ }
                     <wm-grid-column binding="TENANTID" caption="TENANTID" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
                     <wm-grid-column binding="DEPTID" caption="DEPTID" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
                 </wm-grid>
+                <wm-label name="label3" caption="Note: select Q1 to see the second chart populate"></wm-label>
             </wm-dialogcontent>
             <wm-dialogactions name="dialogactions2">
                 <wm-button class="btn-secondary" caption="Cancel" on-click="closeDialog()" name="button5"></wm-button>
