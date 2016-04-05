@@ -12,7 +12,7 @@
                             <wm-tabpane name="tabpane3">
                                 <wm-tabheader name="tabheader3" heading="AllDataTypes_None"></wm-tabheader>
                                 <wm-tabcontent name="tabcontent3">
-                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.DbtestAllDbTypesData.dataSet" navigation="None" name="grid1">
+                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="grid5">
                                         <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="byte" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="shortCol" caption="Short Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" readonly="true"></wm-grid-column>
@@ -38,7 +38,7 @@
                             <wm-tabpane name="tabpane4">
                                 <wm-tabheader name="tabheader4" heading="Alldatatypes_Basic"></wm-tabheader>
                                 <wm-tabcontent name="tabcontent4">
-                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.DbtestAllDbTypesData.dataSet" navigation="Basic" name="grid2">
+                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="grid6">
                                         <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="byte" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="shortCol" caption="Short Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" readonly="true"></wm-grid-column>
@@ -64,7 +64,7 @@
                             <wm-tabpane name="tabpane5">
                                 <wm-tabheader name="tabheader5" heading="AllDataTypes_Advanced"></wm-tabheader>
                                 <wm-tabcontent name="tabcontent5">
-                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.DbtestAllDbTypesData.dataSet" navigation="Advanced" name="grid3">
+                                    <wm-grid readonlygrid="true" title="All DB Types List" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="grid7">
                                         <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="byte" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="shortCol" caption="Short Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" readonly="true"></wm-grid-column>
@@ -90,7 +90,7 @@
                             <wm-tabpane name="tabpane6">
                                 <wm-tabheader name="tabheader6" heading="Self_Relation"></wm-tabheader>
                                 <wm-tabcontent name="tabcontent6">
-                                    <wm-grid readonlygrid="true" title="Self Relation List" dataset="bind:Variables.DbtestSelfRelationData.dataSet" navigation="Advanced" name="grid4">
+                                    <wm-grid readonlygrid="true" title="Self Relation List" dataset="bind:Variables.Dbtest_allscenariosSelfRelationData.dataSet" navigation="Advanced" name="grid8">
                                         <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="stringCol" caption="String Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
                                         <wm-grid-column binding="dateCol" caption="Date Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" readonly="true"></wm-grid-column>
@@ -103,41 +103,6 @@
                                         <wm-grid-column binding="selfRelationByIntCol.booleanCol" caption="Self Relation By Int Col Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean" readonly="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-tabcontent>
-                            </wm-tabpane>
-                        </wm-tabs>
-                    </wm-tabcontent>
-                </wm-tabpane>
-            </wm-tabs>
-            <wm-tabs name="tabs2">
-                <wm-tabpane name="tabpane2">
-                    <wm-tabheader name="tabheader2" heading="With Virtual DB"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent2">
-                        <wm-tabs name="tabs4">
-                            <wm-tabpane name="tabpane8">
-                                <wm-tabheader name="tabheader8" heading="VirtualRelationsDBAllVirtualTableData"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent8"></wm-tabcontent>
-                            </wm-tabpane>
-                            <wm-tabpane name="tabpane9">
-                                <wm-tabheader name="tabheader9" heading="VirtualRelationsDBBigDecVirtualData"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent9"></wm-tabcontent>
-                            </wm-tabpane>
-                            <wm-tabpane name="tabpane10">
-                                <wm-tabheader name="tabheader10"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent10"></wm-tabcontent>
-                            </wm-tabpane>
-                        </wm-tabs>
-                        <wm-tabs name="tabs6">
-                            <wm-tabpane name="tabpane16">
-                                <wm-tabheader name="tabheader16"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent16"></wm-tabcontent>
-                            </wm-tabpane>
-                            <wm-tabpane name="tabpane17">
-                                <wm-tabheader name="tabheader17"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent17"></wm-tabcontent>
-                            </wm-tabpane>
-                            <wm-tabpane name="tabpane18">
-                                <wm-tabheader name="tabheader18"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent18"></wm-tabcontent>
                             </wm-tabpane>
                         </wm-tabs>
                     </wm-tabcontent>

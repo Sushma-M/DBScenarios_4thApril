@@ -7502,9 +7502,9 @@
     "isList" : true,
     "saveInPhonegap" : false,
     "firstRow" : 0,
-    "maxResults" : 20,
+    "maxResults" : 3,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -7747,11 +7747,13 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
+    "bindCount" : 18,
     "tableName" : "All DB Types",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
     "properties" : [ ],
     "relatedTables" : [ ],
+    "filterFields" : { },
     "package" : "com.dbscenarios_30mar.dbtest_allscenarios.AllDbTypes"
   },
   "Dbtest_allscenariosComposites1Data" : {
@@ -9134,7 +9136,7 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : false,
+    "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
@@ -9302,6 +9304,7 @@
       "primaryFields" : [ "id" ]
     },
     "isDefault" : true,
+    "bindCount" : 6,
     "tableName" : "Self Relation",
     "tableType" : "TABLE",
     "dbSystem" : "MySQL",
@@ -9579,6 +9582,16 @@
     "pageName" : "Chart2",
     "pageTransitions" : "none"
   },
+  "goToPage_Cntainr_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_Cntainr_ReadOnlyGrid-wm.NavigationVariable-1459837415918",
+    "name" : "goToPage_Cntainr_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Cntainr_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
   "goToPage_EditableDataGrid" : {
     "_id" : "wm-goToPage_EditableDataGrid-wm.NavigationVariable-1459493532815",
     "name" : "goToPage_EditableDataGrid",
@@ -9617,6 +9630,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "LineChartwithAggrgtn",
+    "pageTransitions" : "none"
+  },
+  "goToPage_List_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_List_ReadOnlyGrid-wm.NavigationVariable-1459836977445",
+    "name" : "goToPage_List_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "List_ReadOnlyGrid",
     "pageTransitions" : "none"
   },
   "goToPage_Main" : {
@@ -9667,6 +9690,16 @@
     "pageName" : "pagewithLiveList",
     "pageTransitions" : "none"
   },
+  "goToPage_Panel_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_Panel_ReadOnlyGrid-wm.NavigationVariable-1459837219170",
+    "name" : "goToPage_Panel_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Panel_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
   "goToPage_Procedure_Page" : {
     "_id" : "wm-goToPage_Procedure_Page-wm.NavigationVariable-1459760363731",
     "name" : "goToPage_Procedure_Page",
@@ -9695,6 +9728,16 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "Tabs_ReadOnlyGrid",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Tile_ReadOnlyGrid" : {
+    "_id" : "wm-goToPage_Tile_ReadOnlyGrid-wm.NavigationVariable-1459835350828",
+    "name" : "goToPage_Tile_ReadOnlyGrid",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Tile_ReadOnlyGrid",
     "pageTransitions" : "none"
   },
   "HrdbDepartmentData" : {

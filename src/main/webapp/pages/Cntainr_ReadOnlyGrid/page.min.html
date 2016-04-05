@@ -1,0 +1,157 @@
+<style id="Cntainr_ReadOnlyGrid.css">
+
+</style>
+<script id="Cntainr_ReadOnlyGrid.js">
+Application.$controller("Cntainr_ReadOnlyGridPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("grid4Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="Cntainr_ReadOnlyGrid.variables.json">
+var _Cntainr_ReadOnlyGridPage_Variables_ ={};
+</script>
+<script id="Cntainr_ReadOnlyGrid.html" type="text/ng-template">
+<wm-page data-ng-controller="Cntainr_ReadOnlyGridPageController" pagetitle="Cntainr Read Only Grid" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="With Normal DB"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-container name="container1" margintop="10" marginbottom="10">
+                            <wm-grid readonlygrid="true" title="All DB Types List with None Navigation" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="None" name="grid1">
+                                <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="byte" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="shortCol" caption="Short Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="intCol" caption="Int Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="longCol" caption="Long Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="bigIntCol" caption="Big Int Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="floatCol" caption="Float Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="double" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="doubleCol" caption="Double Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="double" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="bigDecCol" caption="Big Dec Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_decimal" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="charCol" caption="Char Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="stringCol" caption="String Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="clobCol" caption="Clob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="textCol" caption="Text Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="dateCol" caption="Date Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="dateTimeCol" caption="Date Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="datetime" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="timeCol" caption="Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="timeStampCol" caption="Time Stamp Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="timestamp" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="booleanCol" caption="Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="blobCol" caption="Blob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob" readonly="true"></wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container2">
+                            <wm-grid readonlygrid="true" title="All DB Types List with Basic Navigation" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Basic" name="grid2">
+                                <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="byte" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="shortCol" caption="Short Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="intCol" caption="Int Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="longCol" caption="Long Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="bigIntCol" caption="Big Int Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_integer" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="floatCol" caption="Float Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="double" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="doubleCol" caption="Double Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="double" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="bigDecCol" caption="Big Dec Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_decimal" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="charCol" caption="Char Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="character" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="stringCol" caption="String Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="clobCol" caption="Clob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="textCol" caption="Text Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="dateCol" caption="Date Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="dateTimeCol" caption="Date Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="datetime" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="timeCol" caption="Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="timeStampCol" caption="Time Stamp Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="timestamp" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="booleanCol" caption="Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="blobCol" caption="Blob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob" readonly="true"></wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container3">
+                            <wm-grid readonlygrid="true" title="All DB Types List with Advanced Navigation" dataset="bind:Variables.Dbtest_allscenariosAllDbTypesData.dataSet" navigation="Advanced" name="grid3">
+                                <wm-grid-column binding="id" caption="Id" type="integer" width="px" primary-key="true" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="byteCol" caption="Byte Col" type="byte" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="shortCol" caption="Short Col" type="short" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="intCol" caption="Int Col" type="integer" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="longCol" caption="Long Col" type="big_integer" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="bigIntCol" caption="Big Int Col" type="big_integer" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="floatCol" caption="Float Col" type="double" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="doubleCol" caption="Double Col" type="double" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="bigDecCol" caption="Big Dec Col" type="big_decimal" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="charCol" caption="Char Col" type="character" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="stringCol" caption="String Col" type="string" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="clobCol" caption="Clob Col" type="string" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="textCol" caption="Text Col" type="string" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="dateCol" caption="Date Col" type="date" width="px" generator="assigned" readonly="true" search-placeholder="Enter date in yyyy-mm-dd" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="dateTimeCol" caption="Date Time Col" type="datetime" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="timeCol" caption="Time Col" type="time" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="timeStampCol" caption="Time Stamp Col" type="timestamp" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="booleanCol" caption="Boolean Col" type="boolean" width="px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="blobCol" caption="Blob Col" type="blob" widget-type="image" width="200px" generator="assigned" readonly="true" pcdisplay="true" mobiledisplay="true"><img width="48px" class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}">
+                                </wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" name="container4">
+                            <wm-grid readonlygrid="true" title="Self Relation List" dataset="bind:Variables.Dbtest_allscenariosSelfRelationData.dataSet" navigation="Advanced" name="grid4">
+                                <wm-grid-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="stringCol" caption="String Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="dateCol" caption="Date Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="timeCol" caption="Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="booleanCol" caption="Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="selfRelationByIntCol.id" caption="Self Relation By Int Col Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="selfRelationByIntCol.stringCol" caption="Self Relation By Int Col String Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="selfRelationByIntCol.dateCol" caption="Self Relation By Int Col Date Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="selfRelationByIntCol.timeCol" caption="Self Relation By Int Col Time Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time" readonly="true"></wm-grid-column>
+                                <wm-grid-column binding="selfRelationByIntCol.booleanCol" caption="Self Relation By Int Col Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean" readonly="true"></wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

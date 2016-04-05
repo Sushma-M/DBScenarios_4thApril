@@ -1,4 +1,4 @@
-Application.$controller("Tabs_ReadOnlyGridPageController", ["$scope", function ($scope) {
+Application.$controller("List_ReadOnlyGridPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -17,36 +17,28 @@ Application.$controller("Tabs_ReadOnlyGridPageController", ["$scope", function (
 }]);
 
 
-
-
-
-
-
-
-
-
-Application.$controller("grid5Controller", ["$scope",
+Application.$controller("grid1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("grid6Controller", ["$scope",
+Application.$controller("grid2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("grid7Controller", ["$scope",
+Application.$controller("grid3Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("grid8Controller", ["$scope",
+Application.$controller("grid4Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

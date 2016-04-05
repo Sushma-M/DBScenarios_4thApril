@@ -5,6 +5,9 @@
   "name" : "Chart2",
   "type" : "PARTIAL"
 }, {
+  "name" : "Cntainr_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
   "name" : "Common",
   "type" : "PARTIAL"
 }, {
@@ -19,6 +22,9 @@
 }, {
   "name" : "LineChartwithAggrgtn",
   "type" : "PARTIAL"
+}, {
+  "name" : "List_ReadOnlyGrid",
+  "type" : "PAGE"
 }, {
   "name" : "Login",
   "type" : "PAGE"
@@ -35,6 +41,9 @@
   "name" : "PagewithLivegrid",
   "type" : "PAGE"
 }, {
+  "name" : "Panel_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
   "name" : "Procedure_Page",
   "type" : "PAGE"
 }, {
@@ -42,6 +51,9 @@
   "type" : "PAGE"
 }, {
   "name" : "Tabs_ReadOnlyGrid",
+  "type" : "PAGE"
+}, {
+  "name" : "Tile_ReadOnlyGrid",
   "type" : "PAGE"
 }, {
   "name" : "footer",
